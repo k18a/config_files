@@ -1,0 +1,142 @@
+% Created 2018-10-11 Thu 19:32
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\date{\today}
+\title{Fick's Laws}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={Fick's Laws},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.1 (Org mode 9.1.13)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{Fick's First Law}
+\label{sec:org1e13411}
+\begin{itemize}
+\item an analogy with the \href{fourierslaws.org}{Fourier's laws} for heat transfer
+\item rate of transfer of the diffusing substance through unit area of a section is proportional to the concentration gradient measured normal to the section
+\end{itemize}
+\begin{equation}
+F = D \frac{\partial C}{\partial x}
+\end{equation}
+\begin{itemize}
+\item defines mass flux with respect to distance
+\item first law for cartesian co-ordinates
+\begin{itemize}
+\item $$J = - A * D * \frac{\partial C}{\partial z}$$
+\item J is flux per unit area
+\item A is area accross which diffusion occurs
+\item C is concentration
+\item z is distance
+\item D is diffusion coefficient
+\end{itemize}
+\end{itemize}
+\section{Fick's Second Law}
+\label{sec:org3bee403}
+\subsection{Derivation}
+\label{sec:org38a6280}
+\begin{itemize}
+\item let's assume an isotropic medium
+\item consider the following volume - a rectangular parallepiped with sides 2dx, 2dy, and 2dz
+\item let concentration at the centre be C
+
+    K+---------------------------+K'
+    \emph{|                          /|
+2dz} |                         / |
+  /  |                        /  |
+L+---------------------------+L' |---------> 
+\begin{center}
+\begin{tabular}{llll}
+ &  &  & 4dydz(Fx+dFx/dxdx)\\
+\end{tabular}
+\end{center}
+----------->|   |                       |   |
+\end{itemize}
+4dydz(Fx+dFx/dx dx)| C |                       |   |
+                2dy|  J+-----------------------|---+J'
+\begin{center}
+\begin{tabular}{}
+\end{tabular}
+\end{center}
+I+---------------------------+I'
+
+\begin{itemize}
+\item rate at which diffusing substance enters the control volume is given as
+\end{itemize}
+\begin{equation}
+4 dy dz (F_x - \frac{\partial F_x}{\partial x} dx)
+\end{equation}
+\begin{itemize}
+\item rate at which diffusing substance exits the control volume is given as
+\end{itemize}
+\begin{equation}
+4 dy dz (F_x + \frac{\partial F_x}{\partial x} dx)
+\end{equation}
+\begin{itemize}
+\item performing mass balance, net accumulation in the x direction is given as
+\end{itemize}
+\begin{equation}
+-8 dx dy dz \frac{\partial F_x}{\partial x}
+\end{equation}
+\begin{itemize}
+\item similarly in y and z directions
+\end{itemize}
+\begin{equation}
+-8 dx dy dz \frac{\partial F_y}{\partial y}
+\end{equation}
+\begin{equation}
+-8 dx dy dz \frac{\partial F_z}{\partial z}
+\end{equation}
+\begin{itemize}
+\item since average concentration is given as C, the rate at which diffusing amount changes is given as volume * concentration difference
+\end{itemize}
+\begin{equation}
+8 dx dy dz \frac{\partial C}{\partial t}
+\end{equation}
+\begin{itemize}
+\item equating the above equations
+
+\item a more general conservation equation that gives change in concentration with time
+\begin{itemize}
+\item $$\frac{\partial C}{\partial t} = D * \frac{\partial^2 C}{\partial r^2} = D (\frac{\partial ^2 C}{\partial z ^2} + \frac{1}{A} + \frac{\partial A}{\partial z} \frac{\partial C}{\partial z})$$
+\item t is time
+\end{itemize}
+\item For a non-linear isotherm \cite{Clarkson1999}
+\begin{itemize}
+\item $$\frac{\partial}{\partial z} (D {\frac{\partial C}{\partial z}}) = \frac{\partial C}{\partial t}$$
+\end{itemize}
+\end{itemize}
+\section{Anisotropic Media}
+\label{sec:org714a654}
+\section{Analogy with Heat Flow}
+\label{sec:org93b01a6}
+\section{Diffusion Constant}
+\label{sec:orgad150e5}
+\begin{itemize}
+\item much less sensitive to temperature than the rate constant of a chemical reaction or other phenomena
+\item also much less sensitive to the solute being studied, diffusion constant in a given system for a variety of solutes often fall within a factor of 10
+\item also much less sensitive to solute concentration, although there are exceptions
+\begin{itemize}
+\item smaller solutes may show concentration dependent diffusion
+\end{itemize}
+\end{itemize}
+\end{document}

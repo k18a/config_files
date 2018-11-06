@@ -1,0 +1,15 @@
+#+TITLE: Young-Laplace Equation
+
+- non-linear partial differential equation
+- describes capillary pressure difference sustained across the interface between two static fluids due to the phenomenon of surface tension
+- relates pressure difference to the shape of the surface or wall and is fundamental to the study of static capillary surfaces
+  - static interface implies the absence of tangential stress - only normal stresses are considered
+- a statement of normal stress balance for static fluids meeting at an interface, where the interface is treated as a surface with 0 thickness
+  - $\Delta p = -\gamma \nabla . n$
+    - \Delta p is the pressure difference accross the fluid interface
+    - \gamma is the surface tension
+    - n is the unit normal stress pointing out of the surface
+  - $\Delta p = 2 . \gamma . H$
+    - H is the mean curvature
+  - $\Delta p = \gamma . (\frac{1}{R_1} + \frac{1}{R_2})$
+    - R1 and R2 are principle radii of curvature

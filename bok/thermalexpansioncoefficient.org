@@ -1,0 +1,13 @@
+* Thermal Expansion Coefficient
+
+- denoted by $\alpha _V$
+- describes fractional change in volume per degree change in temperature at constant pressure
+- volumetric thermal expansion coefficient is the most basic of thermal expansion coefficients, and most relevant for fluids
+- [isotropic](isotropic) materials expand at the same rate in every direction
+
+$\alpha _V = \frac{1}{V}(\frac{\partial V}{\partial T})_P$
+
+- $\alpha _V$ is the coefficient of thermal expansion
+- V is volume
+- T is temperature
+- P is pressure

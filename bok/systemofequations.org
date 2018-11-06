@@ -1,0 +1,27 @@
+#+TITLE: System of Equations
+
+- general form
+\begin{equation}
+\Sigma _{i=1} ^m
+a_{i1}x_1 + \dots + a_{in}x_n = b_i
+\end{equation}
+- matrix form
+\begin{equation}
+\begin{bmatrix}
+a_{11} & \dots & a_{1n} \\
+\vdots & \ddots & \vdots \\
+a_{m1} & \dots & a_{mn} 
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\
+\vdots \\
+x_n
+\end{bmatrix}
+= 
+\begin{bmatrix}
+b_1 \\
+\vdots \\
+b_m
+\end{bmatrix}
+\end{equation}
+

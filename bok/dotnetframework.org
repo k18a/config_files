@@ -1,0 +1,5 @@
+#+TITLE: .NET Framework
+
+- software framework developed by Microsoft running primarily on Microsoft Windows
+- includes a large class library named Framework Class Library nad provides language interoperability accross several programming languages
+- programmes written for the .NET framework execute in a software environment (in contrast to an hardware environment) named Common Language Runtime that proveds services such as security, memory management, and exception handling

@@ -1,0 +1,187 @@
+#+TITLE: Potential Theory of Adsorption
+- the potential theory was proposed for the characterization of sub-critical adsorption in micro-porous substances cite:Dubinin1960
+- cite:Dubinin1960 found the ratio of limiting adsorption to micropore volume to be constant for many microporous substances (<0.7 nm) at different temperatures, but could not find a correlation between surface area and adsorption for these substances, thus proposing the potential theory of adsorption. 
+- does not have a Henry's constant at low pressures, but has a saturation adsorption capacity at high pressures
+* Volume Filling Mechanism
+- micropore filling occurs due to the adsorption force field encompassing the entire volume of micropores, leading to a significantly higher heat of adsorption compared to flat surfaces cite:Do1998
+- micropore filling is the primary adsorption mechanism in pores less than 1.5 nm cite:Bering1972
+- in pores with sizes between 1.5 nm and 100 nm, [[file:capillarycondensation.org][capillary condensation]] is the primary adsorption mechanism
+- in pores greater than 15 A, adsorption initially starts as surface coverage mechanism, but later turns into pore filling by [[file:capillarycondensation.org][capillary condensation]] mechanism once a threshold relative pressure is reached cite:Bering1966
+- adsorption in micropores is a limiting case of the capillary condensation theory cite:Bering1966
+- a theoretical monolayer amount calculated from a Langmuir model is 2-3 times larger than the maximum associated with micropore filling cite:Do1998
+- test to see if micropore filling is the prevailing adsorption mechanism cite:Clarkson2000
+  - $\frac{C_{\mu 1}}{C_{\mu 2 }} ~ \frac{V_{v 1}}{V_{v 2}} \neq \frac{SSA_1}{SSA_2}$
+- another way of finding out if micropore filling is the dominant adsorption mechanism is to find out if a correlation could be obtained between Langmuir volumes (max adsorbed) and micropore volumes from the D-R equation. 
+* Adsorption Potential
+- adsorption potential is the difference between the chemical potentials of the adsorbate in the state of normal liquid and the adsorbed state at the same temperature
+\begin{equation}
+A = \mu _L - \mu _a = RT ln(\frac{P_0}{P})
+\end{equation}
+- by this definition it is the change of the Gibbs free energy on adsorption
+- adsorption potential is given as cite:Dubinin1960a
+\begin{equation}
+A = RT ln(\frac{P_0}{P})$
+\end{equation}
+- adsorption potential has the unit of molar energy
+- cite:Dubinin1960 found that a plot of surface coverage, $\theta = W/W_0$, against adsorption potential, A, is temperature invariant.
+\begin{equation}
+(\frac{\partial A}{\partial T})_\theta = 0
+\end{equation}
+- temperature invariance is not a requirement for potential theory but rather just a co-incidence for many substances cite:Do1998
+  - temperature invariance holds as long as adsorption forces are temperature-independent dispersion forces cite:Clarkson1997
+* Characteristic Curve
+- characteristic curve is a plot of the logarithm of the amount adsorbed at different temperatures against the adsorption potential
+- the slope of the characteristic curve is the inverse of the square of the characteristic energy 
+$E = \beta E_0$
+#+BEGIN_SRC ipython :session :results raw drawer :ipyfile dubininradushkevich.png
+%matplotlib inline
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+plt.style.use('dark_background')
+#sns.set_palette(sns.color_palette("muted",n_colors=10))
+plt.figure()
+P=np.linspace(0.000001,1)
+P0 = 1
+R = 8.314
+T = [250,350]
+E = [2500,3000,5000]
+for e in E:
+  for t in T:
+    q = np.exp(-((R*t/e)*np.log(P0/P))**2)
+    lnq = np.log(q)
+    A2 = (R*t*np.log(P0/P))**2
+    plt.plot(lnq,A2,label='T={};E={}'.format(t,e))
+plt.legend()
+plt.xlabel('ln(q)')
+plt.ylabel('$A^2$')
+plt.title('Characteristic Curve')
+#+END_SRC
+#+RESULTS:
+:RESULTS:
+# Out[28]:
+: Text(0.5,1,'Characteristic Curve')
+[[file:dubininradushkevich.png]]
+:END:
+
+* Dubinin Radushkevich 
+- initially proposed by cite:Dubinin1960 for subcritical vapours in microporous solids
+- amount adsorbed can be expressed in terms of adsorption potential, independent of temperature as follows
+\begin{equation}
+\frac{V}{V_0} = - B A ^2
+\end{equation}
+\begin{equation}
+V = V_0 exp[(-\frac{RT}{\beta E_0} ln (\frac{P_0}{P}))^2]
+\end{equation}
+- E0 is the characteristic energy of the solid toward an arbitrarily chosen reference adsorbate; Benzene is widely used as the reference adsorbate
+- this parameter is proportional to the liquid molar volume cite:Do1998
+- maximum adsorption capacity is given as
+\begin{equation}
+V_0 = \frac{W_0}{v_M(T)}
+\end{equation}
+- $W_0$ is the micropore volume
+- $v_m$ is the liquid molar volume
+- in terms of number of moles: 
+$$C_{\mu}=C_{\mu s}exp[(-\frac{RT}{(\beta E_0)}ln(\frac{P_0}{P}))^2]$$
+  - where,
+  - E0 is the solid characteristic energy towards a reference adsorbate - Benzene is widely used as a reference adsorbate.
+  - $\beta$ is a constant which is a function of the adsorptive only.
+  - Maximum adsorption capacity is the ratio of the micropore volume to the liquid molar volume: $C_{\mu s} = \frac{W_0}{v_m (T)}$
+- the DR model often provides a better fit for shale adsorption, despite having the same number of parameters as Lanmmuir cite:Clarkson1997
+#+BEGIN_SRC ipython :session :results raw drawer :ipyfile dubininradushkevich.png
+%matplotlib inline
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+plt.style.use('dark_background')
+sns.set_palette(sns.color_palette("muted",n_colors=10))
+plt.figure()
+P=np.linspace(0.000001,1)
+P0 = 1
+R = 8.314
+T = 300
+E = np.linspace(2500,25000,10)
+for e in E:
+  q = np.exp(-((R*T/e)*np.log(P0/P))**2)
+  plt.plot(P,q,label='E={};E/RT={:.1f}'.format(e,e/(R*T)))
+plt.legend()
+plt.xlabel('partial pressure')
+plt.ylabel('fractional loading')
+plt.title('DR at different adsorption energies')
+#+END_SRC
+
+#+RESULTS:
+:RESULTS:
+# Out[11]:
+: Text(0.5,1,'DR at different adsorption energies')
+[[file:dubininradushkevich.png]]
+:END:
+
+** Derivation  
+- assuming temperature invariance
+\begin{equation}
+(\frac{\partial A}{\partial T})_\theta = 0
+\end{equation}
+- integrating on both sides with respect to T
+\begin{equation}
+A = H(\theta)
+\end{equation}
+- assuming that an inverse exists
+\begin{equation}
+\theta = H^{-1} (A)
+\end{equation}
+- scaling adsorption potential agains the characteristic energy of the adsorbate
+\begin{equation}
+\theta = f(A/E,n)
+\end{equation}
+- cite:Dubinin1960a assumed this function to be the Weibul distribution
+\begin{equation}
+\theta = f(A/E,n) = exp[-(A/E)^n]
+\end{equation}
+** Temperature Dependence
+- saturation capacity cite:Do1998
+\begin{equation}
+C_{\mu s} = C_{\mu s,0} exp[-\delta (T-T_0)]
+\end{equation}
+** Heat of Adsorption
+- isosteric heat is calculated from the van't Hoff Equation
+\begin{equation}
+-\Delta H = \Delta H_{vap} + \beta E_0 (ln \frac{1}{\theta})^{1/2} + \frac{\beta E_0 \delta T}{2} (ln \frac{1}{\theta})^{-1/2}
+\end{equation}
+- $\Delta H_{vap}$ is the latent heat of vaporization
+- $\delta$ characterizes change in saturation capacity with respect to temperature
+\begin{equation}
+-\delta = \frac{1}{V_0}\frac{d V_0}{dT}
+\end{equation}
+- net heat of adsorption is the isosteric heat minus the heat of vaporization
+\begin{equation}
+-\Delta H_{net} = \beta E_0 (ln \frac{1}{\theta})^{1/2} + \frac{\beta E_0 \delta T}{2} (ln \frac{1}{\theta})^{-1/2}
+\end{equation}
+- higher the characteristic energy of the adsorbate, higher the heat of adsorption
+- enthalpy of immersion is the heat released if adsorption had taken place in a bulk liquid adsorbate
+- since there is no phase change involved with the adsorption, the enthalpy of immersion is given by the integral of the net heat of adsorption (since the heat of adsoprtion is the differential of enthalpy)
+\begin{equation}
+\Delta h_i = \int _0 ^1 q_{net} (\theta) d \theta
+\end{equation}
+\begin{equation}
+\Delta h_i = -(\beta E_0) (1+ \delta T) \Gamma(\frac{3}{2})
+\end{equation}
+- this can be readily used to determine the characteristic energy of the system by measuring the heat of immersion
+
+* Dubinin-Astakhov Model 
+$$W = W_0 exp [-(\frac{R T}{\beta E} {ln \frac {P_0}{P}})^n]$$ 
+- where, 
+- w is amount adsorbed 
+- $w_0$ is the micropore volume 
+- $\beta$ is the affinity constant 
+- E is the characteristic energy
+- n is a fitting constant 
+- The linear form of the equation is given as: 
+  - $$ log(W) = log(W_0) - D(log(\frac{P_0}{P}))^n$$ 
+    - where w is the amount adsorbed, 
+    - w0 is the micropore volume 
+    - P0 is the saturation pressure 
+    - n is the Astakhov exponent
+- n is an empirical heterogeneity parameter cite:Do1998 and is a measure of the sharpness of the micropore size distribution
+- for broad micropore distributions, n lies between 1.2 and 1.8
+- for narrow micropore distributions, n lies between 3 and 6

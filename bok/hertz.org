@@ -1,0 +1,4 @@
+#+TITLE: Hertz
+- the number of wave cycles in 1 second
+- humans can hear sounds of from 20 Hz to 20 kHz, but most sounds we hear daily are between 60 Hz to 4 kHz
+- piano's highest note is 4.2 kHz

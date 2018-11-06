@@ -1,0 +1,15 @@
+#+TITLE: Pseudo-First Order Diffusion Model
+
+- earliest model pertaining to adsorption rate based on adsorption capacity
+- called pseudo first order equation to distinguish it from kinetic equations
+- initially proposed by Lagergren in 1898
+- $\frac{dq_t}{dt} = k_1 * (q_e - q_t)$
+  - q_t is amount adsorbed at time t
+  - k_2 is pseudo second order rate constant
+  - q_e is amount adsorbed at equilibrium
+- with boundary conditions:
+  - $q_t = 0$ at $t = 0$
+  - $q_t = q_t$ at $t = t$
+  - $q_t = q_e$ at $t = \infty$
+- $ln(\frac{q_e}{q_e - q_t} = k_1 t$
+- $log(q_e - q_t) = log(q_e) - \frac{k_1}{2.303} * t$

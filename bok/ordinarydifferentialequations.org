@@ -1,0 +1,27 @@
+#+TITLE: Ordinary Differential Equations
+
+- has only one independent variable, so that all the derivatives occurring in it are ordinary derivatives (dy/dx)
+- the order of the ordinary derivative is the highest derivative present
+
+- general ordinary differential equation of the nth order using prime notation: 
+- $F(x,y,y',y'',y^(n))=0$
+
+
+** Solution to an ODE: 
+
+- to verify if y=y(x) is a solution of an ODE, we need to: 
+  1. compute the derivatives of y(x)
+  2. show that y(x) and these derivatives when substituted in the equation reduce it to an identity in x
+- consider the differential equation: 
+  - $\frac{dy}{dx} = f(x)$
+- it's solution is given by:
+  - $y=\int f(x) dx + c$
+- however, it's not always possible to find out the solution to this integral over the whole range of $-\infty to +\infty$; it's often sufficient to find out
+  - $y=\int _{x_0} ^{x} f(t) dt + c$
+  - where, t is only a dummy variable
+- when written like this, a solution to the integral always exists as long as the integrand is continuous over the range of integration
+
+- it's easier to derive the differential equation that a given solution satisfies than to find the solution from a given differential equation $f(x,y,c_1,c_2,c_n,...)$
+  - first differentiate the equation implicitly with respect to x
+  - if the parameter c does not exist, this is the required ODE of the solution
+  - if the parameter still exists combine the obtained dufferential equation to the initial solution to get the ODE

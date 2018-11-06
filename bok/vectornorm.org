@@ -1,0 +1,11 @@
+#+TITLE: Vector Norm
+
+* L1 Norm
+- sum of absolute values of the vectors
+* L2 Norm
+- square root of the sum of squared vector values
+\begin{equation}
+|[x]| = \sqrt{x_1^2 + \dots x_n^2}
+\end{equation}
+* Max Norm
+0 maximum vector values

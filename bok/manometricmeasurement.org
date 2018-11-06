@@ -1,0 +1,17 @@
+* Manometric Measurement of Adsorption 
+- Manometric methods of adsorption are preferred for low temperature (77 K) applications cite:Sing1985
+
+* Sample Preparation 
+
+- Outgassing parameters depend on the nature of the system at hand and the application required cite:Sing1985
+- Determination of outgassed mass of the sample is a major source of discrepancy between different experiments cite:Sing1985
+- Inorganic oxides are outgassed at about $150 ^0C$, whilst microporous substances such as activated charcoal and zeolites require a much higher temperature $300 ^0C$ cite:Sing1985 
+
+* Temperature Control
+- As pressure within an enclosed cell is strongly temperature-dependent, adequate temperature control is essential cite:Sing1985 
+
+* Equilibrium Determination
+
+* Error Analysis 
+
+- Relative errors must be calculated for both experimental measurements and the isotherm fit. 

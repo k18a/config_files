@@ -1,0 +1,25 @@
+#+TITLE: Ideal Solution
+
+* Solution
+
+- homogeneous mixture composed of two or more substances
+- has a positive [[file:entropy.org][entropy]] of mixing
+
+* Ideal Solution 
+
+- mean strength of interactions are the same between all the molecules of the solution: $2U_{AB} = U_{AA} + U_{BB}$
+- longer range interactions are indistinguishable
+- thermodynamic properties of the mixture are analogous to ideal gases
+- enthalpy of mixing is 0
+- closer the enthalpy of mixing is to 0, the more ideal the solution
+- volume change on mixing is 0: $V = \Sigma V_i$
+- change in Gibbs free energy is determined solely by the entropy of mixing: $\Delta G = RT \Sigma x_i ln(x_i)$
+- [[file:vapourpressure.org][vapour pressure]] of the solution obeys [[file:raoultslaw.org][Raoult's law]]
+- [[file:activitycoefficient.org][activity coefficient]] of each component is equal to 1
+- solutions of molecules that are chemically almost identical (ex.: 1-butanol and 2-butanol) will be almost ideal
+
+* Real Solution
+
+- deviations from ideality can be described using a Margules function or [[file:activitycoefficient.org][activity coefficients]]
+
+

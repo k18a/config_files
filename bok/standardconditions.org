@@ -1,0 +1,49 @@
+* Standard Conditions
+
+- standard sets of conditions for experimental measurements to be established 
+- allow comparisons to be made between different data sets
+- different institutes and organisations sometimes set their own standard conditions
+- a different concept from Gibbs Standard state
+
+** IUPAC
+
+- until 1982: 
+  - 273.15 K
+  - 1 atm
+- after 1982: 
+  - 273.15 K
+  - 1 bar
+- usually known as standard temperature and pressure (STP)
+
+** NIST
+
+- 293.15 K (20 degC) 
+- 1 atm
+- usually known as normal temperature and pressure (NTP)
+- standard cubic foot for gases is at 70 degC and 1 atm 
+
+** ISO 
+
+- 20 degC
+- 1 atm
+- 50% RH
+
+** SPE
+
+- 15 degC
+- 1 bar
+- standard cubic foot for natural gas is at 60 degF and 1 atm (defined as surface temperature and pressure)
+
+* Gibbs Standard State
+
+- a concept different from standard conditions
+- reference point used to calculate the properties 
+  - of a substance ( or a mixture or a solution ) under different conditions
+- standard state need not actually exist in the physical world and can be purely hypothetical
+- standard pressure is usually taken as 1 bar based on IUPAC recommendations
+- strictly speaking temperature is not part of the standard state, 
+  - but most thermodynamic properties are commonly reported at either 25 degC or 0 degC
+- for most elements, the reference point is defined for the most stable [allotrope](allotrope) of the element
+- for solutions the standard state is the hypothetical state 
+  - it would have at the standard molality or the amount of concentration
+  - but exhibiting infinite dilution behaviour

@@ -1,0 +1,5 @@
+#+TITLE: Initial Value Problem
+
+- also known as Cauchy problem
+- an [[file:ordinarydifferentialequations.org][Ordinary Differential Equation]] specified with an initial condition at a given point in the domain of the solution
+

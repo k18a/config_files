@@ -1,0 +1,9 @@
+#+TITLE: Linear Isotherm
+
+Most adsorption systems exhibit linear (Henry's law) behavior at low pressures. 
+
+Obtained by substituting a two dimensional analogue of the ideal gas law in to the Gibbs adsorption equation cite:Do1998: $\pi A = n R_g T$
+
+Linear Isotherm: $$\frac{n}{A}=K(T)P$$
+
+where K(T) is the Henry's constant and a function of temerature; $K(T)=C(T)/(R_g T)$, where C(T) is the integration constant. 

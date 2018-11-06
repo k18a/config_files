@@ -1,0 +1,9 @@
+#+TITLE: Linear Subspace
+- ${R^n}$ is the set of all posible vectors
+- {V} is a subset of ${R^n}$
+- to be a subspace of ${R^n}$ a vector {V} needs to satisfy the following conditions
+  - {V} contains [0] vector
+  - closure under scalar multiplication
+    - vector [x[ in {V} times any scalar c is also in {V}
+  - closure under addition 
+    - if vectors [a] and [b] are in {V}, then [a] + [b] are also in {V}

@@ -1,0 +1,66 @@
+#+TITLE: Scipy
+
+- fully operational with numpy library
+- gives solvers and other algorithms similar to MATLAB
+
+* Special Functions
+- scipy.special
+
+* Integration
+- scipy.integrate
+- numerical integration routines
+#+BEGIN_SRC python
+import scipy.integrate
+ans, err = scipy.integrate.quad(lambda x: x**2, 0, 4)
+return ans
+#+END_SRC
+#+RESULTS:
+: 21.333333333333336
+- you don't want to import all methods; faster to import only methods that you're going to use
+
+* Optimization
+- scipy.optimize
+- minimization routines
+
+* Interpolation
+-scipy.interpolate
+#+BEGIN_SRC python
+import numpy as np
+from scipy import interpolate, integrate
+x = np.arange(-1,11)
+y = np.exp(-x/3)
+ans_integrated = integrate.simps(y[1:-1],x[1:-1])
+f = interpolate.interp1d(x,y) # interpolate creates a funcion object
+ans_interpolated, err = integrate.quad(f,0,10)
+return ans_interpolated, ans_integrated # integrating both functions to compare the
+#+END_SRC
+
+#+RESULTS:
+| 2.919715379096423 | 2.8550038226912573 |
+
+* Fourier Transforms
+- scipy.fftpack
+
+* Signal Processing
+- scipy.signal
+
+* Linear Algebra
+- scipy.linalg
+- reproduces solvers in numpy, but also includes solvers for sparse matrices, which can be advantageous for sparse data structures
+
+* Sparse Eigenvalue Problems with ARPACK Compressed Sparse Graph Routines
+- scipy.sparse.csgraph
+
+* Stastistics
+- scipy.stats
+
+* Multi-dimensional Image Processing
+- scipy.ndimage
+
+* File IO
+- scipy.io
+- in binary scientific data storage formats
+
+* Weave
+- write c++ functions in python
+- CType, Swig are other packages that does this

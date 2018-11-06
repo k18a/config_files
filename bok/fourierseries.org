@@ -1,0 +1,4 @@
+#+TITLE: Fourier Series
+
+- expansion of a periodic function in terms of an infinite sum of sines and cosines
+

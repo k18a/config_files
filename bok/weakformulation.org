@@ -1,0 +1,44 @@
+#+TITLE: Weak Formulation
+- a function that satisfies an orgthagonal projection of the partial differential equation onto a vector space of functions
+- allows us to use [[file:linearalgebra.org][linear algebra]] concepts to solve [[file:differentialequations.org][partial differential equations]]
+- basis for [[file:finiteelement.org][finite element methods]] and other variationally based numerical methods
+- the strong form and the weak form are equivalent
+\begin{equation}
+strong form \leftrightarrow weak form
+\end{equation}
+* Formulation
+- consider a function u(x)
+\begin{equation}
+u(x) \in S
+\end{equation}
+- S is a space of functions that satisfies Dirichlet boundary conditions at x=0
+\begin{equation}
+S = \{u | u(0) = u_0\}
+\end{equation}
+- given data include
+  - initial condition, u_0
+  - time, t
+  - function, f(x)
+  - constitutve relation,  $\sigma = E u,_x$
+- consider a function w such that
+\begin{equation}
+\forall w \in V
+\end{equation}
+- w is a function in a class of functions V that satisfies an homogeneous [[file:boundaryconditions.org][dirichlet boundary condition]] at x=0
+\begin{equation}
+V = \{w|w(0) = 0\}
+\end{equation}
+- the following is true
+\begin{equation}
+\int _0 ^L w,_x \sigma dx = \int_0^L\big(w fdx\big) + w(L) t
+\end{equation}
+- the above is the weak form in 1D
+- in 3D, we just multiply everythin with A
+\begin{equation}
+\int _0 ^L w,_x \sigma Adx = \int_0 ^L\big(w fAdx\big) + w(L) tA
+\end{equation}
+- the final term is the boundary force, the other two terms are volume elements
+* Steps to get Weak From
+1. Move everything over to the left hand side; multiply with the test function; integrate over the entire body
+2. Integrate the space differential term (with dx) by parts
+3. Impose boundary conditions

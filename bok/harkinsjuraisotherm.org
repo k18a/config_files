@@ -1,0 +1,13 @@
+#+TITLE: Harkins-Jura Isotherm
+
+- multi-component isotherm based on Gibbs isotherm. EoS:
+  - $\pi=b - a \sigma$, where a and b are constants.
+- harkins-Jura Isotherm:
+  - $$\frac{n}{n_{max}} = \frac{1}{\sqrt{1+\frac{1}{B}ln(\frac{1}{x})}}$$,
+  - where x is the reduced pressure, $x=P/P_0$
+- for the isotherm to have real solutions, $0\leq B \leq 3/2$.
+- maximum adsorption is given by:
+  - $n_{max} = \sqrt(\frac{C}{B})$
+- it was found that for many systems, the square root of C is proportional to the surface area:
+  - $S = 4.06 * \sqrt(C)$.
+

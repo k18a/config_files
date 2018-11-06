@@ -1,0 +1,4 @@
+#+TITLE: Overtones
+
+- primarily live in the 10 kHz to 14 kHz region
+- humans normally don't hear these sounds in music, but can have an effect on the sound as a whole

@@ -1,0 +1,9 @@
+#+TITLE: Angle Between Vectors
+- consider two non zero vectors $[a], [b] \in [R^n]$
+- angle between the two vectors is given as
+\begin{equation}
+cos \theta = \frac{[a].[b]}{|[a]||[b]|}
+\end{equation}
+- corollary
+  - if [a] and [b] are orthagonal, their dot product is 0
+  - [0] is orthagonal to all other vectors

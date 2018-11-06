@@ -1,0 +1,9 @@
+#+TITLE: Quadrature Rules
+* Midpoint/Rectangle Rule
+\begin{equation}
+\int _a ^b f(x) dx \approx (b-a) f(\frac{a+b}{2})
+\end{equation}
+* Trapezoidal Rule
+\begin{equation}
+\int _a ^b f(x) dx \approx (b-a) \frac{f(a) + f(b)}{2}
+\end{equation}

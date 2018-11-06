@@ -1,0 +1,59 @@
+#+TITLE: Stereology
+
+- stereology derives insights based on the direct observation of a solid cross-section.
+- the matrix is contrasted with pores by impregnating with fluorescent resins, or by surface replication and shadowing.
+- for anisotropic solids, sections of a variety of non-parallel planes must be examined cite:Sing1985.
+- image analysis may be then be used to calculate several statistically significant results such as,
+  1) porosity, 
+  2) pore size - as a distribution of randomly chosen straight lines which traverse a pore from one boundary to another, etc. cite:Sing1985.
+  3) SSA calculated from imaging techniques will be considerably lower than that deduced from gas adsorption, due to the fractal nature of the solid, whose capture is limited by the resolution of the capture device cite:Sing1985
+
+* Radiation Scattering 
+- variations in scattering length density which occur over distances exceeding the normal interatomic spacings cause radiation scattering, whose angular distribution of scattered intensity can be used to derive values of porosity and surface area.
+- according to Bragg's law:
+  - $d~\frac{\lambda}{2sin(\theta)}$,
+    - where d is the pore size,
+    - $\lambda$ is the wavelength, and
+    - values around $\theta$ are the approximate angular range where aforesaid information could be derived. 
+- a monochromatic beam of electromagnetic radiation or neutrons with a wavelength $\lambda_0$, intensity $I_0$, and wave-vector $k_0$, is focussed on a sample, and the resultant scattered intensity is measured as a function of angle $2\theta$ to the incident direction.
+
+|                | X-rays                  | Neutrons              |
+| Source         | X-ray generator         | Thermal reactor       |
+|                | Synchrontron            | Pulse source          |
+| Monochromator  | Crystal                 | Velocity selector     |
+| Collimation    | Pin hole /slit          | Circular diaphragm    |
+| Containment    | Plastic film windows    | Little restriction    |
+|                |                         | Silica or metal cells |
+| Sample size    | Thin (<1 nm)            | Thick (1-10nm)        |
+| Detector       | Photographic film       | High resolution 2-D   |
+|                | linear or 2D gas filled | multicell             |
+| Sample to      | Generally <2nm          | Variable (~2-40m)     |
+| detector dist. |                         |                       |
+
+
+| Type of radiation | Typical wavelegth (nm) | Inhomogeneity      | Spatial Resolution (nm) |
+| Light             | 400-600                | refractive index   | 200-20,000              |
+| X-rays            | 0.1-0.4                | electron density   | 5-50                    |
+| Neutrons          | 0.1-2.5                | scattering density | 5-500                   |
+
+- radiation Scattering is non-destructive and does not alter shale microstructures as may be done whilst outgassing @Sing1985.
+
+* Scanning Electron Microscope (SEM)
+
+- based on scattered electrons
+- provides insights on sample's surface and surface composition
+- has a lesser resolution than TEM
+- allows for more sample to be analysed than TEM
+- provides a 3 dimensional image
+- whilst quantitative metrics are able to provide several valuable insights on shale fabric, further qualitative analyses is necessary to classify [[file:poretypes.org][pore types]] into the system proposed by cite:Loucks2012.
+  
+* Transmission Electron Microscope (TEM)
+
+- based on transmitted electrons
+- provides insights on internal composition, crystallography, etc
+- has a higher resolution than SEM
+- provides a 2 dimensional image
+
+# Focused Ion Beam Scanning Electron Microscope (FIB-SEM)
+
+# Field Emissions Scanning Electron Microscope / Transmission Electron Microscope (FE-SEM / TEM)

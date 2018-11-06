@@ -1,0 +1,5 @@
+#+TITLE: Associative Property
+- consider
+\begin{equation}
+(2 + 3) + 4 = 2 + (3 + 4)
+\end{equation}

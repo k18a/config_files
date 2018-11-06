@@ -1,0 +1,27 @@
+#+TITLE: Unilan isotherm
+
+- *Uni*form distribution and *Lan*gmuir local isotherm 
+- proposed initially as an empirical relation, can be derived by assuming:
+  - Patchwise topography
+  - Each patch is ideal
+- has correct behavior at zero loading with Henry's constant $K=C_{\mu s}*b*(\frac{sinh(s)/s})$
+- the Unilan isotherm:
+  - $C_{\mu} = \frac{C_{\mu s}}{2s}ln(\frac{1+b*e^s*P}{1+b*e^{-s}*P})$
+    - where,
+    - $b=b_{\infty}exp(\frac{E}{RT})=b_0exp[-\frac{E}{RT_0}(1-\frac{T_0}{T})]$
+    - $E=\frac{E_{max}+E_{min}}{2}$
+    - $s=\frac{E_{max}-E_{min}}{2RT}$
+    - Emax and Emin are maximum and minimum energies of the distribution.
+    - Parameter s characterizes the heterogeneity of the system - larger s implies more heterogeneities. 
+      - Unilan reduces to Langmuir when s = 0.
+- energy distribution that gives the Unilan isotherm: 
+  - $F(E) = \frac{1}{E_{max} - E_{min}} for E_{min} < E < E_{max}$
+  - $F(E) = 0 for E < E_{min} or E > E_{max}$
+- temperature Dependence 
+- temperature dependence of saturation capacity cite:Do1998
+  - $C_{\mu s}=C_{\mu s,0}exp[\chi(1 - \frac{T}{T_0})]$
+  - the \chi function was not defined properly in cite:Do1998
+- isosteric heat can be found in cite:Do1998
+- $(-\Delta H) = E + \frac{2(1-\theta)}{bP}[\frac{(e^s + bP)(e^{-s} + bP)}{(e^s - e^{-s})}]\frac{\Delta E}{2}-(\frac{2 + e^sbP + e^{-s}bP}{e^s - e^{-s}})\frac{\Delta E}{2bP}$
+- b*P is related to fractional loading through the isotherm equation cite:Do1998
+- adsorption Energy E in the Unilan equation is the isosteric heat at a fractional loading of 0.5.

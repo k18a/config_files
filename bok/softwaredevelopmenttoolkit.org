@@ -1,0 +1,4 @@
+#+TITLE: Software Development Toolkit
+
+- set of software development tools that allows the creation of applications for a certain software package, software framework, hardware platform, computer system, video game console, operating system, or similar development platform.
+- can be just a few APIs in the form on on-device libraries to interface a particular programming langage or may be a complex hardware specific tool that can communicate with a particular embedded system

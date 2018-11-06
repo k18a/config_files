@@ -1,0 +1,10 @@
+#+TITLE: Seperable Equations
+
+- differential equations that can be written in the form: 
+- $\frac{dy}{dx} = f(x)g(y)$
+- the derivative is a product of two functions, each of which depends only on one of the variables 
+- the variables are separated as follows
+- $\frac{dy}{g(y)} = f(x)dx$
+- this can be solved as
+- $\int \frac{dy}{g(y)} = \int f(x)dx + c$
+- the integrations themselves can be quite complicated to carry out sometimes

@@ -1,0 +1,24 @@
+#+TITLE: Wettability
+
+- ability of a fluid phase to wet a solid surface preferentially in the presence of a second immiscible phase
+- wetting or wettability depends on the surface energies of the components involved
+- adding chemicals such as surfactants can alter wettability
+
+* Contact Angle
+
+- wettability is measured by contact angle
+- contact angle is always measured throught the denser phase
+- contact angle is related to the interfacial energy as
+  - $\sigma _{OS} - \sigma _{WS} = \sigma _{OW} cos \theta$
+    - \sigma_{OS} interfacial energy between oil and solid
+    - \simga_{WS} interfacial energy between water and solid
+    - \sigma_{OW} interfacial energy between oil and water
+    - \theta contact angle at oil-water-solid interface measured through the water phase
+| wettability          | contact angle |
+| strongly water wet   |          0-30 |
+| moderately water wet |         30-75 |
+| neutrally wet        |        75-105 |
+| moderately oil wet   |       105-150 |
+| strongly oil wet     |       150-180 |
+- wettability can be changed by the contact of core with drilling fluids or fluids on the rig floor and by contact with oxygen or water from atmosphere
+- laboratory fluids should be at reservoir conditions to obtain the most reliable measurements of wettability

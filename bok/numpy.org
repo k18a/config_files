@@ -1,0 +1,62 @@
+#+TITLE: Numpy
+
+- implemented in C and is much faster than python code
+  - python code has a lot of meta data associated with various structures taking up a lot of memory and is therefore inefficent compared to compled c
+  - this is true especially when comparing numpy arrays with lists
+
+* Creating numpy arrays
+#+BEGIN_SRC python
+import numpy as np
+return np.arange(-10,10,2,dtype=float)
+#+END_SRC
+#+RESULTS:
+| -10 | -8 | -6 | -4 | -2 | 0 | 2 | 4 | 6 | 8 |
+#+BEGIN_SRC python
+import numpy as np
+return np.array([1,2,3])
+#+END_SRC
+#+RESULTS:
+| 1 | 2 | 3 |
+#+BEGIN_SRC python
+import numpy as np
+return np.linspace(1,4,6)
+#+END_SRC
+#+RESULTS:
+| 1 | 1.6 | 2.2 | 2.8 | 3.4 | 4 |
+#+BEGIN_SRC python
+import numpy as np
+return np.indices((3,3))
+#+END_SRC
+#+RESULTS:
+| (0 0 0) | (1 1 1) | (2 2 2) |
+| (0 1 2) | (0 1 2) | (0 1 2) |
+
+* Array Functions
+** reshape
+ #+BEGIN_SRC python
+ import numpy as np
+ return np.arange(9).reshape(3,3)
+ #+END_SRC
+ #+RESULTS:
+ | 0 | 1 | 2 |
+ | 3 | 4 | 5 |
+ | 6 | 7 | 8 |
+** shape
+ #+BEGIN_SRC python
+ import numpy as np
+ x = np.arange(9).reshape(3,3)
+ return x.shape
+ #+END_SRC
+ #+RESULTS:
+ | 3 | 3 |
+** Slicing
+- finite difference using slicing
+#+BEGIN_SRC python
+import numpy as np
+x = np.arange(0,20,2)
+y = x**2
+dy_dx = (y[1:] - y[:-1])/(x[1:] - x[:-1])
+return dy_dx
+#+END_SRC
+#+RESULTS:
+| 2 | 6 | 10 | 14 | 18 | 22 | 26 | 30 | 34 |

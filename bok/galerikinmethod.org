@@ -1,0 +1,18 @@
+#+TITLE: Galerikin Method
+- an approximate numerical solution to a partial differential function is constructed as a linear combination of basis functions, $\phi _j$ in a finite dimensional sub space - sum of coefficients times basis functions, leading to the formulation of a matrix equation, which is solved by standard methods from linear algebra.
+\begin{equation}
+u(x,t) \approx U(x,t) = \Sigma _{j=1} ^N \epsilon _j \phi _j (x,t)
+\end{equation}
+- the basis function is defined as 1 when $x=x_j$, and 0 for all other values of x
+\begin{equation}
+\phi_j = 1, x = x_j; 
+\phi_j = 0, x \neq x_j
+\end{equation}
+\begin{equation}
+x = [\epsilon _j]^N _j = 1
+\end{equation}
+- the coefficients are deterimed based on the [[file:weakformulation.org][weak solution]] to the PDE
+- this allows us to define the [[file:vectornorm.org][L2 product]] of the functions with associated norm, and orthagonality - key to FEM
+\begin{equation}
+(v,w) = S
+\end{equation}

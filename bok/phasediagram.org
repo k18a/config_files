@@ -1,0 +1,18 @@
+#+TITLE: Phase Diagrams
+
+
+- shows conditions at which thermodynamically distinct phases occur and co-exist at equilibrium
+- phase boundaries are lines of equilibrium that mark conditions at which multiple phases co-exist at equilibrium
+- phase boundaries intersect at triple point, where three different phases can coexist
+- solidus is the temperature below which substance is stable in the solid state
+- liquidus is the temperature above which substance is stable in the liquid state
+
+* PT Diagram 
+- slope of the PT diagram is given by the [clausisusclapeyron](clausisusclapeyron) equation
+
+
+* TS Diagram
+
+* 3-Dimensional Diagram
+
+* Binary Mixtures

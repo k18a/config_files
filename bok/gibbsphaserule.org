@@ -1,0 +1,15 @@
+#+TITLE: Gibbs Phase Rule
+
+* Phase Rule
+
+- gives the degrees of freedom - the largest number of independent intensive variables that can be varied simultaneously and arbitrarily without determine one another
+- since phases are in thermodynamic equilibrium, chemical potentials of different phases must be equal; this limits the number of intensive variables that can be defined
+- also known as state postulate
+- defines the number of properties that need to be specified to fully define a thermodynamic system in a state of equilibrium 
+- for example, the state of a simple compressible system is completely specified by two independent intensive properties
+
+$F=C-P+2$
+
+- F is the number of degrees of freedom
+- C is the number of components 
+- P is the number of phases

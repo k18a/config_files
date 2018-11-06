@@ -1,0 +1,18 @@
+#+TITLE: Propanediol 
+
+- exists in 2 forms, with slightly different properties
+- 1,2 propanediol (propylene glycol)
+- 1,3 propanediol (propanediol)
+
+* Propylene Glycol 
+- used as a skin conditioning agent, humectant, frangrance ingredient, as a solvent, and to control (reduce) viscosity of cosmetic products
+- can be an irritant to the skin and eyes and can cause dermatitis and rashes in humans - but this is very rare and only occurs in unusual circumstances
+
+#+CAPTION: Propylene Glycol
+[[./propyleneglycol.jpg]]
+
+* Propanediol 
+- mainly used as a solvent and viscosity altering agent in cosmetic products
+- considered to be of low hazard to bodily health, but can cause skin and eye irritation
+
+xxxxsxxxxs

@@ -1,0 +1,3 @@
+* Quasi-static Process
+
+- infinitely slow process

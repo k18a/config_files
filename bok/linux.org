@@ -1,0 +1,52 @@
+#+TITLE: Linux
+
+- a vairant of Unix
+
+* Linux File System
+- UNIX treats everything as a file
+  - ordinary file - contains data
+  - directory file - contains names of other files and directories
+  - device file - represents a device or peripheral
+- UNIX files are organized in an ierarchical structure
+** Root Directory
+ - root directory is represented by /
+ - root directory contains several other directories
+*** bin
+  - contains binary files
+  - applications are usually stored here
+*** dev
+  - contains device files
+*** home
+  - contains user files
+  - gt
+*** lib
+  - contains library files
+*** tmp 
+  - contains temporary files
+*** sbin
+  - contains system executables
+*** usr
+  - contains most of your programmes
+  - contains bin, sbin, lib folders, and also a local folder
+**** local
+   - is not touched during system upgrades
+   - can contain user programmes that the user does not want to upgrade
+
+* Pathnames
+- / represents root directory
+- ~ represents root directory
+- . represents current directory
+- .. represents directory one level above current directory
+
+* Commands
+
+- ls - list files in current direcory
+- cd - change directory
+- mkdir - make directory
+- rmdir - remove directory
+- touch - create new, empty files; change timestamp for most recent access on existing files
+
+** Command Options
+- R - recursive
+  - applies in all directories and subdirectories and files
+  - rm -R

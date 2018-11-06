@@ -1,0 +1,19 @@
+#+TITLE: Standard Operating Procedure for Manometric Adsorption Measurement Rig
+
+* Abreviations
+
+- LEV - Local Exhaust Ventillation
+- MSDS - Material Safety Data Sheet
+
+* Breif Safety Overview
+- principal investigator is responsible for training other users of the rig
+  - training includes a discussion of potential hazards, an explanation of relevant policies, techniques, and procedures including the use of personal protective equipment
+- always consult the MSDS for the relevant gas/material specific hazards involving the gas/material
+- access to rig is limited to authorized users
+- 
+
+* Operating Procedures
+- 
+** Engineering Controls
+- make sure the LEV is turned on before venting any gas from the rig
+** PPE Required

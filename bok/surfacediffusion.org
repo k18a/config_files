@@ -1,0 +1,65 @@
+#+TITLE: Surface Diffusion Models
+
+* Unipore Diffusion Model
+
+- $\frac{V_t}{V_\infty} = 1 - \frac{6}{\pi^2} \Sigma (\frac{1}{n^2}) exp(-\frac{D n^2 \pi t}{r_p^2})$
+  - where
+  - $V_t$ is amount adsorbed at time t
+  - $V_\infty$ is amount adsorbed at time $\infty$
+- when $V_t/V_\infty <0.5$ (for short time scales < 600 s) the unipore model can be simplified as cite:Crosdale1998
+  - $\frac{V}{V_t}=\frac{6}{\sqrt{\pi}}{\sqrt{D_e t}}$
+- the unipore model, assumes a linear adsorption isotherm and an unimodal pore size distribution cite:Clarkson1999, and hence cannot be used with heterogeneous pore structures.
+- the unipore model tends to underestimate the time taken to reach equilibrium cite:Clarkson1999
+- cite:Crosdale1998 found that in the vitrinite rich coals that were predominantly microporous, unipore model was applicable, whilst diffusion in the inertinite rich coals were better explained by the bidisperse model.
+
+* Bi-disperse Diffusion Model
+
+- bi-disperse model was originally proposed by cite:Ruckenstein1971
+- bi-disperse solids maybe obtained through several processes
+  - when finely divided particles are tableted or pelletized, the resultant product has both micropores and macropores cite:Ruckenstein1971
+  - when shales are hydraulically fractured, or in the presence of larger natural fractures in microporous shales cite:Crosdale1998
+- the model assumes a bimodal pore size distribution
+  - with macropores and micropores, and no adsorption in macropores cite:Ruckenstein1971
+- $\frac{V_t}{V_{\infty}} = \frac { \sum _{k=1}^{\infty} \sum _{k=1}^{\infty} \frac {k^2 [1 - exp(-\alpha {\epsilon} _{qk}^2 \tau)]} { {\epsilon} _{qk}^4 [ \frac {\alpha}{\beta} + 1 + cot^2 {\epsilon _{qk} } - (1 - \frac{k^2 {\pi}^2} {\beta}){\frac{1}{{\epsilon} _{qk}^{2}}} ] } } { \sum _{k=1}^{\infty} \sum _{k=1}^{\infty} \frac {k^2} { \epsilon _{qk}^4 [ \frac {\alpha}{\beta} + 1 + cot^2 {\epsilon _{qk} } - (1 - \frac{k^2 {\pi}^2} {\beta}){\frac{1}{{\epsilon} _{qk}^{2}}} ] } }$
+- this equation maybe simplified based on whether the macropore or micropore diffusion determines the overall rate of diffusion cite:Crosdale1998
+- this is determined by the parameter $\alpha$:
+  - 1) for $\alpha < 10 ^{-3}$ micro-pore diffusion is the rate determining step;
+  - 2) for $10 ^{-3} < \alpha < 10 ^2$, both macro-pore and micro-pore diffusion are important; and
+  - 3) for $\alpha > 10^2$, macro-pore diffusion is the rate determining step
+- the parameter $\beta / \alpha$ represents the ratio of micro-pore and macro-pore uptakes at equilibrium: small values indicate dominant macro-pore uptake and larger values indicate dominant micro-pore uptake cite:Crosdale1998
+- macropore transport was initially dominant after a step change in pressure, after which micropore transport was more pronounced cite:Clarkson1999; this observation was also consistent with reservoir simulations by cite:Gamson1996
+
+* Homogeneous Solid Diffusion Model
+
+- derivation from cite:Qiu2009
+- describes mass transfer in an amorphous and homogeneous sphere
+- $\frac{\partial q}{\partial t} = \frac{D_s}{r^2} \frac{\partial}{\partial r} (r^2 \frac{\partial q}{\partial r})$
+  - D_s is intraparticle diffusion coefficient
+  - r is radial position
+  - q is adsorption quantity of the solute at time t
+- infinte bath case
+  - sphere is infintely free of the solute
+  - concentration of the solute on the surface of the sphere remains constant
+  - external film resistance is neglected due to the assumption of constant surface concentration
+- solution is given for an infinite bath case cite:Crank1975
+- $\frac{q}{q_s} = 1 + \frac{2R}{\pi r} \Sigma _{n=1} ^{\infty} \frac{(-1)^n}{n} sin \frac{n \pi r}{R} exp(\frac{-D _s n ^2 \pi ^2 t}{R ^2})$
+  - R is total particle radius
+- average value of amount adsorbed, q, in a spherical particle at a particular time is given as
+- $q' = \frac{3}{R ^3} \int _0 ^R q(r) r ^2 dr$
+  - q' is the average value of q in a spherical particle
+  - q(r) is the local value of the solid phase concentration
+- substituting Crank's solution for q(r)
+- $\frac{q'}{q _{\infty} = 1 - \frac{6}{\pi ^2} \Sigma _{n=1} ^{\infty} \frac{1}{n ^2} exp(\frac{- D _s n ^2 \pi ^2 t}{R ^2})$
+  - $q _{\infty}$ represents average concentration in the solid at infinite time
+- for short time, when $q' / q _{\infty} < 0.3$
+- $\frac{q'}{q _{\infty} = 6 (\frac{D _s}{R ^2 \pi}) ^{1/2} t ^{1/2}$
+- for long time
+- $\frac{q'}{q _{\infty} = 1 - \frac{6}{\pi ^2} exp(\frac{- D _s \pi ^2 t}{R ^2})$
+- linear form of the equation
+- $ln(1 - \frac{q'}{q _{\infty}}) = \frac{-D _s \pi ^2}{R ^2} t + ln \frac{6}{\pi ^2}$
+
+* Weber-Morris Model
+
+- in many adsorption cases, solute uptake varies almost proportionally with $t^{1/2}$ rather than contact time t
+- $q_t = k t^1/2$
+- if Weber-Morris model is prevalent, and intra-particle diffusion is the rate controlling step, a plot of q_t against t^{1/2} passes through the origin with a slope of k

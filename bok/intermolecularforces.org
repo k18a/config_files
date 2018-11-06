@@ -1,0 +1,12 @@
+#+TITLE: Intermolecular Forces
+
+* Intermolecular Forces
+
+There are 3 types of intermolecular forces: 
+1. dipole-dipole, 
+2. dipole-induced-dipole, and 
+3. dispersion.
+ 
+* Dispersion Forces
+
+Even if the net dipole moment in an atom or a molecule is 0 over a period of time, the charges are not symmetrically distributed at each instant, causing a net attractive force between two particles known as the dispersion force.

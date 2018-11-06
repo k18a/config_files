@@ -1,0 +1,4 @@
+#+TITLE: Commutative Property
+- changing the order of operands does not change the result
+- addition and multiplication are commutative $1+2 = 2+1$
+- subration and division are not commutative $1-2 \neq 2-1$

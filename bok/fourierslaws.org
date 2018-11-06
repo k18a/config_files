@@ -1,0 +1,10 @@
+#+TITLE: Fourier's Laws
+
+- law of heat conduction
+- the time rate of heat transfer through a material is proportional to the negative gradient in the temperature and to the area at right angles to that gradient
+- Newton's law of cooling is a discrete analogue of the Fourier's law
+- [[file:ohmslaw.org][Ohm's law]] is the electrical analogue of Fourier's Law
+* Integral Form
+- looks at the amount of energy flowing into or out of a body as a whole
+* Differential Form
+- looks at rate of energy flow or flux

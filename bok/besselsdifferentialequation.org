@@ -1,0 +1,3 @@
+#+TITLE: Bessel's Equation
+
+- $$x^2\frac{d^2y}{dx^2}+x\frac{dy}{dx}+(x^2-p^2)y=0$$

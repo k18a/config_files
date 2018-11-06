@@ -1,0 +1,64 @@
+% Created 2018-10-30 Tue 17:35
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\date{\today}
+\title{Diffusion}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={Diffusion},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.1 (Org mode 9.1.13)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\begin{equation}
+i_9
+\end{equation}
+
+\begin{itemize}
+\item process by which matter is transported from one part of a system to another as a result of random molecular motions
+\item caused by brownian motion of particles
+\item approximate diffusion in
+\begin{itemize}
+\item gases is 5 cm/min
+\item liquids is 0.05 cm/min
+\item solids is 0.00001 cm/min
+\end{itemize}
+\item often the rate determining step in a series of physical processes
+\end{itemize}
+
+Diffusion may either be characterized using 
+
+\begin{center}
+\begin{tabular}{ll}
+rate constant & fick's laws\\
+lumped parameter model & distributed parameter model\\
+\(flux = k * \Delta(concentration)\) & \(flux = D * (\frac{\Delta(concentration)}{length}\)\\
+k is the mass transfer coefficient & D is the diffusion coefficient\\
+k is analogous to reciprocal of resistance & D is analogous to reciprocal of resistivity\\
+\(voltage = resistance * current\) & \(\frac{voltage}{length}= resistivity * current density\)\\
+more empirical & more theoretical\\
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item models used to fit experimental kinetic data often fail to consider if the boundary conditions assumed by the model are valid to the given experimental conditions \cite{Qiu2009}
+\end{itemize}
+\end{document}

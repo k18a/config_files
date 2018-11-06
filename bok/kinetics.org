@@ -1,0 +1,3 @@
+* Kinetics 
+
+** [[file:ratelaw.org][Rate Law]]

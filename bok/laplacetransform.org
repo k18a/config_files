@@ -1,0 +1,12 @@
+#+TITLE: Laplace Transform
+
+- an integral transform perhaps second only to the [[file:fouriertransform.org][Fourier Transform]] in it's utility in solving physical problems
+- particularly useful in solving linear ODEs
+- the unilateral Laplace Transform
+\begin{equation}
+L[f(t)](s) = \int _{0} ^{\infty} f(t) e^{-st} dt
+\end{equation}
+- the bilateral Laplace Transform
+\begin{equation}
+L[f(t)](s) = \int _{0} ^{\infty} f(t) e^{-st} dt
+\end{equation}

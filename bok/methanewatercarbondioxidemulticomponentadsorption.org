@@ -1,0 +1,4 @@
+#+TITLE: Methane-Water Multi-Component Adsorption Isotherms in Gas Shales
+
+- three isotherms will be obtained for one sample
+- time required - 24 days

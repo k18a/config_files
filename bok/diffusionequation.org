@@ -1,0 +1,512 @@
+#+TITLE: Diffusion Equation
+- a partial differential equation that describes the collective motion of micro-particles in a material resulting from the random movement of each micro-particle
+- same as the Fick's Second Law, but this article deals more with the mathematics of the equation
+- is written as
+\begin{equation}
+\frac{\partial \phi (r,t)}{\partial t} = \nabla . [D(\phi, r) \nabla \phi (r,t)]
+\end{equation}
+- \phi is density of the diffusing material at location r and time t
+- D is diffusion coefficeint for density \phi at location r
+
+- when D is a symmetric positive definite matrix, the equation describes anisotropic diffusion, which is written as
+le for the understanding of self diffusion mechanism
+
+- also has applications in mathematics: [[file:markovprocess.org][Markov Process]], materials sciences, information sciences, etc
+
+- is derived from the continuity equation also known as the Eulerian [[file:materialtimederivative.org][material balance equation]], combined with [[file:fickslaws.org][Fick's first law]]
+\begin{equation}
+\frac{\partial \phi}{\partial t} + \nabla (j) = 0
+\end{equation}
+\begin{equation}
+j = -D (\phi, r) \nabla \phi (r,t)
+\end{equation}
+- where j is the flux if the diffusing material
+* Derivation
+- consider the following volume - a rectangular parallepiped with sides 2dx, 2dy, and 2dz
+- let concentration at the centre be C
+#+BEGIN_EXAMPLE
+                      K+---------------------------+K'
+                      /|                          /|
+                  2dz/ |                         / |
+                    /  |                        /  |
+                  L+---------------------------+L' |--------->
+                   |   |                       |   | 4dydz(Fx+dFx/dxdx)
+       ----------->|   |                       |   |
+4dydz(Fx+dFx/dx dx)| C |                       |   |
+                2dy|  J+-----------------------|---+J'
+                   |  /                        |  /
+                   | /                         | /
+                   |/          2dx             |/
+                  I+---------------------------+I'
+#+END_EXAMPLE
+- rate at which diffusing substance enters the control volume is given as
+\begin{equation}
+4 dy dz (F_x - \frac{\partial F_x}{\partial x} dx)
+\end{equation}
+- rate at which diffusing substance exits the control volume is given as
+\begin{equation}
+4 dy dz (F_x + \frac{\partial F_x}{\partial x} dx)
+\end{equation}
+- performing mass balance, net accumulation in the x direction is given as
+\begin{equation}
+-8 dx dy dz \frac{\partial F_x}{\partial x}
+\end{equation}
+- similarly in y and z directions
+\begin{equation}
+-8 dx dy dz \frac{\partial F_y}{\partial y}
+\end{equation}
+\begin{equation}
+-8 dx dy dz \frac{\partial F_z}{\partial z}
+\end{equation}
+- since average concentration is given as C, the rate at which diffusing amount changes is given as volume * concentration difference
+\begin{equation}
+8 dx dy dz \frac{\partial C}{\partial t}
+\end{equation}
+- equating the above equations
+\begin{equation}
+\frac{\partial C}{\partial t} +
+\frac{\partial F_x}{\partial x} +
+\frac{\partial F_y}{\partial y} +
+\frac{\partial F_z}{\partial z} = 0
+\end{equation}
+- substituting Fick's First Law for isotropic media (constant D in all directions)
+\begin{equation}
+\frac{\partial C}{\partial t} = D (
+\frac{\partial^2 C}{\partial x^2} +
+\frac{\partial^2 C}{\partial y^2} +
+\frac{\partial^2 C}{\partial z^2} )
+\end{equation}
+\begin{equation}
+\frac{\partial C}{\partial t} = D (\nabla^2 C)
+\end{equation}
+** Non-isotropic media
+- if the media is not isotropic
+\begin{equation}
+\frac{\partial C}{\partial t} = \nabla (D . \nabla C)
+\end{equation}
+- diffusivity for non-isotropic media
+\begin{equation}
+F_x =
+D_{xx} \frac{\partial C}{\partial x} +
+D_{xy} \frac{\partial C}{\partial y} +
+D_{xz} \frac{\partial C}{\partial z}
+
+F_y =
+D_{yx} \frac{\partial C}{\partial x} +
+D_{yy} \frac{\partial C}{\partial y} +
+D_{yz} \frac{\partial C}{\partial z}
+
+F_z =
+D_{zx} \frac{\partial C}{\partial x} +
+D_{zy} \frac{\partial C}{\partial y} +
+D_{zz} \frac{\partial C}{\partial z}
+\end{equation}
+- for example $D_{xz}\frac{\partial C}{\partial z}$ is the contribution to mass transfer in the x direction due to the concentration gradient in the z direction
+- Substituting Fick's first law into the above equation
+\begin{equation}
+\frac{\partial C}{\partial t} =
+(D_{xx})
+(\frac{\partial^2 C}{\partial x^2} ) +
+(D_{yy})
+(\frac{\partial^2 C}{\partial y^2} ) +
+(D_{zz})
+(\frac{\partial^2 C}{\partial z^2} ) +
+(D_{yz} + D_{zy})
+(\frac{\partial^2 C}{\partial y \partial z} ) +
+(D_{xz} + D_{zx})
+(\frac{\partial^2 C}{\partial x \partial z} ) +
+(D_{xy} + D_{yx})
+(\frac{\partial^2 C}{\partial x \partial y} ) +
+\end{equation}
+- consider the transformation that converts an ellipsoid co-ordinates to rectangular co-ordinates
+- transforming into rectangular co-ordinates $\epsilon, \eta, \zeta$, giving
+\begin{equation}
+\frac{\partial C}{\partial t} =
+D_{\epsilon}
+(\frac{\partial^2 C}{\partial \epsilon^2} ) +
+D_{\eta}
+(\frac{\partial^2 C}{\partial \eta^2} ) +
+D_{\zeta}
+(\frac{\partial^2 C}{\partial \zeta^2} ) +
+\end{equation}
+- performing more transformations to co-ordinates $\epsilon_1, \eta_1, \zeta_1$, giving
+\begin{equation}
+\frac{\partial C}{\partial t} =
+D
+(\frac{\partial^2 C}{\partial \epsilon_1^2}  +
+\frac{\partial^2 C}{\partial \eta_1^2}  +
+\frac{\partial^2 C}{\partial \zeta_1^2} )
+\end{equation}
+- thus problems in anisotropic media can sometimes be reduced to problems in isotrpic media, depending on the boundary conditions of the problem - when the media is infinite or bounded by planes perpendicular to the principal axes of diffusion
+- a more general conservation equation that gives change in concentration with time
+  - $$\frac{\partial C}{\partial t} = D * \frac{\partial^2 C}{\partial r^2} = D (\frac{\partial ^2 C}{\partial z ^2} + \frac{1}{A} + \frac{\partial A}{\partial z} \frac{\partial C}{\partial z})$$
+  - t is time
+- For a non-linear isotherm cite:Clarkson1999
+  - $$\frac{\partial}{\partial z} (D {\frac{\partial C}{\partial z}}) = \frac{\partial C}{\partial t}$$
+** In terms of Pressure
+- obrained by substituting [[file:darcyslaw.org][Darcy's Law]]
+\begin{equation}
+Q = -\frac{k}{\mu} (\nabla P - \rho g)
+\end{equation}
+- and the fact that fluid velocity is given as
+\begin{equation}
+v = \frac{Q}{\phi}
+\end{equation}
+- into the [[file:materialtimederivative.org][Material balance equation]]
+\begin{equation}
+\frac{\partial (\rho \phi)}{\partial t} + \nabla (\rho \phi v) = 0
+\end{equation}
+\begin{equation}
+\frac{\partial (\rho \phi)}{\partial t} + \nabla (\rho Q) = 0
+\end{equation}
+- first we need to do some work on the [[file:materialbalance.org][material balance equation]]
+\begin{equation}
+\frac{\partial (\rho \phi)}{\partial t} + \nabla (\rho \phi v) = 0
+\end{equation}
+- aplying product rule to the material balance equation for porous media
+\begin{equation}
+\phi \frac{\partial \rho}{\partial t} + \rho \frac{\partial \phi}{\partial t} + \nabla \rho . Q + \rho \nabla Q = 0
+\end{equation}
+- density and porosity are functions of pressure and space
+\begin{equation}
+\rho = \rho(P(x)) ; \phi = \phi(P(x))
+\end{equation}
+- applying chain rule to obtain the equation in terms of gradients of pressure
+- and taking out the term \rho \phi from the first two terms
+\begin{equation}
+\rho \phi [
+\frac{1}{\rho} \frac{\partial \rho}{\partial P}\frac{\partial P}{\partial t} +
+\frac{1}{\phi} \frac{\partial \phi}{\partial P}\frac{\partial P}{\partial t}
+] +
+\frac{\partial \rho}{\partial P} \nabla P . Q + \rho \nabla Q =
+0
+\end{equation}
+- substituting terms for fluid [[file:isothermalcompressibility.org][compressibility]]
+\begin{equation}
+C = \frac{1}{\rho} \frac{\partial \rho}{\partial P}
+\end{equation}
+- and rock compressibility
+\begin{equation}
+C_R = \frac{1}{\phi} \frac{\partial \phi}{\partial P}
+\end{equation}
+- and dividing the whole equation by \rho
+\begin{equation}
+\phi [C + C_R] \frac{\partial P}{\partial t} +
+\frac{1}{\rho} \frac{\partial \rho}{\partial P} \nabla P Q + \nabla Q =
+0
+\end{equation}
+- again we have fluid compressibility in the second term
+- and defining total compressibility as
+\begin{equation}
+C_t = C+C_R
+\end{equation}
+- and let's substitute Darcy's law ignoring gravity term (horizontal flow)
+\begin{equation}
+Q = -\frac{k}{\mu} (\nabla P)
+\end{equation}
+- we have
+\begin{equation}
+\phi C_t \frac{\partial P}{\partial t} -
+C \nabla P (\frac{k}{\mu} \nabla P) -
+\nabla (\frac{k}{\mu} \nabla P) =
+0
+\end{equation}
+- and assuming homogeneous and isotropic permeability, we can factor out permeability from the last two terms
+- we get the general form of the diffusivity equation
+\begin{equation}
+\frac{\mu \phi C_t}{k}
+\frac{\partial P}{\partial t} =
+\nabla.(\nabla P) +
+C (\nabla P.\nabla P)
+\end{equation}
+- assuming small and constant compressibility, the final term becomes negligible, giving the Pressure Diffusivity Equation
+\begin{equation}
+\frac{\partial P}{\partial t} =
+\alpha
+\nabla.(\nabla P)
+\end{equation}
+\begin{equation}
+\alpha = \frac{k}{\mu \phi C_t}
+\end{equation}
+- this has the same form as the [[file:heatdifferentialequation.org][heat equation]]
+- the above formulation is called the strong form of the pressure diffusivity equation
+- this requires the derivative of P and the second derivative of P to be continuous throughout the required limits for us to be able to derive a solution
+- to relax this requirement, let's derive a weak form of the pressure diffusivity equation
+* Methods of Solution
+- general solutions can be obtained for a variety of initial and boundary conditions provided the diffusion is constant
+- the solution has two standard forms either comprising of
+| series of error functions or related integrals | trigonometric series           |
+| suited for numerical evaluation at small times | converges large values of time |
+- general solution for cylindrical co-ordinates - trigonometric functions are replaced by a series of Bessel functions
+** Method of Reflection and Superposition
+- solution to the diffusion equation
+\begin{equation}
+\frac{\partial C}{\partial t} =
+D
+(\frac{\partial^2 C}{\partial x^2})
+\end{equation}
+- is of the form
+\begin{equation}
+C = \frac{A}{t^{1/2}}exp(-\frac{x^2}{4Dt})
+\end{equation}
+- where A is an arbitrary constant
+#+BEGIN_SRC ipython :session :results raw drawer :ipyfile diffusion_solution.png
+%matplotlib inline
+# import modules
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+plt.style.use('dark_background')
+sns.set_palette(sns.dark_palette("muted purple",input="xkcd",n_colors=5))
+x = np.linspace(-1,1,100)
+A = 1
+D = 1
+T = np.linspace(0.05,5,5)
+plt.figure()
+for t in T:
+  C = (A/(t**0.5))*np.exp(-(x**2)/(4*D*t))
+  plt.plot(x,C,label='t='+str(t))
+plt.xlabel('distance from centre')
+plt.ylabel('concentration')
+plt.legend()
+#+END_SRC
+#+CAPTION: concentration plots at different times
+[[file:diffusion_solution.png]]
+- the solution is symmetrical with respect to x = 0, and tends to approach 0 as x tends to $\pm \infty$, and approaches $\infty$ as x approaches 0
+- total amount of substance diffusing through the media is given as
+\begin{equation}
+M = \int_{-\infty}^{\infty} C dx
+\end{equation}
+- substituting
+\begin{equation}
+\epsilon ^2 = \frac{x^2}{4Dt}
+\end{equation}
+\begin{equation}
+dx = 2(Dt)^{1/2} d \epsilon
+\end{equation}
+\begin{equation}
+M = 2 A D^{1/2} \int_{-\infty}^{\infty} exp(-\epsilon ^2) d\epsilon = 2 A(\pi D)^{1/2}
+\end{equation}
+- amount diffusing remains constant and equal to the amount orginally deposited in the plane x = 0; therefore substituting for A
+\begin{equation}
+C = \frac{M}{2(\pi D t)^{1/2}}exp(-\frac{x^2}{4Dt})
+\end{equation}
+- which is the general solution for the diffusion equation in 1 dimension
+*** Impermeable Boundary at x = 0
+- 0 if we have an region with impermeable boundary at x = 0, extending over x > 0, the solution is just the solution for negative x superposed over the positive x region
+\begin{equation}
+C = \frac{M}{(\pi D t)^{1/2}}exp(-\frac{x^2}{4Dt})
+\end{equation}
+- boundary condition for the impermeable boundary is given as
+\begin{equation}
+\frac{\partial C}{\partial x} = 0; x = 0
+\end{equation}
+*** Extended Initial Distributions
+- if the initial distribution occupies a finite region instead of a point as assumed so far
+#+BEGIN_EXAMPLE
+                                 C
+                   d\epsilon     ^
+        --------------+-+--------| C0
+                      | |        |
+                      | |        |
+                      | |        |
+        --------------+-+--------+--------------------------->x
+                                 0
+#+END_EXAMPLE
+- consider the following initial distribution at t = 0
+\begin{equation}
+C = C_0; x < 0
+\end{equation}
+\begin{equation}
+C = 0; x > 0
+\end{equation}
+- the soltion is assumed to composed of an infinite number of line sources superimposed with each other
+- consider an element of width $\partial \epsilon$ to be a line source of strength $C_0 \partial \epsilon$
+- concentration at point is given as
+\begin{equation}
+C = \frac{C_0 \partial \epsilon}{(\pi D t)^{1/2}}exp(-\frac{x^2}{4Dt})
+\end{equation}
+- let's now integrate it to find the solution
+- substitute
+\begin{equation}
+\eta = \frac{\epsilon}{2\sqrt{Dt}}
+\end{equation}
+\begin{equation}
+C(x,t) = 
+\frac{C_0}{2 (\pi D t)^{1/2}} \int_{x} ^{\infty} exp (-\epsilon ^2 / 4 D t) d \epsilon = 
+\frac{C_0}{\pi^{1/2}} \int_{x/2\sqrt{Dt}}^{\infty} exp (-\eta^2) d \eta
+\end{equation}
+- let's substitute the [[file:errorfunction.org][error function]], which enters into the solution of a diffusion problem as a consequence of summing the effect of a series of line sources each yeilding an exponential type of distribution
+\begin{equation}
+erf(x) 
+= \frac{1}{\sqrt{\pi}} \int_{-x}^{x} exp(-t^2) dt
+= \frac{2}{\sqrt{\pi}} \int_{0}^{x} exp(-t^2) dt
+\end{equation}
+\begin{equation}
+C(x,t) = \frac{1}{2}C_0 erfc(\frac{x}{2\sqrt{Dt}})
+\end{equation}
+- for a region initially confined to -h < x < h
+\begin{equation}
+C(x,t) = \frac{1}{2}C_0(erf\frac{h-x}{2\sqrt{Dt}}+erf\frac{h+x}{2\sqrt{Dt}})
+\end{equation}
+** Method of Separation of Variables
+- substitute 
+\begin{equation}
+C = X(x) T(t)
+\end{equation}
+- where X and T are functions of x and t respectively
+\begin{equation}
+X\frac{dT}{dt} = DT\frac{d^2X}{dx^2}
+\end{equation}
+\begin{equation}
+\frac{1}{T}\frac{dT}{dt} = \frac{D}{X}\frac{d^2X}{dx^2}
+\end{equation}
+- we now have two ODEs whose result must be a constant; let's assume this constant is $-\lambda^2 D$ for the sake of convenience, yeilding the following ODEs
+\begin{equation}
+\frac{1}{T}\frac{dT}{dt} = -\lambda^2 D
+\end{equation}
+\begin{equation}
+\frac{1}{X}\frac{d^2X}{dx^2} = -\lambda^2
+\end{equation}
+- the solutions are given as
+\begin{equation}
+T = exp(-\lambda ^2 Dt)
+\end{equation}
+\begin{equation}
+X = A sin \lambda x + B cos \lambda x
+\end{equation}
+- resulting in the following solution for C
+\begin{equation}
+C = ( A sin \lambda x + B cos \lambda x ) exp (- \lambda^2 Dt)
+\end{equation}
+- the most general solution is obtained by summing all particular solutions for the diffusion equation with constant diffusivity (since it's linear)
+\begin{equation}
+C = \Sigma _{m=1} ^{\infty} ( A_m sin \lambda _m x + B _m cos \lambda _m x ) exp (- \lambda _m ^2 Dt)
+\end{equation}
+- where $A_m, B_m, and \lambda _m$ are determined by intial and boundary conditions for any particular problem
+** Method of [[file:laplacetransform.org][Laplace Transform]]
+- application of Laplace Transform to the diffusion equation removes the time variable leaving an ODE the solution of which yields the transform of the concentration as a function of the space variables x,y,z
+- Laplace Transform is defined as
+\begin{equation}
+f(p) = \int _{0} ^{\infty} f(t) e^{-pt} dt
+\end{equation}
+- where p is a sufficiently large number to make the itegral converge - it may be a complex number whose real part is sufficiently large
+* Weak Form
+- recall that P is a function of space and time
+\begin{equation}
+P = P(x,t)
+\end{equation}
+- let's multiply the Pressure Diffusivity Equation with a function w, which is only a function of space
+\begin{equation}
+w(x) \frac{\partial P(x,t)}{\partial t} -
+w(x) \alpha
+\nabla.(\nabla P(x,t)) =
+0
+\end{equation}
+- integrating over the entire body \Omega
+\begin{equation}
+\int _\Omega w(x) \frac{\partial P(x,t)}{\partial t} -
+\int _\Omega w(x) \alpha
+\nabla.(\nabla P(x,t)) =
+0
+\end{equation}
+- \alpha is constant; we can take it out
+- applying [[file:divergencetheorem.org][divergence theorem]] to the second term
+\begin{equation}
+\int _\Omega w(x) \frac{\partial P(x,t)}{\partial t} +
+\alpha \int _\Omega \nabla w(x) \nabla P(x,t) dx +
+\alpha \int _{\partial \Omega} ^\Omega \nabla w(x) \nabla P(x,t) dx =
+0
+\end{equation}
+- this is the weak form of the Pressure Diffusivity Equation, as we have weakened the continuity requirement on P
+- in the original equation we needed the equation to be continuous on the entire range of the density (Pressure) function P; in the weak form we ave shifted some of that continuity requirement on to the new function w
+- w(x) is a completely arbitrary function
+- we will define it as the [[file:deltafunction.org][Dirac delta function]] to simplify discretization
+\begin{equation}
+w(x) = \delta(X-X_i)
+\end{equation}
+- this weak from allows us to unify different discretization methods for reservoir simulations - finite difference, finite volume
+* Discretization
+- the diffusion equation may be discretized in both space and time, or in only one of the two components, based on application
+  - in discretizing time alone, corresponds to taking time slices of the continuous system and no new phenomena arise
+  - in discretizing space alone, the [[file:greensfunction.org][Green's Function]] becomes the discrete Gaussian kernel rather than the continuous [[file:gaussianfunction.org][Gaussian kernel]]
+  - in discretizing both space and time, a [[file:randomwalk.org][random walk]] is obtained
+- to understand the concept of [[file:finitedifference.org][finite difference]] let's rewrite the weak form equation in one dimension
+
+         0<--------------------x------------------>l
+         +-----------------------------------------+
+         |                                         |
+         |               core                      |
+         |                                         |
+         +-----------------------------------------+
+
+- the differntial term (the 3rd term) in the weak form equation, is just a point in one dimension, and therefore becomes a limit
+
+\begin{equation}
+\int _0 ^l \frac{\partial P(x,t)}{\partial t} dx +
+\alpha \int _0 ^l \frac{\partial w(x)}{\partial t} \frac{\partial P(x,t)}{\partial x} dx +
+\alpha [w(x) \frac{\partial P(x,t)}{\partial x}] _0 ^l =
+0
+\end{equation}
+
+- let us divide the core into n parts
+
+ |---x0---|---x1---|---x2---|...|---x(n-2)---|---x(n-1)---|
+  \Deltax0 \Deltax1 \Deltax2     \Deltax(n-2) \Deltax(n-1)
+
+- rewriting the one dimensional weak form equation as a finite difference expansion
+
+\begin{equation}
+\Sigma _{i=0} ^{i=n-1} [
+\int _{x_i-\Delta x_i / 2} ^{x_i + \Delta x_i / 2} w(x) \frac{\partial P(x,t)}{\partial t} dx +
+\alpha \int _{x_i-\Delta x_i / 2} ^{x_i + \Delta x_i / 2} \frac{\partial w}{\partial x} \frac{\partial P(x,t)}{\partial x} dx -
+\alpha [w(x) \frac{\partial P(x,t)}{\partial x}] _{x_i-\Delta x_i / 2} ^{x_i + \Delta x_i / 2}
+]
+= 0
+\end{equation}
+
+- now let's take advantage of the fact that w(x) is a delta function
+- for the first term
+\begin{equation}
+\int _{a - \epsilon} ^{a + \epsilon} f(x) \frac{\partial \delta (x-a)}{\partial x} dx = - \frac{\partial f(a)}{\partial x}
+\end{equation}
+- for the second term
+\begin{equation}
+\int _{a - \epsilon} ^{a + \epsilon} f(x) \delta (x-a) dx = f(a)
+\end{equation}
+- for the third term
+\begin{equation}
+\delta(x \neq 0) = 0
+\end{equation}
+- now we have
+\begin{equation}
+\Sigma _{i=0} ^{i=n-1} [
+\frac{\partial P(x,t)}{\partial t} -
+\alpha \frac{\partial ^2 P(x,t)}{\partial x ^2}
+]
+= 0
+\end{equation}
+- now we need a way to approximate these derivatives using [[file:finitedifference.org][finite difference]] - central difference approximation
+- for first derivative
+\begin{equation}
+\frac{\partial p}{\partial x} =
+\frac{p(x+\Delta x) - p(x-\Delta x)}{2 \Delta x} +
+\frac{1}{3!} \frac{\partial ^3 p}{\partial x^3} \Delta x^3 +
+\dots
+\end{equation}
+- for second derivative
+\begin{equation}
+\frac{\partial^2 p}{\partial x^2} =
+\frac{p(x+\Delta x) - 2 p(x) + p(x-\Delta x)}{\Delta x ^2} +
+\frac{1}{4!} \frac{\partial ^4 p}{\partial x^4} \Delta x^4 +
+\dots
+\end{equation}
+- substituting in the diffusion equation and performing summation
+\begin{equation}
+\frac{\partial p_0}{\partial t} + \frac{\alpha}{\Delta x ^2} [-p_{1} + 2p_{0} - p_{-1}] +
+\frac{\partial p_1}{\partial t} + \frac{\alpha}{\Delta x ^2} [-p_{2} + 2p_{1} - p_{0}] +
+\dots +
+\frac{\partial p_{n-1}}{\partial t} + \frac{\alpha}{\Delta x ^2} [-p_{n} + 2p_{n-1} - p_{-n-2}] =
+0
+\end{equation}
+- in matrix notation

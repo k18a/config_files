@@ -1,0 +1,16 @@
+#+TITLE: Parachor
+
+- parachors are empirical parameters
+\begin{equation}
+P = \frac{\gamma ^{1/4} M}{\rho}
+\end{equation}
+- $\gamma$ is surface tension
+- M is molar mass
+- $\rho$ is density
+- in reservoir simulation
+- parachors are empirical parameters
+- parachor of component i can be estimated using the molecular weight of the component M_i and the empirical regression equation
+\begin{equation}
+P _{chi} = 10.0 + 2.92 M_i
+\end{equation}
+  - this equation works reasonably well for molecular weights ranging from 100 to 500

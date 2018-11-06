@@ -1,0 +1,5 @@
+* Critical Desorption Pressure 
+
+- CDP is the pressure at which gas will begin to desorb cite:Ross2007
+- The difference in the amount adsorbed between the CDP and abandonment pressure gives the total producible sorbed gas cite:Ross2007
+- Desorption efficiency is defined as the amount of sorbed methane produced for an unit drop in pressure - the first derivative of the desorption isotherm cite:Li2016a

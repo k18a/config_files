@@ -1,0 +1,11 @@
+#+TITLE: Gamma Function
+
+an extension of factorial function, with the argument shifted down by 1
+
+$\Gamma(n)=(n-1)!$
+
+defined for all complex numbers except non-positive integers
+
+$\Gamma(z) = \int _0 ^{\infty} x^{z-1} e^{-x} dx$
+
+[[./gammafunction.png]]

@@ -1,0 +1,44 @@
+#+TITLE: Frequency
+
+- $c = \lambda * \gamma$, where c is velocity, $\lambda$ is wavelength and $\gamma$ is frequency
+- faster waves travel faster
+- every pitch a musical instrument plays has a core frequency
+- frequencies are measured in Hertz
+* Sound Equalizer
++ alters the loundness of each frequency in a music to suit one's musical taste
++ try starting with subtraction rather than increasing sounds of diferent frequencies
+  - this allows you to filter out unpleasant sounds that you do not want in your music
+** Controlable Parameters
+*** Primary Frequency
+ - the frequency you're affecting
+ - can be either boosted or reduced to a desired number of decibels
+*** Bandwidth (Q)
+ - how wide a swath of frequency you'll be affecting
+*** Shelf/Notch
+ - notch mode offers all control points
+ - shelf mode eliminates all frequencies below it
+** Controlled Frequencies
+** Bass
+- contains bass instruments such as drums
+*** 32 Hz
+- sub-woofer region, most speakers can't produce this frequency and herd only ones with good dedicated amplifier with a high-quality subwoofer |
+*** 64 Hz
+- audible on most speakers
+- most bass instruments reside in this region
+*** 125 Hz
+- can be heard in most speakers well 
+*** 250 Hz
+- guitars and pianos will have a large amount of low end in this frequency
+** Mid range
+- most instruments such as guitars, pianos, and voice etc.
+*** 500 Hz
+- low end vocals
+*** 1 k
+- instruments such as guitar, piano etc.
+*** 2 k
+- human voice
+** High End
+*** 8 k
+- cymbals, synths and and high range piano and guitar
+*** 16 k
+- very high end

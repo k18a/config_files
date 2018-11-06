@@ -1,0 +1,136 @@
+#+TITLE: Pandas
+
+* dataframes
+- tabular data object 
+  
+** indexing
+- row-wise
+  - similar to lists
+- can also use loc
+#+BEGIN_SRC python
+df[start_row:end_row:step_change]
+df[df.column_name=value]
+df.loc[row]
+#+END_SRC
+- column-wise
+#+BEGIN_SRC python
+df[['column_name1','column_name2']]
+df[start_row:end_row:step_change]
+df.column_name
+#+END_SRC
+
+* Commands
+** read_csv
+- read csv files into dataframe
+*** converters
+- converts each cell based on a converter function
+*** parse_dates
+- read certain columns as dates
+** read_excel
+- read excel files into dataframe
+** DataFrame
+- create dataframe from
+  - dictionary
+    - each list item represents one column
+  - list of tupples
+  - list of dictionaries
+    - each list item represents one row
+** to_csv
+- write to csv file
+** to_datetime
+- parse data to datetime based on a string literal
+** missing data
+*** fillna
+- fill NaN values with value
+**** ffill / bfill
+- replace na with previous/next value
+*** interpolate
+- interpolate to make a guess on missing values
+*** dropna
+- drop rows with missing values
+** shape
+- get a tuple with number of rows and columns in dataframe
+** replace
+- a [[file:regularexpression.org][regex]]
+- replace old value with new value
+** head/tail
+- print first/last 5 or n rows in data frame
+** columns 
+- list all columns in dataframe
+** max/min/mean/std
+- get max/min/mean/std value of current dataset
+** describe
+- print statistical summary of dataset
+  - count
+  - mean
+  - std
+  - min
+  - max
+** set_index
+- set index to be a particular column
+** reset_index
+- reset index of dataframe
+** inplace
+- carries out operations in the same dataframe
+- does not create a new dataframe
+** groupby
+- group dataframe by column values
+- creates a groupby object with unique column value as key and the corresponding rows of the dataframe as columns
+- this creates an iteratable object
+- a specific dataframe can be accessed by get_group command
+- you can run methods on a groupby object to run commands on each dataframe in the groupby object
+  - this process comprises spliting the orignial data into groups
+  - applying a given method
+  - combining the results to get a new dataframe
+  - known as split, apply, combine
+** concat
+- concatenate two dataframes to give a new dataframe
+- can also concatenate dataframe with series
+** merge
+- join two dataframes based on column name
+*** how
+- typically only includes elements in both dataframe
+- outer includes all elements
+- right inlcudes all elements in second dataframe
+- left includes all elements in first dataframe
+** pivot
+- used to transform dataframes to aggregate repeating values on rows and/or columns
+** melt
+- opposite of pivot
+- transfers column name to repeating row names
+** to_datetime
+- converts object to datetime
+** insert
+- insert column into dataframe
+** map
+- allows you to map an existing value in a series to a different set of values
+- dictionary maps each value in current column to a specific value in the new column
+** apply
+- apply function to each element in a series
+#+BEGIN_SRC python
+def converter_function(cell):
+    return value
+df = pd.read_csv('path/to/file',converters = {
+                 'column_name':converter_function},
+		 parse_dates=list_of_column_names)
+df = pd.read_excel('path/to/file','sheet_name')
+df = pd.DataFrame(python_dictionary)
+df = pd.DataFrame(list_of_tupples, columns=list_of_column_names)
+df[column_name] = pd.to_datetime(df[column_name])
+df.fillna(value, inplace=True)
+df.replace(list_of_old_values,new_value)
+df.replace(dictionary_of_values_for_different_columns,new_value)
+df.replace(dictionary_of_old_and_new_values)
+df.to_csv('file_name', index=False,columns=list_of_column_names)
+rows, columns = df.shape()
+df.set_index('column_name')
+g = df.groupby(column_name)
+new_df = g.get_group(column_value)
+g.method(arguments)
+df = pd.concat(list_of_data_frames,ignore_index=True)
+df = pd.merge(first_data_frame, second_data_frame, on=column_name, how=inner,outer,left,right)
+df.pivot(index=row_name,columns=column_name,values=list_of_column_names)
+pd.melt(dataframe, id_vars=list_of_columns_that_you_want_to_retain)
+df.map(function_dictionary_or_series)
+df.apply (lambda row: function (row),axis=1)
+#+END_SRC

@@ -1,0 +1,98 @@
+#+TITLE: Adsorption and Migration Mechanisms in Gas Shales at Pore Scale
+* To Do
+    
+* Reports
+1. [[file:rigstandardoperatingprocedure.org][Standard Operating Procedure]]
+2. [[file:reservoirmodeldevelopment.org][Shale Reservoir Model]]
+3. [[file:~/bok/lothianshaleadsorption.org][Error Analysis]]
+4. [[file:bowlandpore.org][Pore Characteristics]]
+5. [[file:adsorptioninbowlandshales.org][Methane Adsorption]]
+
+* [[file:adsorption.org][Adsorption]]
+
+** Theory
+- it's best to use the simplest model that suits a given purpose, both to undue emphasis on the fine points of theory often tends to obscure what's really going on.
+*** Single-Component Models
+**** [[file:gibbsapproachadsorption.org][Gibbs Thermodynamic Approach]]
+      - [[file:linearisotherm.org][Linear Isotherm]]
+      - [[file:volmerisotherm.org][Volmer Isotherm]]
+      - [[file:fowlerguggenheim.org][Fowler-Guggenheim Isotherm]]
+      - [[file:hilldeboer.org][Hill-deBoer Isotherm]]
+**** Mono-layer Models
+- [[file:langmuir.org][Langmuir Isotherm]]
+- [[file:freundlich.org][Freundlich Isotherm]]
+- [[file:sips.org][Sips Isotherm]]
+- [[file:toth.org][Toth Isotherm]]
+- [[file:unilan.org][UNILAN Isotherm]]
+**** [[file:multilayering.org][Multi-layer Models]]
+**** [[file:microporefilling.org][Micropore-filling Models]] 
+*** Multi-Component Models
+- [[file:harkinsjuraisotherm.org][Harkins-Jura Isotherm]]
+- [[file:extendedlangmuir.org][Extended Langmuir Isotherm]]
+- [[file:idealadsorptionsolutiontheory.org][Ideal Adsorption Solution Theory]]
+- [[file:loadingratiocorrelation.org][Loading Ratio Correlation]]
+- [[file:zgreos.org][ZGR Equation of State]]
+*** Other Concepts
+- [[file:adsorptionhysteresis.org][Hysteresis]]
+- [[file:isostericheat.org][Isosteric Heat of Adsorption]]
+- [[file:capillarycondensation.org][Capillary Condensation]]
+- [[file:criticaldesorptionpressure.org][Critical Desorption Pressure]]
+- [[file:separationfactoradsorption.org][Separation Factor]]
+*** Adsorption Characterization Methods
+- [[file:manometricmeasurement.org][Manometric]]
+- [[file:continuousmeasurement.org][Continuous]]
+- [[file:surfaceexcessadsorption.org][Factors Affecting Adsorption Calculations]]
+*** [[file:factorsaffectingshalesorption.org][Factors Affecting Sorption in Shales]]
+* Diffusion  
+- gas production from shales involves 3 steps cite:Crosdale1998:
+  - Darcy flow in natural and hydraulic fractures,
+  - Knudsen diffusion in nano-pores, and
+  - Gas desorption in nano-pores.
+- the rate determining step is diffusion in nano-pores cite:Crosdale1998
+- diffusion in shales is a complex process; consequently most models attempting to characterise this phenomenon are approximate cite:Ruckenstein1971
+- in laboratory experiments, the adsorption process involves cite:Qiu2009
+  - film diffusion - in the fluid film
+  - intra-particle diffusion - along pore walls
+  - mass-action - ad/desorption on the active sites in pores
+- mass-action is instantaneous for physisorption; one of the other two steps is usually rate determining cite:Qiu2009
+- models used to fit experimental kinetic data often fail to consider if the boundary conditions assumed by the model are valid to the given experimental conditions cite:Qiu2009 
+*** [[file:ratelaw.org][Rate Law Based Equations]] 
+** [[file:elovichequation.org][Elovich Equation]] 
+** [[file:fickslaws.org][Fick's Laws]] 
+*** [[file:filmdiffusion.org][Film Diffusion Models]] 
+*** [[file:surfacediffusion.org][Surface Diffusion Models]] 
+** Experiment / Calculations
+* Pore/Surface Characterization 
+- [[file:poretypes.org][Pore Types]]
+- [[file:porosity.org][Porosity]]
+- [[file:specificsurfacearea.org][Specific Surface Area]]
+- [[file:poresizedistribution.org][Pore Size Distribution]]
+- [[file:fractaldimension.org][Fractal Dimension]]
+- [[file:permeability.org][Permeability]]
+- [[file:contactangle.org][Contact Angle]]
+- [[file:surfaceenergy.org][Surface Energy]]
+** Pore/Surface Characterization Methods
+It must be noted that no experimental methods exist that can give the absolute value of pore characteristics listed above; measured values are characteristic of the experimetal conditions cite:Sing1985
+- [[file:adsorptionporecharacterization.org][Gas Adsorption]]
+- [[file:interfacialporecharacterization.org][Interfacial Forces]]
+- [[file:porosimetry.org][Mercury Porosimetry]]
+- [[file:calorimetry.org][Calorimetry]]
+- [[file:pycnometry.org][Pycnometry]]
+- [[file:stereology.org][Stereology]]
+- [[file:amotttest.org][Amott Test]]
+* Reservoir Simulation
+* Geology
+- CO2 production in coals can be due to interactions between coal water and an igneous rock, although significant amounts of CO2 related to non-igneous activity maybe present cite:Crosdale1998
+- [[file:reservoircharacterization.org][Reservoir Characterization]]
+- [[file:geochemistry.org][Shale Geochemistry]]
+- [[file:bowlandbasin.org][Bowland Basin]]
+- [[file:lothianshales.org][Lothian Shales]]
+* Enhanced Recovery
+- Gas injection may increase methane recovery from shale r  (setq-default dotspacemacs-line-numbers t)
+eservoirs by one of the two mechanisms cite:Clarkson2000: 
+  1) lowering methane partial pressure in free gas 
+  2) competitive adsorption 
+- [[file:carbondioxideenhancedrecovery.org][Carbon dioxide Enhanced Recovery]]
+- [[file:surfactantenhancedrecovery.org][Surfactant Enhanced Recovery]]
+* Bibliography
+bibliography:~/bok/bibliography/allref.bib

@@ -1,0 +1,6 @@
+#+TITLE: Linear Combination
+- let's consider the following vectors
+- $V_1, V_2, \dots, V_n$
+- you just add up the vectors, scaling them with arbitrary constants
+- $C_1 V_1 + C_2 V_2 + \dots + C_n V_n$
+- where $C_n \in R$

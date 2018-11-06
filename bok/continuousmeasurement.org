@@ -1,0 +1,4 @@
+* Continuous Measurement for Adsorption Characteriazation  
+
+- A method that involves slow continuous admission of the adsorptive is used to determine equilibrium under quasi-static conditions cite:Sing1985
+- such an experimental technique was first proposed by cite:Nelsen1958

@@ -1,0 +1,14 @@
+#+TITLE: Nicotinamide, 3-pyridinecarboxamide 
+
+- commonly known as niacinamide
+- physiologically active form of niacin or vitamin B3
+- used in several dermatological applications
+  - anti-acne
+  - up-regulator of markers of epidermal differentiation (with concurrent stratum corneum barrier benefits)
+    - concerned with 
+  - moderator of photoimmunesuppression and accompanying tumor genesis
+    - exposure to UV rays can lead to suppression of many adaptive immune responses
+  - modifying cosmetic apprearance of skin through suppression of epidermal melanosome transfer with subsequent effect on skin pigmentaion
+  - modifying epidermal surface topography
+- the mechanism of action is not fully established
+  - niacinamide is an important precursor of nicotinamide adenine dinucliotide (NADH and NADPH) ions and niacinamide can promote broad spectrum activity through

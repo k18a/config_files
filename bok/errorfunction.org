@@ -1,0 +1,36 @@
+#+TITLE: Error Function
+
+- special function of a sigmoid shape defined as:
+\begin{equation}
+erf(x) 
+= \frac{1}{\sqrt{\pi}} \int_{-x}^{x} exp(-t^2) dt
+= \frac{2}{\sqrt{\pi}} \int_{0}^{x} exp(-t^2) dt
+\end{equation}
+- has applications in probability, statistics, and partial differential equations describing diffusion
+#+BEGIN_SRC ipython :session :results raw drawer :ipyfile errorfunction.png
+%matplotlib inline
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+from scipy.special import erf, erfc, erfcinv
+plt.style.use('dark_background')
+sns.set_palette(sns.color_palette("muted",n_colors=10))
+plt.figure()
+Z = np.linspace(-3,3)
+ye = [erf(z) for z in Z]
+plt.plot(Z,ye)
+#+END_SRC
+
+[[./errorfunction.png]]
+- the function has the following properties
+\begin{equation}
+erf(-z) = -erf(z)
+\end{equation}
+
+\begin{equation}
+erf(0) = 0
+\end{equation}
+
+\begin{equation}
+erf(\infty) = 1
+\end{equation}

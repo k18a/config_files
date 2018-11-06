@@ -1,0 +1,8 @@
+#+TITLE: General Solutions to an Ordinary Differential Equation
+
+* General Solutions to Ordinary Differential Equations
+- contains one or more constants, equal in number to the order of the ODE
+- a single combination of the values that the constants in the general solution could take constitute a particular solution
+
+| differential equation form | general solution | comments |
+| 2x + 2y y' = 0             | x^2 + y^2 = 0    | family of circles |

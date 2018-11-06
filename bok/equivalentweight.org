@@ -1,0 +1,5 @@
+#+TITLE: Equivalent Weight
+
+- mass of one equivalent
+- mass of a given substance which will combine or displace directly or indirectly with 1.008 parts by mass of hydrogen or 8 parts by mass of oxygen or 35.5 parts by mass of chlorine
+- atomic weight / valance

@@ -1,0 +1,7 @@
+#+TITLE: Limits
+
+
+Applications
+
+- number e is often defined by the limit: $e=\lim_{n \to \infty} (1 + \frac{1}{n})^n$
+- in terms of h = 1/n: $e=\lim_{h \to 0} (1 + h)^(1/h)$

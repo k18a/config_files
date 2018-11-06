@@ -1,0 +1,6 @@
+#+TITLE: Basis for a Vector Space
+- let V be the [[file:linearspan.org][span]] of S, $V = span(S)$, where S is a set of linearly independent vectors
+- linear independence implies that, $C_1 V_1 + \dots + Cn V_n = 0$ only when $C_1 = \dots = C_n = 0$
+- we can then say that S is a basis for V - you can represent any vector in {V}, as a linear combination of vectors in {S}
+- the minimum set of vectors that spans the [[file:linearsubspace.org][subspace]] that it's the basis of - there is no redundancy (one of the vectors can be represented as linear combination of other vectors)
+- a vector subspace can have infinite bases

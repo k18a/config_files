@@ -1,0 +1,134 @@
+#+TITLE: Rate Laws
+
+** Rate of a Reaction
+
+- a rate law describes the relationship between reactant rates and reactant concentrations
+- reactant rates are usually expressed as concentration of reactant consumed or concentration of products formed per unit time
+  - $rate = \frac{\Delta[reactant]}{\Delta t} = \frac{\Delta[product]}{\Delta t}$
+
+- instantaneous rate of a reaction is the raction rate a any given point in time 
+  - reaction rate approaches the instantaneous reaction rate as the measurement time becomes smaller and smaller
+
+** Order of a Reaction
+
+- reaction rates maybe dependent on specific interactions between reactant molecules the phases in which the reaction takes place etc.
+
+* Zero Order Reaction Kinetics
+  
+- example: a reaction mediated by a catalyst present in small amounts
+- consider a closed container initially filled with chemical species A
+- $a A \rightarrow b B$
+- $$c_A = -kt + c_i$
+- where c_i is initial concentration
+- at $t=0$, $[A] = [A]_0$
+- $c_A = [A]_0 - kt$
+- a plot of concentration against time yeilds a straight line with a slope of -k and an intercept of [A]_0
+
+* First Order Reaction Kinetics
+  
+- when a chemical reaction is of the form
+  - $\Sigma _i v _i A _i = 0$
+    - v_i stoichiometric coefficient
+    - A_i number of moles of reactants
+  - when change in number of moles is 0
+- reaction rate can then be represented by
+  - $r = k \Pi _{reactants} [A_i] ^{v _i}$
+- for a reaction $A \rightarrow B$,
+  - $r = \frac{d[A]}{dt} = -k[A]$
+- first order rate constant has the units of 1/s
+- with boundary conditions
+  - $t = 0$, $[A] = [A_0]$
+- $[A] = [A] e ^{-kt}$
+- linear form of equation
+- $ln([A]) = ln([A] _0) - kt$
+
+** Pseudo-First Order Diffusion Model
+
+- earliest model pertaining to adsorption rate based on adsorption capacity
+- called pseudo first order equation to distinguish it from kinetic equations
+- initially proposed by cite:Lagergren1898
+- $\frac{dq_t}{dt} = k_1 * (q_e - q_t)$
+  - q_t is amount adsorbed at time t
+  - k_2 is pseudo second order rate constant
+  - q_e is amount adsorbed at equilibrium
+- with boundary conditions:
+  - $q_t = 0$ at $t = 0$
+  - $q_t = q_t$ at $t = t$
+- $ln(\frac{q_e}{q_e - q_t}) = k_1 t$
+- with boundary conditions
+  - $q_t = q_0$ at $t = 0$
+  - $q_t = q_t$ at $t = t$
+- $q_t = q_e - q_e exp(-k_1 t) + q_0 exp(-k_1 t)$
+- linear form 
+- $log(q_e - q_t) = log(q_e) - \frac{k_1}{2.303} * t$
+- k_1 can be calculated from a linear plot of $log(q_e - q_t)$ agains t
+- k_1 is directly proportional to the rate of adsorption
+
+* Second Order Reaction Kinetics
+- $2A \rightarrow B$
+- when rate depends on the square of the concentration of the species
+- second order rate constant has the units of m3/(mol*s)
+- $r = - \frac{1}{2} \frac{d[A]}{dt} = k_2 [A] ^2$
+- integrating with boundary conditions
+  - $[A] = [A] _0$ at t=0
+  - $[A] = [A]$ at t=t
+- $\frac{1}{[A]} = 2 k_2 t + \frac{1}{[A] _0}$
+  - [A] is concentration of reactant at time t
+  - [A] _0 is initial concentration
+  - k_2 is second order rate constant
+- second order reaction rates can also apply to reactions in which two species react with each other to form a product
+- $A+B \rightarrow C$
+- $r = -\frac{d[A]}{dt} = -frac{d[B]}{dt} = k[A][B]$
+- concentrations of A and B are related to each other
+  - $[B] = [B]_0 - ([A]_0 - [A]) = [A] + [B] _0 - [A] _0$
+- using partial fractions to integrate
+- $kt = \frac{1}{[A] _0 - [B] _0} ln(\frac{[A][B] _0}{[B] [A] _0})$
+
+** Pseudo Second Order Diffusion Model
+- have had success in determining flouride adsorption cite:Fan2003a
+- chemical adsortpion maybe second order in a chemical reaction involving a bi-valent species cite:Qiu2009
+- called pseudo-second order rate quation to distinguish it from other kinetic equations
+- successfully applied to adsorption of bivalent metal ions on dyes, herbicides, oil, and organic substances  
+- $\frac{dq_t}{dt} = k_2 * (q_e - q_t)^2$
+- integrating with boundary conditions
+  - $q_t = 0$ at $t = 0$
+  - $q_t = q_t$ at $t = t$
+- $\frac{1}{q_e - q_t} = \frac{1}{q_e - q_t} + k_2 t$
+  - q_t is amount adsorbed at time t
+  - k_2 is pseudo second order rate constant
+  - q_e is amount adsorbed at equilibrium
+- defining $V_0 = k_2 q_e ^2$
+  - V_0 is the initial adsorption rate
+- linear form
+- $\frac{t}{q_t} = \frac{1}{V_0} + \frac{1}{q_e} * t$
+- k_2 can be found by plotting $\frac{t}{q_t}$ agains t
+- k_2 is inversely proportional to the rate of adsorption
+- integrating with boundary conditions
+  - $q_t = q_0$ at $t = 0$
+  - $q_t = q_t$ at $t = t$
+\begin{equation}
+q_t = \frac{q_e k_2 t |q_e - q_0| + q_0}{1 + k_2 t |q_e - q_0|}
+\end{equation}
+  - q_t is amount adsorbed at time t
+  - k_2 is pseudo second order rate constant
+  - q_e is amount adsorbed at equilibrium
+  - q_0 is amount adsorbed at time 0
+
+* Elovich's Diffusion Equation
+- used for chemisorption in heterogeneous solids cite:Qiu2009
+- $\frac{dq}{dt} = a * e ^{-\alpha q}$ cite:Qiu2009 
+  - q is amount adsorbed at time t
+  - a is desorption constant
+  - \alpha is initial adsorption rate
+- linear form of the equation is given as cite:Qiu2009
+- $q = (\frac{2.3}{\alpha}) * log (t + t_0) - (\frac{2.3}{\alpha}) log t_0$
+  - $t_0 = \frac{1}{\alpha a}$
+- with the assumption of $a\alpha >> 1$ and boundary conditions
+  - $q=0$ at $t=0$
+  - $q=q$ at $t=t$
+- $q = \alpha ln(a \alpha) + \alpha ln t$
+- with the boundary conditions
+  - $q=q_0$ at $t=0$
+  - $q=q$ at $t=t$
+- $q = \frac{-log( exp(-\alpha q_0) - a \alpha t )}{\alpha}$
+- the Elovich equation was found to correlate data better than the Activated Adsorption Theory cite:Jahediesfanjani2007

@@ -1,0 +1,2 @@
+#+TITLE: Finite Element
+- a [[file:galerikinmethod.org][Galerikin method]] where we choose the basis function to be piecewise polynomial functions defined over a mesh, which approximates the geometry of the problem

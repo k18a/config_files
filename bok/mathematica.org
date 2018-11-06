@@ -1,0 +1,15 @@
+#+TITLE: Mathematica
+
+* ND Frame
+- framework for solving differential equations
+- Numerical Differential Equation Solver
+- can solve ODEs, PDEs, boundary value problems etc.
+- output is in the form of a interpolating function, but calculations are carried out numerically
+
+- general syntax for solving NDSolve 
+#+BEGIN_SRC wolfram
+NDSolve[eqns, vars, {t,tmin,tmax}]
+#+END_SRC
+
+- eqns contain the actual equation and a set of initial conditions
+- vars first contain dependent variables followed by independent variables

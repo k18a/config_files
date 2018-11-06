@@ -1,0 +1,4 @@
+#+TITLE: Homogeneous Function 
+
+- has multiplicative scaling behaviour: if all its arguments are multiplied by a factor, then its value is multiplied by some power of this factor
+- $f(cx,cy)=c^kf(x,y)$

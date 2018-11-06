@@ -1,0 +1,180 @@
+#+TITLE: Python 
+
+* PEP8 Style Guide
+
+- Python Enhancement Proposal #8
+** whitespace
+- syntactically significant
+- use spaces instead of tabs for indentation
+- lines should be 79 characters in length or less
+- continuations of long expressions should be indented by 4 extra spaces
+- functions and classes should be separated by two blank lines
+- methods should be separated by one blank line
+- don't put spaces around list indexes, function calls, or keyword argument assignments
+- put one - and only one - space before and after variable assignemtns
+** naming conventions
+- functions, variables, and attributes should be in lowercase_underscore format
+- protected instance of attributes should be in _leading_underscore format
+- private instance of attributes should be in __double leading_underscore format
+- classes and exceptions should be in CapitalizedWord format
+- module-level constants should be in ALL_CAPS format
+- instance methods in classes should use self as the name of the first parameter (which refers to the object)
+- class methods should use cls as the name of the first parameter (which refers to the class)
+** expressions and statements
+- *there should be one - and preferable only one - obvious way to do it*
+- use inline negation (if a is not b) instead of negation of positive expressions (if not a is b)
+- don't check for empty values by checking the length of the object; use if not somelist and assume empty values implicitly to evaluate false
+- avoid single-line statements and loops
+- always put import statements at the top of a file
+- always use absolute names for modules when importing them - not names relative the the current module's own path
+- imports should be in sections of the following order
+  - standard library modules
+  - third party modules
+  - your own modules
+  - each sub-section should have imports in an alphabetical order
+
+* Python 2 vs Python 3
+
+| Python 2                                        | Python 3                                   |
+| no bytes                                        | bytes contain seqeunces fo 8 bit values    |
+| str contains sequence of 8-bit values           | str contains sequece of unicode characters |
+| unicode contains sequence of unicode characters | no unicode                                 |
+  
+* Environments
+* Loops
+  
+** generator functions
+
+- range(x) - creates list of x integers from 0 to x-1
+- xrange(x) - creates an iteratable from 0 to x-1, thereby saving memory compared to range
+- enumerate(list) - loop over something and also have a counter (index value)
+
+* Functions 
+
+#+BEGIN_SRC python
+def name_of_function(positional_arguments,*args,** kwargs):
+    '''
+    DOCSTRING: explains function
+    INPUT: name
+    OUTPUT: name
+    '''
+    print(positional_arguments)
+    return positional_arguments + 1
+#+END_SRC
+
+** *args 
+- can pass in as many arguments as you want
+- python converts all inputs into a tuple
+- can use any name for the variable preceeded by a \*, but by convention always use \*args and not a different variable name
+** **kwargs
+- builds a dictionary of keyword arguments
+- can use any variable name preceeded by \**, but always use **kwargs by convention
+
+** map(function, list)
+- applies function to list and produces result
+
+** filter(function, list)
+- filters list based on function
+
+** lambda x: operations on x
+- takes x as an input and returns result performing operations on x
+- very useful when used with map or filter
+  
+** return 
+- returns value of function
+
+** assert
+- asserts if a function passes a certain condition 
+
+* Classes
+- everything in python is an object - lists, dictionaries, etc. - and have associated methods with them
+#+BEGIN_SRC python
+class NameOfClass():
+    class_object_attributes = values #attributes that are common to all instances of the class
+
+#create instance of the object
+    def __init__(self,param1,param2):
+	self.param1 = param1
+	self.param2 = param2
+	self.param3 = NameOfClass.class_object_attribute
+
+    def some_methods(self):
+	#perform actions
+	print(self.param1)
+#+END_SRC
+     
+** [[file:pythonspecialmethods.org][Special Methods]]
+
+** [[file:pythonclassproperties.org][Properties]]
+* Data Types
+** Dictionary
+**** dict.update
+  - dict.update(dict2) adds dict2 to dict
+ 
+* Other Features
+- [[file:pythondecorators.org][Decorators]]
+* Jupyter 
+** nbconvert
+- converts jupyter notebook to specified output format
+#+BEGIN_SRC shell
+jupyter nbconvert --to outputformat inputfile --output outputfile
+#+END_SRC
+
+* Error Handling
+- 3 keywords in case error arises in code
+  - try
+  - except
+  - finally
+#+BEGIN_SRC python
+try:
+code_to_try
+except ErrorType1:
+code_in_case_of_error_type_1
+except ErrorType2:
+code_in_case_of_error_type_2
+except:
+code_in_case_of_all_other_errors
+else:
+code_in_case_of_no_error
+finally:
+code_executed_all_the_time
+#+END_SRC
+
+* Pylint
+- create report for code
+#+BEGIN_SRC shell
+pylint python_file.py
+#+END_SRC
+
+* Unittest
+- allws you to test your programme for input files to check if you're getting correct results
+#+BEGIN_SRC python
+import unittest
+import programme
+
+class TestClass(unittest.TestCase):
+
+    def test_method_1(self):
+        input_1 = input_1
+        result = programme(input_1)
+        self.assertEqual(result,correct_result)
+#+END_SRC
+
+* Decorators
+- add extra functionality to old functions
+#+BEGIN_SRC python
+@some_decorator
+def func():
+    return something
+#+END_SRC
+* String Fromatting
+** .format
+#+BEGIN_SRC python
+template.format(p0,p1,...,k0=v0,k1=v1,...)
+#+END_SRC
+- p0, p1, p2 are positional arguments
+- k0, k1 are keyword arguments with values v0, v1
+#+BEGIN_SRC python 
+'{Placeholder1:Totalwidth.DecimaldigitsNumberformatting}'.format(Placeholder1=value_to_be_formatted)
+#+END_SRC
+- value_to_be_formatted is formattd according to format specifications

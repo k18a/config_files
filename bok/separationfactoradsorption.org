@@ -1,0 +1,6 @@
+#+TITLE: Separation Factor 
+
+- separation factors are a simple way of representing relative adsorption between two the i and j components in a multi-component adsorption system cite:Clarkson2000
+- $ \alpha_{ij}=\frac{(x/y)_i}{(x/y)_j}$
+- separation factor for the EL model is the ratio of adsorption equilibria constants of pure component isotherms, and is independent of concentration or total pressure cite:Ruthven1984
+- however this assumption is not always valid, as selectivity of the more strongly absorbed component is inversely proportional to the concentration of the component cite:Clarkson2000

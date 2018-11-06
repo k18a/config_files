@@ -1,0 +1,66 @@
+* Internal Energy
+
+- represented by U
+- the capacity to do work plus the capacity to release heat
+- all thermodynamic potentials can be derived from the [[file:internalenergy.org][internal energy]], U based on [[file:legendretransformation.org][legendre transformation]]
+
+** Formulation
+
+$U = \int (TdS - pdV + \sum \mu _i dN_i)$
+
+- U is internal energy
+- T is absolute temperature
+- S is entropy
+- p is the pressure
+- V is the volume
+- $\mu$ is the chemical potential
+
+** Derivation 
+
+From [[file:lawsofthermodynamics.org][first law of thermodynamics]]
+
+$dU = \partial Q + \partial W$
+
+- U is internal energy
+- $\partial Q$ is the energy added as heat
+- $\partial W$ is the work done
+
+Second law of thermodynamics
+
+$\partial Q = T dS$
+
+- $\partial Q$ is the energy added as heat
+- T is absolute temperature
+- S is entropy
+
+Work done is given by
+
+$\partial W = PdV$
+
+Substituting second law into the first law
+
+$dU = TdS - PdV$
+
+Including amounts of chemical components Ni
+
+$dU = TdS - PdV + \sum \mu _i dn_i$
+
+This is often known as the fundamental thermodynamic equation
+
+*** Special Forms
+
+If the system has external parameters X so that the volume is not constant
+
+$dU = TdS - \sum X_j dx_j + \sum \mu _i dn_i$
+
+For an ideal gas
+
+$U(S,V,N) = c_v N k (\frac{N \phi}{V} e^(S/Nk))^{1/c_v}$
+
+- U is internal energy
+- S is entropy
+- cv is heat capacity at constant volume
+- N is number of moles
+- V is volume
+- $\phi$ is a constant independent of the thermodynamic state if the gas, with the dimensions of $VTc_v/N$
+- k is boltzmann constant = 1.381e-23 J/K

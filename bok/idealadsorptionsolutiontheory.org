@@ -1,0 +1,8 @@
+#+TITLE: Ideal Adsorption Solution Theory
+
+- the IAST  applies Raoult's law to characterize the adsorbed mixture on the assumption that it behaves like an ideal solution @Radke1972.
+- assuming an activity coefficient of 1, the equilibrium of component i between gas phase and adsorbed phase is given as: 
+  - $P y_i = P_i^0 (\pi) x_i$
+  - where $P_i^0$ is the vapour pressure of the pure component adsorbed at the same temperature and spreading pressure as the solution,
+  - $\pi$ is the spreading pressure, the 2 dimensional equivalent of pressure, and maybe determined by integrating the Gibbs adsorption isotherm to the vapour pressure of the pure component, $P_i^0$ cite:Ruthven1984
+    - $ {\pi}_{i}^* = \frac{\pi A}{R T}= \int_{0}^{P_{i}^{0}} \frac{n(P)}{P} dP$

@@ -1,0 +1,7 @@
+#+TITLE: Partition Coefficient
+
+- ratio of concentrations of a compound in a mixture if two immiscible phases at equilibrium
+- measure of the difference in solubility of the compound in two phases
+- partition coefficient usually refers to ratio of un-ionized species where as distributed coefficient refers to ratio of both ionized and un-ionized species
+- whn one of the solvents is water and the other is a non-polar solvent, the logarthim of the partition coefficient log P is a measure of lipophilicity or hydrophobicity
+  - $log P _{solvent/water} = log(\frac{solute_{solvent}}{solute_{water}})$

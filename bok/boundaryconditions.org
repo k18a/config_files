@@ -1,0 +1,12 @@
+#+TITLE: Boundary Conditions
+
+* Dirichlet 
+- specification on the value of the solution itself on the boundary
+
+* Neumann
+- specification of the derivative of the solution on the boundary
+
+* Cauchy 
+- an ODE or a PDE that the solution must satisfy at the boundary
+- specifies both the function value and the normal derivative on the boundary of the domain
+- this corresponds to imposing both a Dirichlet and Neumann boundary conditions

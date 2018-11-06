@@ -1,0 +1,13 @@
+* Natural Variables
+
+- variables that are held constant in a process
+- a thermodynamic potential can be derived as a function of its natural variables
+- consider the fundamental relation $U = f(S,V)$, 
+  - where U is the internal energy, 
+- by performing [[file:legendretransformation.org][legendre transformation]], we can get a new function, $F = g(T,V)$; 
+- S,V are natural variables for U, whilst T,V are natural variables for F
+- if a thermodynamic potential can be determined as a function of its natural variables, 
+- all of the thermodynamic properties of the system can be found 
+  - by taking the partial derivatives of that potential with respect to its natural variables; 
+- conversely, if the thermodynamic potential is not given as a function of its natural variables, 
+  - it will not yield all the thermodynamic properties of the system

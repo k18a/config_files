@@ -1,0 +1,68 @@
+#+TITLE: Langmuir Theory
+
+- Langmuir equation reduces to Henry's law isotherm at very low pressures
+
+* Assumptions
+
+- the Langmuir model assumes that cite:Langmuir1918
+  1) the surface is energetically homogeneous,
+  2) the adsorbate is present in definite localised sites, and 
+  3) each site can contain only one molecule 
+- an ideal surface has a periodic energy fluctuation larger than the thermal energy of the molecule, with the troughs acting as adsorption sites cite:Do1998
+- the following criteria need to be met for Langmuir theory to be applicable instead of potential theory cite:Clarkson1999
+  1) Surface is energetically homogeneous, 
+  2) Monolayer volume, and hence slope of Langmuir plot is temperature invariant, and 
+  3) Fitting parameter decreases exponentially with temperature. 
+
+* Derivation
+
+- the Langmuir theory of adsorption, originally derived based on a kinetic principle, assumes that the rates of adsorption and desorption are equal at equilibrium cite:Do1998
+- the number of molecules adsorbed is given by the rate of striking from the kinetic theory of gas, multiplied by the striking coefficient, $\alpha$, and the fraction of empty adsorption sites, $(1-\theta)$: $R_a = (1 - \theta) * \frac{\alpha P}{\sqrt{2 \pi M R_g T}}$ 
+- the number of molecules desorbed is given by: $R_d = k_{d \infty} exp(-\frac{E_d}{R_g T})\theta$
+where $k_{d\infty}$ is the rate constant for desorption at infinite temperature
+- equating the two, the Langmuir equation is obtained:
+  - $$\theta = \frac{b*P}{1+b*P}$$ 
+    - where b, the affinity constant is given by:
+      - $b = \frac{\alpha exp(Q/R_g T)}{k_{d\infty}\sqrt{2 \pi M R_g T}} = b_\infty exp(Q/R_g T)$
+- Langmuir equation with a different representation
+  - $$q = \frac{V_L*P}{P_L + P}$$
+  - q is amount adsorbed
+  - V_L is the Langmuir volume 
+    - this is also known as q_e - the amount adsorbed at equilibrium
+  - P is the pressure or concentration
+  - Q^0 is Langmuir volume
+  - P_L is the Langmuir pressure
+    - Langmuir pressure is the inverse of the affinity constant
+    - $P_L = \frac{1}{b}$
+- the affinity constant at a given temperature is related to the affinity constant at infinite temperature, $b_\infty$, as: $b(T) = b_{\infty} exp(\frac{Q}{R_g T})$.
+  - the affinity constant does not vary with fractional loading for Langmuir cite:Do1998
+  - where Q = the heat of adsorption and is equal to the activation energy for desorption
+  - Q is positive and therefore adsorption is an exothermic process
+  - since adsorption is accompanied by a decrease in free energy, and entropy (as molecules are getting more orderly), the associated enthalpy change is negative $\Delta H = \Delta G + T\Delta S < 0$; adsorption is an exothermic process cite:Do1998
+  - differentiating the Langmuir equation and substituting into the van't Hoff equation gives the equation for isosteric heat of adsorption for the Langmuir model @Do1998: $-\Delta H = Q + \frac{\delta R_g T^2}{(1-\theta)}$
+  - where the thermal expansion coefficient of the saturation concentration $\delta = -\frac{1}{C_{\mu s}}\frac{dC_{\mu s}}{dT}$
+  - for Langmuir, the thermal expansion of the saturation concentration, $\delta = 0$ if $\Delta H$ is finite at high coverage cite:Do1998
+
+- linear form of Langmuir equation
+- $\frac{P}{q_e} = \frac{P}{Q_0} + \frac{1}{Q^0 * b}$
+  - q_e is the amount adsorbed at equilibrium
+    - this is also known as the Langmuir volume V_L
+  - P is the pressure or concentration
+  - Q^0 is Langmuir volume
+  - b is the affinity constant
+    - Langmuir pressure is the inverse of the affinity constant
+    - $P_L = \frac{1}{b}$
+
+* Super-critical Langmuir Model
+
+- a variant of Langmuir for super-critical applications cite:Gasparik2014:
+  - $$n_{excess} = n_L \frac{p}{p+p_L(T)}(1-\frac{\rho_g(p,T)}{\rho_a})$$
+    - where $n_L$ is the Langmuir volume
+    - $p_L$ is the langmuir pressure
+    - $\rho_g$ is the gas phase density 
+    - $\rho_a$ is the adsorbate phase density
+
+* Bi-Langmuir Model
+
+- cite:Lu1995 proposed a variant of the Langmuir model, taking into account the different adsorption characteristics of kerogens and clay minerals:
+  - $\frac{n_{ads}}{N_m} = f_1 \frac{k_1(T)p}{1+k_1(T)p} + (1-f_1)\frac{k_2(T)p}{1+k_2(T)p}$

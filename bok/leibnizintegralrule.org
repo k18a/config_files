@@ -1,0 +1,19 @@
+#+TITLE: Leibniz Integral Rule
+
+- for an integral of the form
+\begin{equation}
+\int _{a(x)} ^{b(x)} f(x,t) dt
+\end{equation}
+- where $-\infty < a(x),b(x) < \infty$
+- is expressed as
+\begin{equation}
+\frac{d}{dx} (\int _{a(x)} ^{b(x)} f(x,t) dt = 
+f(x,b(x)) . \frac{d}{dx} b(x) - 
+f(x,a(x)) . \frac{d}{dx} a(x) + 
+\int _{a(x)} ^{b(x)} \frac{\partial}{\partial x} f(x,t) dt
+\end{equation}
+- if a(x), b(x) are constants
+\begin{equation}
+\frac{d}{dx} (\int _{a} ^{b} f(x,t) dt = 
+\int _{a} ^{b} \frac{\partial}{\partial x} f(x,t) dt
+\end{equation}

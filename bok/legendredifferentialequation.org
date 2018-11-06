@@ -1,0 +1,5 @@
+#+TITLE: Legendre Differential Equation
+
+- second order ordinary differential equation
+- $$(1-x^2)\frac{d^2y}{dx^2}-2x\frac{dy}{dx}+p(p+1)*y=0$$
+- 

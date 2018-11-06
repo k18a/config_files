@@ -1,0 +1,25 @@
+#+TITLE: Diffusion
+
+\begin{equation}
+i_9
+\end{equation}
+
+- process by which matter is transported from one part of a system to another as a result of random molecular motions
+- caused by brownian motion of particles
+- approximate diffusion in
+  - gases is 5 cm/min
+  - liquids is 0.05 cm/min
+  - solids is 0.00001 cm/min
+- often the rate determining step in a series of physical processes
+
+Diffusion may either be characterized using 
+
+| rate constant                              | fick's laws                                             |
+| lumped parameter model                     | distributed parameter model                             |
+| $flux = k * \Delta(concentration)$         | $flux = D * (\frac{\Delta(concentration)}{length}$      |
+| k is the mass transfer coefficient         | D is the diffusion coefficient                          |
+| k is analogous to reciprocal of resistance | D is analogous to reciprocal of resistivity             |
+| $voltage = resistance * current$           | $\frac{voltage}{length}= resistivity * current density$ |
+| more empirical                             | more theoretical                                        |
+
+- models used to fit experimental kinetic data often fail to consider if the boundary conditions assumed by the model are valid to the given experimental conditions cite:Qiu2009 

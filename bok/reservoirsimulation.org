@@ -1,0 +1,927 @@
+#+TITLE: Reservoir Simulation
+* [[file:materialtimederivative.org][Material Time Derivative]]
+- describes the time rate of change of some physical quantity of a material element that is subjected to space and time dependent macroscopic velocity field variations of that physical quantity
+- serves as a link between Eulerian and Lagrangian descriptions of continum deformation
+- also known as total derivative, substantial derivative, or convective derivative
+
+- consider two concepts with two different sets of co-ordinates
+- for the sake of argument, let's define x at time t as, $x(t_0) = X$
+** Lagrangian co-ordinates
+- also known as refernce or material co-ordinates
+- concentration measured at a point moving along the speed of a stream, c(X)
+  - X with respect to fixed co-ordinates is not a function of time, as it's fixed
+\begin{equation}
+\frac{D}{Dt} (c(X,t)) = \frac{\partial c}{\partial t}
+\end{equation}
+** Eulerian co-ordinates
+- also known as current or spatial co-rodinates
+- concentration measured at a fixed point of a moving stream, c(x)
+  - x with respect to fixed co-ordinates is a function of time, and hence written as x(t)
+\begin{equation}
+\frac{D}{Dt} (c(x(t),t)) = \frac{dc}{dt} 
+= \frac{\partial c}{\partial t} + \frac {\partial c}{\partial x} \frac{\partial x}{\partial t}
+= \frac{\partial c}{\partial t} + \nabla (c) . v
+\end{equation}
+- the first term represents the local rate of change - the rate of change in the absence of any flow
+- the second term represents the convective rate of change - the convective derivative
+- to sum up the material time derivative for any tensor field y that is macroscopic, with the sense that it depends only on position and time co-ordinates y=y(x,t):
+\begin{equation}
+\frac{D}{Dt} (y) = \frac{\partial y}{\partial t} + \nabla (y) * u
+\end{equation}
+- where \Nabla y is the covariant derivative
+- u(x,t) is the flow velocity
+* [[file:materialbalance.org][Material Balance]]
+- an alternative method to deriving mass conservation compared to Reynolds Transport Theorem
+** Time Derivative Form
+- consider a control volume, whose shape and volume can change over time, but is of fixed mass and material
+- a particle located at X in the reference configuration is now located at x in current configuration 
+#+BEGIN_EXAMPLE
+      reference t = 0                   current t = t
+      +--------------+   mapping         -------------
+      |              |  x=\chi(X,t)   --/             \--
+      |         X----+-----------------------x           \
+      |              |              (                     )
+      |              |               \                   /
+      +--------------+                --\             /--
+                                         -------------
+#+END_EXAMPLE
+- reference configuration is at time t=0
+- $\omega_0$ represents all particles in the control volume at time t=0
+- the control volume changes over time
+- $\Chi$ represents a mapping function that maps the position of a particle x from time 0 to current time t
+- since x(t=0) is represented by X (see [[file:materialtimederivative.org][Material Time Derivative]]), \Chi maps co-ordinates from Lagrangian to Eulerian co-ordinates
+- $\Chi$ is a function of X and t
+\begin{equation}
+x = \chi (X,t)
+\end{equation}
+- based on our definition, the mass of the particles in the reference configuration equals mass of particles in current configuration
+\begin{equation}
+m(\omega_0) = m(\omega)
+\end{equation}
+- m represents mass of particles
+- in differential form
+\begin{equation}
+dm(X) = dm(x)
+\end{equation}
+- X represents position vector in Lagrangian coordinates, and x represents position vector in Eulerian co-ordinates
+- dm is differntial mass
+- mass is volume times density
+\begin{equation}
+\rho_0(X) \phi(X) dV_0 = \rho(x,t) \phi(x,t) dV 
+\end{equation}
+- $\rho$ is density
+- $\phi$ is rock porosity
+- dV is differential volume
+- integrating this 
+\begin{equation}
+\int \int \int _{\omega_0} \rho_0(X) \phi_0(X) dX_1 dX_2 dX_3= \int \int \int _{\omega} \rho(x,t) \phi(x,t) dx_1 dx_2 dx_3
+\end{equation}
+- we can use a Jacobian determinant to convert Eulerian co-ordinates to Lagrangian co-ordinates
+\begin{equation}
+\int \int \int _{\omega_0} \rho_0(X) \phi(X) dX_1 dX_2 dX_3= \int \int \int _{\omega} \rho(x,t) \phi(x,t) J dX_1 dX_2 dX_3
+\end{equation}
+- J is the Jacobian determinant which converts from x to X, given as J = det(F)
+\begin{equation}
+J = 
+\begin{bmatrix}
+ \frac{\partial x_1}{\partial X_1} & \frac{\partial x_1}{\partial X_2} & \frac{\partial x_1}{\partial X_3} \\
+ \frac{\partial x_2}{\partial X_1} & \frac{\partial x_2}{\partial X_2} & \frac{\partial x_2}{\partial X_3} \\
+ \frac{\partial x_3}{\partial X_1} & \frac{\partial x_3}{\partial X_2} & \frac{\partial x_3}{\partial X_3} \\
+\end{bmatrix}
+\end{equation}
+- representing 
+\begin{equation}
+F_{ij} = \frac{\partial x_i}{\partial X_j}
+\end{equation}
+- the Jacobian is given as 
+\begin{equation}
+J = 
+\begin{bmatrix}
+ F_{11} & F_{12} & F_{13} \\
+ F_{21} & F_{22} & F_{23} \\
+ F_{31} & F_{32} & F_{33} \\
+\end{bmatrix}
+\end{equation}
+- in simplified notation
+\begin{equation}
+\int _{\omega_0} \rho_0(X) \phi_0(X) dV_0 = \int _{\omega} \rho(x,t) \phi(x,t) J dV_0
+\end{equation}
+- the statement of mass conservation is thus given as
+\begin{equation}
+\rho_0(X) \phi_0(X) = \rho(x,t) \phi(x,t) J
+\end{equation}
+- this is equivalent to other forms of material balance
+- this form is often known as the material form of conservation of mass
+** Regular Form
+- to get to a more familiar form, we need to take the material time derivative on both sides of the equation
+\begin{equation}
+\frac{D}{Dt} (\rho _0 \phi _0) = \frac{D}{Dt} (\rho \phi J)
+\end{equation}
+- left hand side is constant
+\begin{equation}
+0 = \frac{D}{Dt} (\rho \phi J)
+= J \frac{D}{Dt} (\rho \phi) + \rho \phi \frac{D}{Dt} J 
+= J [\frac{\partial (\rho \phi)}{\partial t} + \nabla (\rho \phi) * v] + \rho \phi \frac{D}{Dt} J
+\end{equation}
+- let's figure out the second term for now
+- applying chain rule, since F is a function of time
+\begin{equation}
+\frac{D}{Dt} J = \frac{D}{Dt} (det F)
+= \frac{\partial det F}{\partial F_{ij}} \frac{\partial F_{ij}}{\partial t}
+\end{equation}
+- partial of the determinant of a matrix with respect to its components is equal to the determinant of the matrix times the transpose inverse of the matrix
+\begin{equation}
+\frac{\partial det F}{\partial F_{ij}} \frac{\partial F_{ij}}{\partial t} 
+= 
+det F (F_{ji}) ^{-1} \frac{\partial F_{ij}}{\partial t} 
+\end{equation}
+- since det F = J; inverse transpose is just the elemenets reversed in the first term
+- also since x in F is a function of X and t in the second term
+\begin{equation}
+J \frac{\partial X _i}{\partial x _j} \frac{\partial }{\partial t} \frac{\partial x_i}{\partial X_j} 
+\end{equation}
+- rearranging differntial terms
+\begin{equation}
+J \frac{\partial X _i}{\partial x _j} \frac{\partial }{\partial X_j} \frac{\partial x_i}{\partial t} 
+\end{equation}
+- the last term is nothing but the velocity
+\begin{equation}
+J \frac{\partial X _i}{\partial x _j} \frac{\partial V_i}{\partial X_j} 
+\end{equation}
+- rearranging
+\begin{equation}
+J \frac{\partial V _i}{\partial x _j} \frac{\partial X_i}{\partial X_j} 
+\end{equation}
+- the last term is the identity matrix
+\begin{equation}
+J \frac{\partial V _i}{\partial x _j} \delta_{ij} 
+\end{equation}
+- the identity matrix is represented by the Kronecker delta function, also known as the identity matrix
+\begin{equation}
+\delta _{ij} = 1 if i=j
+\delta _{ij} = 0 otherwise
+\end{equation}
+- multiplication of any matrix with an identity matrix is itself
+\begin{equation}
+J \frac{\partial V _i}{\partial x _j}
+\end{equation}
+- in slightly different notation
+\begin{equation}
+J \nabla v
+\end{equation}
+- going back to our initial material balance
+\begin{equation}
+0 = J [\frac{\partial (\rho \phi)}{\partial t} + \nabla (\rho \phi) * v] + \rho \phi J \nabla v
+\end{equation}
+- simplifying
+\begin{equation}
+0 = \frac{\partial (\rho \phi)}{\partial t} + \nabla (\rho \phi) * v + \rho \phi \nabla v
+\end{equation}
+- the last 2 terms represent the product rule
+- the 3 dimensional mass conservation equation is given as
+\begin{equation}
+0 = \frac{\partial (\rho \phi)}{\partial t} + \nabla (\rho \phi v)
+\end{equation}
+- expanding the divergence operator \nabla
+\begin{equation}
+0 = \frac{\partial (\rho \phi)}{\partial t} + 
+\frac{\partial (\rho \phi v_x)}{\partial x} +
+\frac{\partial (\rho \phi v_y)}{\partial y} +
+\frac{\partial (\rho \phi v_z)}{\partial z}
+\end{equation}
+- for non porous media
+\begin{equation}
+0 = \frac{\partial (\rho)}{\partial t} + \nabla (\rho v)
+\end{equation}
+* [[file:darcyslaw.org][Darcy's Law]]
+- accounting for the effects of gravity we have
+\begin{equation}
+q = -\frac{k}{\mu} (\nabla P - \rho g)
+\end{equation}
+- actual velocity, v, is given by dividing Darcy velocity with porosity
+\begin{equation}
+v = \frac{q}{\phi} = -\frac{k}{\mu} (\nabla P - \rho g)
+\end{equation}
+- permeability, k, is the permeability tensor
+- pressure gradient $\nabla P$ is the pressure vector
+- gravity is a vector
+- velocity is a vector
+* [[file:diffusionequation.org][Pressure Diffusivity Equation]]
+- let us start by deriving the pressure diffusivity equation (analogus to heat equation as diffusivity is assumed to be constant)
+- obrained by substituting [[file:darcyslaw.org][Darcy's Law]]
+\begin{equation}
+Q = -\frac{k}{\mu} (\nabla P - \rho g)
+\end{equation}
+- and the fact that fluid velocity is given as
+\begin{equation}
+v = \frac{Q}{\phi}
+\end{equation}
+- into the [[file:materialtimederivative.org][Material balance equation]]
+\begin{equation}
+\frac{\partial (\rho \phi)}{\partial t} + \nabla (\rho \phi v) = 0
+\end{equation}
+- this gives
+\begin{equation}
+\frac{\partial (\rho \phi)}{\partial t} + \nabla (\rho Q) = 0
+\end{equation}
+- and assuming homogeneous isotropic [[file:permeability.org][permeability]], and neglecting the effect of gravity, and small and constant compressibility
+\begin{equation}
+\frac{\partial P}{\partial t} =
+\alpha
+\nabla.(\nabla P)
+\end{equation}
+\begin{equation}
+\alpha = \frac{k}{\mu \phi C_t}
+\end{equation}
+- since diffusivity is constant in this derivation,
+** Derivation
+- first we need to do some work on the [[file:materialbalance.org][material balance equation]]
+\begin{equation}
+\frac{\partial (\rho \phi)}{\partial t} + \nabla (\rho \phi v) = 0
+\end{equation}
+- aplying product rule to the material balance equation for porous media
+\begin{equation}
+\phi \frac{\partial \rho}{\partial t} + \rho \frac{\partial \phi}{\partial t} + \nabla \rho . Q + \rho \nabla Q = 0
+\end{equation}
+- density and porosity are functions of pressure and space
+\begin{equation}
+\rho = \rho(P(x)) ; \phi = \phi(P(x))
+\end{equation}
+- applying chain rule to obtain the equation in terms of gradients of pressure
+- and taking out the term \rho \phi from the first two terms
+\begin{equation}
+\rho \phi [
+\frac{1}{\rho} \frac{\partial \rho}{\partial P}\frac{\partial P}{\partial t} +
+\frac{1}{\phi} \frac{\partial \phi}{\partial P}\frac{\partial P}{\partial t}
+] +
+\frac{\partial \rho}{\partial P} \nabla P . Q + \rho \nabla Q =
+0
+\end{equation}
+- substituting terms for fluid [[file:isothermalcompressibility.org][compressibility]]
+\begin{equation}
+C = \frac{1}{\rho} \frac{\partial \rho}{\partial P}
+\end{equation}
+- and rock compressibility
+\begin{equation}
+C_R = \frac{1}{\phi} \frac{\partial \phi}{\partial P}
+\end{equation}
+- and dividing the whole equation by \rho
+\begin{equation}
+\phi [C + C_R] \frac{\partial P}{\partial t} +
+\frac{1}{\rho} \frac{\partial \rho}{\partial P} \nabla P Q + \nabla Q =
+0
+\end{equation}
+- again we have fluid compressibility in the second term
+- and defining total compressibility as
+\begin{equation}
+C_t = C+C_R
+\end{equation}
+- and let's substitute Darcy's law ignoring gravity term (horizontal flow)
+\begin{equation}
+Q = -\frac{k}{\mu} (\nabla P)
+\end{equation}
+- we have
+\begin{equation}
+\phi C_t \frac{\partial P}{\partial t} -
+C \nabla P (\frac{k}{\mu} \nabla P) -
+\nabla (\frac{k}{\mu} \nabla P) =
+0
+\end{equation}
+- and assuming homogeneous and isotropic permeability, we can factor out permeability from the last two terms
+- we get the general form of the diffusivity equation
+\begin{equation}
+\frac{\mu \phi C_t}{k}
+\frac{\partial P}{\partial t} =
+\nabla.(\nabla P) +
+C (\nabla P.\nabla P)
+\end{equation}
+- assuming small and constant compressibility, the final term becomes negligible, giving the Pressure Diffusivity Equation
+\begin{equation}
+\frac{\partial P}{\partial t} =
+\alpha
+\nabla.(\nabla P)
+\end{equation}
+\begin{equation}
+\alpha = \frac{k}{\mu \phi C_t}
+\end{equation}
+- this has the same form as the [[file:heatdifferentialequation.org][heat equation]]
+- the above formulation is called the strong form of the pressure diffusivity equation
+- this requires the derivative of P and the second derivative of P to be continuous throughout the required limits for us to be able to derive a solution
+- to relax this requirement, let's derive a weak form of the pressure diffusivity equation
+** [[file:weakformulation.org][Weak Form]] Derivation
+- recall that P is a function of space and time
+\begin{equation}
+P = P(x,t)
+\end{equation}
+- let's multiply the Pressure Diffusivity Equation with a function w, which is only a function of space
+\begin{equation}
+w(x) \frac{\partial P(x,t)}{\partial t} -
+w(x) \alpha
+\nabla.(\nabla P(x,t)) =
+0
+\end{equation}
+- integrating over the entire body \Omega
+\begin{equation}
+\int _\Omega w(x) \frac{\partial P(x,t)}{\partial t} -
+\int _\Omega w(x) \alpha
+\nabla.(\nabla P(x,t)) =
+0
+\end{equation}
+- $\alpha$ is constant; we can take it out
+- applying [[file:divergencetheorem.org][divergence theorem]] to the second term
+\begin{equation}
+\int _\Omega w(x) \frac{\partial P(x,t)}{\partial t} +
+\alpha \int _\Omega \nabla w(x) \nabla P(x,t) dx +
+\alpha \int _{\partial \Omega} ^\Omega \nabla w(x) \nabla P(x,t) dx =
+0
+\end{equation}
+- this is the weak form of the Pressure Diffusivity Equation, as we have weakened the continuity requirement on P
+- in the original equation we needed the equation to be continuous on the entire range of the density (Pressure) function P; in the weak form we ave shifted some of that continuity requirement on to the new function w
+- w(x) is a completely arbitrary function
+- we will define it as the [[file:deltafunction.org][Dirac delta function]] to simplify discretization
+\begin{equation}
+w(x) = \delta(X-X_i)
+\end{equation}
+- this weak from allows us to unify different discretization methods for reservoir simulations - finite difference, finite volume
+- let's rewrite the weak form equation in one dimension
+#+BEGIN_EXAMPLE
+         0<--------------------x------------------>l
+         +-----------------------------------------+
+         |                                         |
+         |               core                      |
+         |                                         |
+         +-----------------------------------------+
+#+END_EXAMPLE
+- the differntial term (the 3rd term) in the weak form equation, is just a point in one dimension, and therefore becomes a limit
+\begin{equation}
+\int _0 ^l \frac{\partial P(x,t)}{\partial t} dx +
+\alpha \int _0 ^l \frac{\partial w(x)}{\partial t} \frac{\partial P(x,t)}{\partial x} dx +
+\alpha [w(x) \frac{\partial P(x,t)}{\partial x}] _0 ^l =
+0
+\end{equation}
+- let us divide the core into n parts
+#+BEGIN_EXAMPLE
+ |---x0---|---x1---|---x2---|...|---x(n-2)---|---x(n-1)---|
+  \Deltax0 \Deltax1 \Deltax2     \Deltax(n-2) \Deltax(n-1)
+#+END_EXAMPLE
+- rewriting the one dimensional weak form equation becomes
+\begin{equation}
+\Sigma _{i=0} ^{i=n-1} [
+\int _{x_i-\Delta x_i / 2} ^{x_i + \Delta x_i / 2} w(x) \frac{\partial P(x,t)}{\partial t} dx +
+\alpha \int _{x_i-\Delta x_i / 2} ^{x_i + \Delta x_i / 2} \frac{\partial w}{\partial x} \frac{\partial P(x,t)}{\partial x} dx -
+\alpha [w(x) \frac{\partial P(x,t)}{\partial x}] _{x_i-\Delta x_i / 2} ^{x_i + \Delta x_i / 2}
+]
+= 0
+\end{equation}
+- now let's take advantage of the fact that w(x) is a delta function
+- for the first term
+\begin{equation}
+\int _{a - \epsilon} ^{a + \epsilon} f(x) \frac{\partial \delta (x-a)}{\partial x} dx = - \frac{\partial f(a)}{\partial x}
+\end{equation}
+- for the second term
+\begin{equation}
+\int _{a - \epsilon} ^{a + \epsilon} f(x) \delta (x-a) dx = f(a)
+\end{equation}
+- for the third term
+\begin{equation}
+\delta(x \neq 0) = 0
+\end{equation}
+- now we have
+\begin{equation}
+\Sigma _{i=0} ^{i=n-1} [
+\frac{\partial P(x,t)}{\partial t} -
+\alpha \frac{\partial ^2 P(x,t)}{\partial x ^2}
+]
+= 0
+\end{equation}
+- this is the same equation as obtained previously but going through the weaj form allows us to convert to other numerical methods more easily
+* [[file:finitedifference.org][Finite Difference Method]]
+- now we need a way to approximate these derivatives using [[file:finitedifference.org][finite difference]] - central difference approximation
+- for second derivative
+\begin{equation}
+\frac{\partial^2 p}{\partial x^2} =
+\frac{p(x+\Delta x) - 2 p(x) + p(x-\Delta x)}{\Delta x ^2} +
+\frac{1}{4!} \frac{\partial ^4 p}{\partial x^4} \Delta x^4 +
+\dots
+\end{equation}
+- substituting in the diffusion equation for the second partial derivative with x and performing summation
+\begin{equation}
+\frac{\partial p_0}{\partial t} + \frac{\alpha}{\Delta x ^2} [-p_{1} + 2p_{0} - p_{-1}] +
+\frac{\partial p_1}{\partial t} + \frac{\alpha}{\Delta x ^2} [-p_{2} + 2p_{1} - p_{0}] +
+\dots +
+\frac{\partial p_{n-1}}{\partial t} + \frac{\alpha}{\Delta x ^2} [-p_{n} + 2p_{n-1} - p_{-n-2}] =
+0
+\end{equation}
+- in matrix notation
+\begin{equation}
+\begin{bmatrix}
+1 & 0 & \dots & 0 \\
+0 & 1 & \dots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & \dots & 0 & 1\\
+\end{bmatrix}
+\begin{bmatrix}
+\frac{\partial P_{0}}{\partial t} \\
+\frac{\partial P_{1}}{\partial t} \\
+\vdots \\
+\frac{\partial P_{N-1}}{\partial t} \\
+\end{bmatrix}
++
+\begin{bmatrix}
+2 & -1 & 0 & \dots & 0 \\
+-1 & 2 & -1 & \dots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & \dots & -1 & 2 & -1\\
+0 & \dots & 0 & -1 & 2\\
+\end{bmatrix}
+\begin{bmatrix}
+P_{0} \\
+P_{1} \\
+\vdots \\
+P_{N-2} \\
+P_{N-1} \\
+\end{bmatrix}
+= 0
+\end{equation}
+- P is the solution vector
+\begin{equation}
+[I] [\frac{\partial P}{\partial t}] + \frac{\alpha}{\Delta x^2} [A] [P] = 0
+\end{equation}
+- rearranging
+\begin{equation}
+[\frac{\partial P}{\partial t}] = \frac{\alpha}{\Delta x^2} [A] [P]
+\end{equation}
+- now we have an ordinary differential equation that can either be solved differntially or using finite differences for the time derivative
+\begin{equation}
+[P] = exp(\frac{\alpha}{\Delta x^2} [A]) [P_0]
+\end{equation}
+- to discretize time derivative
+- let's use the forward derivative
+\begin{equation}
+\frac{\partial p}{\partial t} =
+\frac{p^{(n+1)} - p^{(n)}}{\Delta t}
+\end{equation}
+- substituting
+\begin{equation}
+[I][P^{n+1} - P^n] + \frac{\alpha \Delta t}{\Delta x^2} [A] [P] = 0
+\end{equation}
+- we can either solve for P at time step n or at time step n+1 for the second P
+** Explicit Formulation - time step n
+- can be unstable for long simulations
+\begin{equation}
+[I] [P^{n+1}] - [I][P^n] + \frac{\alpha \Delta t}{\Delta x^2} [A] [P^n] = 0
+\end{equation}
+- rearranging
+\begin{equation}
+[P^{n+1}] = ([I] - \frac{\alpha \Delta t}{\Delta x^2} [A]) [P^n]
+\end{equation}
+- the constant $\frac{\alpha \Delta t}{\Delta x^2}$ needs to be < 0.5 for this method to be stable
+** Implicit Formulation - time step n+1
+\begin{equation}
+[I] [P^{n+1}] - [I][P^n] + \frac{\alpha \Delta t}{\Delta x^2} [A] [P^{n+1}] = 0
+\end{equation}
+- solving
+\begin{equation}
+[P^{n+1}] = ([I] + \frac{\alpha \Delta t}{\Delta x^2} [A])^{-1} [P^n]
+\end{equation}
+- need to take inverse of the matrix at every time step and is therefore more computationally intensive
+- but the implicit method is unconditionally stable
+* Boundary Conditions
+- [[file:boundaryconditions.org][boundary conditions]] can either be Dirichlet or Neumann
+- in this context
+** Dirichlet
+- Dirichlet is constant pressure / prescribed pressure
+- consider the first row of the matrix
+#+BEGIN_EXAMPLE
+            +-------+-------+
+            | X_(-1)|  X_0  |
+            +-------+-------+
+                    Pb
+#+END_EXAMPLE
+- interpolating
+\begin{equation}
+P_B = \frac{P_{-1} + P_0}{2}
+\end{equation}
+\begin{equation}
+P_{-1} = 2 P_B P_0
+\end{equation}
+- let
+\begin{equation}
+\eta = \frac{\alpha \Delta t}{\Delta x^2}
+\end{equation}
+- the first term becomes
+\begin{equation}
+\eta ( 3 P_0 - 2 P_B - P_1)
+\end{equation}
+- substituting in our matrix equations
+- if we have the Dirichlet boundary conditions on both sides
+\begin{equation}
+\begin{bmatrix}
+1 & 0 & \dots & 0 \\
+0 & 1 & \dots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & \dots & 0 & 1\\
+\end{bmatrix}
+\begin{bmatrix}
+\frac{\partial P_{0}}{\partial t} \\
+\frac{\partial P_{1}}{\partial t} \\
+\vdots \\
+\frac{\partial P_{N-1}}{\partial t} \\
+\end{bmatrix}
++
+\begin{bmatrix}
+3 & -1 & 0 & \dots & 0 \\
+-1 & 2 & -1 & \dots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & \dots & -1 & 2 & -1\\
+0 & \dots & 0 & -1 & 3\\
+\end{bmatrix}
+\begin{bmatrix}
+P_{0} \\
+P_{1} \\
+\vdots \\
+P_{N-2} \\
+P_{N-1} \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+2 \eta P_{BL} \\
+0\\
+0\\
+0\\
+2 \eta P_{BR} \\
+\end{bmatrix}
+
+\end{equation}
+** Neumann
+- Neumann is constant/no flux
+#+BEGIN_EXAMPLE
+            +-------+-------+
+            |X_(N-1)|  X_N  |
+            +-------+-------+
+                    |<- q
+#+END_EXAMPLE
+- q is constant flux at boundary condition
+- we use Darcy's law to estimate q
+\begin{equation}
+q = \frac{-k}{\mu}*\frac{\partial P}{\partial x}
+\end{equation}
+- using finite difference
+\begin{equation}
+q = \frac{k}{\mu}*\frac{P_{N-1} - P_{N}}{\Delta x}
+\end{equation}
+- $P_N$ is given as
+\begin{equation}
+P_N = P_{N-1} - \frac{q \mu \Delta x}{k}
+\end{equation}
+- if there is no flow, q=0
+\begin{equation}
+P_N = P_{N-1}
+\end{equation}
+- the last term then becomes
+\begin{equation}
+\eta(-P_{N-2} + P_N + \frac{q\mu\Delta x}{k})
+\end{equation}
+- substituting in matrix equations
+\begin{equation}
+\begin{bmatrix}
+1 & 0 & \dots & 0 \\
+0 & 1 & \dots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & \dots & 0 & 1\\
+\end{bmatrix}
+\begin{bmatrix}
+\frac{\partial P_{0}}{\partial t} \\
+\frac{\partial P_{1}}{\partial t} \\
+\vdots \\
+\frac{\partial P_{N-1}}{\partial t} \\
+\end{bmatrix}
++
+\begin{bmatrix}
+1 & -1 & 0 & \dots & 0 \\
+-1 & 2 & -1 & \dots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & \dots & -1 & 2 & -1\\
+0 & \dots & 0 & -1 & 1\\
+\end{bmatrix}
+\begin{bmatrix}
+P_{0} \\
+P_{1} \\
+\vdots \\
+P_{N-2} \\
+P_{N-1} \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+\frac{q \mu \eta \Delta x}{k} \\
+0\\
+0\\
+0\\
+\frac{q \mu \eta \Delta x}{k} \\
+\end{bmatrix}
+
+\end{equation}
+** Putting it all together
+\begin{equation}
+[I] [P^{n+1}] - [I][P^n] + \frac{\alpha \Delta t}{\Delta x^2} [A] [P] = [P^B]
+\end{equation}
+- can be solved explicityly
+\begin{equation}
+[I] [P^{n+1}] - [I][P^n] + \frac{\alpha \Delta t}{\Delta x^2} [A] [P^n] = [P^B]
+\end{equation}
+\begin{equation}
+[P^{n+1}] = ([I] - \frac{\alpha \Delta t}{\Delta x^2} [A]) [P^n] + [P^B]
+\end{equation}
+- or implicitly
+\begin{equation}
+[I] [P^{n+1}] - [I][P^n] + \frac{\alpha \Delta t}{\Delta x^2} [A] [P^{n+1}] = [P^B]
+\end{equation}
+\begin{equation}
+[P^{n+1}] = ([I] + \frac{\alpha \Delta t}{\Delta x^2} [A])^{-1} ( [P^n] + [P^B] )
+\end{equation}
+* Transmisbility Form
+- the above equation has pressure units, we want to convert this into rate units (volume/time)
+- let's multiply by
+\begin{equation}
+\frac{[B]}{\Delta t}
+\end{equation}
+- where B is a diagonal matrix with the accumulation of the fluid depending on the pressure within the grid block
+- this is the accumulation matrix
+\begin{equation}
+\begin{bmatrix}
+B_0 & 0 & \dots & 0 \\
+0 & B_1 & \dots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & \dots & 0 & B_{n-1}
+\end{bmatrix}
+\end{equation}
+- where B is given as
+\begin{equation}
+B_i = \frac{V_i \phi C_t}{B_{\alpha}}
+\end{equation}
+- where C_t is the total compressibility
+- $B_\alpha$ is the formation volume factor
+\begin{equation}
+B_{\alpha} = \frac{V^{Reservoir}}{V^{Standard}}
+\end{equation}
+- also let's define the transmisibility matrix is
+\begin{equation}
+[T] = \frac{\eta}{\Delta t} [B] [A]
+\end{equation}
+- T is the amount of fluid flow into or out of a grid block
+- [T] is given as - the first and last rows are determined by boundary conditions
+\begin{equation}
+\begin{bmatrix}
+\dots & \dots & \dots & \dots & 0 \\
+-T & 2T & -T & \dots & 0 \\
+0 & -T & 2T & \dots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & -T & 2T & -T \\
+0 & \dots & \dots & \dots & \dots \\
+\end{bmatrix}
+\end{equation}
+- where T is defined as
+\begin{equation}
+T = \frac{k A_i}{\mu B_{\alpha} \Delta x}
+\end{equation}
+- also let's define [Q] as
+\begin{equation}
+[Q] = \frac{1}{\Delta t} [B] [P^B]
+\end{equation}
+- [Q] can also be used to account for injection/producing wells as follows
+\begin{equation}
+\begin{bmatrix}
+2 T P^B \\
+\vdots \\
+-Q_{producing} \\
+\vdots \\
+Q_{injection} \\
+\vdots
+\end{bmatrix}
+\end{equation}
+- the resulting equation in transmisibility form is given as
+\begin{equation}
+\frac{1}{\Delta t} [B] [P^{n+1}] -
+\frac{1}{\Delta t} [B] [P^n] +
+[T] [P] =
+[Q]
+\end{equation}
+- solving for it explicitly
+\begin{equation}
+[P^{n+1}] = [P^n] + \Delta t [B]^{-1} ([Q] - [T] [P^n])
+\end{equation}
+- implicit solution
+\begin{equation}
+[P^{n+1}] = ([T] + \frac{1}{\Delta t} [B])^{-1} (\frac{1}{\Delta t} [B] [P^n] + [Q])
+\end{equation}
+* Mixed Discretization Method
+\begin{equation}
+\theta [explicit] + (1- \theta) [implicit]
+\end{equation}
+\begin{equation}
+\theta [T] [P^n] +
+(1-\theta)[T][P^{n+1}] +
+\frac{1}{\Delta t} [B] [P^{n+1}] =
+\frac{1}{\Delta t} [B] [P^n] +
+[Q]
+\end{equation}
+\begin{equation}
+[(1-\theta) [T] + \frac{1}{\Delta t} [B]][P^{n+1}] =
+(\frac{1}{\Delta t} [B] - \theta [T]) [P^n] + [Q]
+\end{equation}
+** Crank-Nicholson Method
+- can be derived by using the central difference approximation instead of the forward difference approximation to the time derivative
+- 2nd order accurate for both time and space derivatives
+* Finite Volume Discretization
+- consider the initial strong form equation
+\begin{equation}
+\phi c_t
+\frac{\partial P}{\partial t} =
+\nabla
+\frac{k}{\mu}
+(\nabla P)
+\end{equation}
+- let's increase complexity by a little - remove the homogenous permeability and viscosity condition
+- let's maintain a constant cross sectional area but allow the shape to change through the reservoir
+#+BEGIN_EXAMPLE
+                         /--------------------+------+
+                        +-----------+         |      |
+                        |   A(x)  k0|         | A(x) |
+                        |  \Omega   |         |      |
+                        +-----------+         |k(n-1)|
+                         \--------------\     |      |
+                                         -----+------+
+#+END_EXAMPLE
+- multiply by a vector function of x as last time
+\begin{equation}
+w(x) \phi c_t 
+\frac{\partial P(x,t)}{\partial t} -
+w(x) 
+\nabla
+\big( 
+\frac{k(x)}{\mu(x)}
+\nabla (P(x,t))
+\big) =
+0
+\end{equation}
+- integrating over the entire body $\Omega$
+\begin{equation}
+\int _\Omega
+w(x) \phi c_t 
+\frac{\partial P(x,t)}{\partial t} -
+\int _\Omega 
+w(x) 
+\nabla
+\big(
+\frac{k(x)}{\mu(x)}
+\nabla (P(x,t))
+\big)
+dx =
+0
+\end{equation}
+- integrating in 3 dimensions with respect to area A
+\begin{equation}
+\int _0 ^L
+\int 
+\int _{A(x)}
+w(x) \phi c_t 
+\frac{\partial P(x,t)}{\partial t} dA dx -
+\int _0 ^L
+\int 
+\int _{A(x)}
+w(x) 
+\nabla
+\big(
+\frac{k(x)}{\mu(x)}
+\nabla (P(x,t))
+\big)
+dA dx =
+0
+\end{equation}
+- since A(x) is assumed to be constant; in one dimension
+\begin{equation}
+\int _0 ^L
+A(x)
+w(x) \phi c_t 
+\frac{\partial P(x,t)}{\partial t} dx -
+\int _0 ^L
+A(x)
+w(x) 
+\frac{\partial}{\partial x}
+\big(
+\frac{k(x)}{\mu(x)}
+\frac{\partial P(x,t)}{dx}
+\big)
+dx
+=
+0
+\end{equation}
+- integrating the second term [[file:integrationbyparts.org][by parts]] with functions A(x)w(x), and the rest
+\begin{equation}
+\int _0 ^L
+A(x)
+w(x) \phi c_t 
+\frac{\partial P(x,t)}{\partial t} dx 
+- 
+[
+A(x)w(x)
+\frac{k(x)}{\mu(x)}
+\frac{\partial P(x,t)}{\partial x}
+]_0 ^L
++
+\int _0 ^L
+(
+\frac{k(x)}{\mu(x)}
+\frac{\partial P(x,t)}{\partial x} 
+)
+(
+\frac{\partial}{\partial x}
+A(x)
+w(x) 
+)
+dx 
+=
+0
+\end{equation}
+- let w(x) = 1; using 
+\begin{equation}
+\int _0 ^L 
+A(x) \phi c_t \frac{\partial P}{\partial t} dx 
++ 
+\int _0 ^L 
+\frac{k}{\mu} \frac{\partial A(x)}{\partial x} 
+\frac{\partial P(x,t)}{\partial x} dx 
+- 
+[A(x) \frac{k}{\mu} \frac{\partial P(x,t)}{\partial x}] _0 ^L 
+= 
+0
+\end{equation}
+- spliting into grid blocks
+\begin{equation}
+\Sigma _{i=0} ^{N-1} {
+\int _{x_i - (\Delta x_i / 2)} ^{x_i + (\Delta x_i / 2)}
+A(x) \phi c_t \frac{\partial P(x,t)}{\partial t} dx 
++ 
+\int _{x_i - (\Delta x_i / 2)} ^{x_i + (\Delta x_i / 2)}
+\frac{k(x)}{\mu(x)} \frac{\partial A}{\partial x} 
+\frac{\partial P(x,t)}{\partial x} dx 
+- 
+[
+A(x) \frac{k(x)}{\mu(x)} \frac{\partial P(x,t)}{\partial x}
+]_{x_i - (\Delta x_i / 2)} ^{x_i + (\Delta x_i / 2)}
+} = 0
+\end{equation}
+- using [[file:quadraturerulesintegration.org][midpoint quadrature]] to solve the integral
+\begin{equation}
+\int _a ^b f(x) dx \approx (b-a) f(\frac{a+b}{2})
+\end{equation}
+\begin{equation}
+\Sigma _{i=0} ^{N-1} \bigg\{
+A(x) \phi c_t \frac{\partial P(x,t)}{\partial t} \Delta x_i 
++ 
+\frac{k(x)}{\mu(x)} \frac{\partial A(x)}{\partial x} 
+\frac{\partial P(x,t)}{\partial x} \Delta x_i 
+- 
+[
+A(x) \frac{k(x)}{\mu(x)} \frac{\partial P(x,t)}{\partial x}
+]_{x_i - (\Delta x_i / 2)} ^{x_i + (\Delta x_i / 2)}
+\bigg\} = 0
+\end{equation}
+- since midpoint quadrature rule assumes that the pressure distribution within a grid block is constant, $\frac{\partial p}{\partial x} = 0$ the 2nd term is 0
+- dividing by $B_\alpha$, the formation volume factor
+\begin{equation}
+B_{\alpha} = \frac{V^{Reservoir}}{V^{Standard}}
+\end{equation}
+- since $V(x_i) = A(x_i) \Delta x_i$
+\begin{equation}
+\Sigma _{i=0} ^{N-1} \bigg\{
+\frac{V(x_i) \phi c_t}{B_{\alpha}} \frac{\partial P(x)}{\partial t} dx - 
+\frac{1}{B_{\alpha}}
+\bigg[
+\frac{k(x) A(x)}{\mu(x)}
+\frac{\partial P(x_i + \Delta x_i /2)}{\partial x} -
+\frac{\partial P(x_i - \Delta x_i /2)}{\partial x}
+\bigg]\bigg\} = 0
+\end{equation}
+- and assuming permeability is independent of concentration for now
+\begin{equation}
+\Sigma _{i=0} ^{N-1} \bigg\{
+\frac{V(x_i) \phi C_t}{B_{\alpha}} \frac{\partial p}{\partial t} dx - 
+\frac{k A}{\mu B_{\alpha}}
+\bigg[
+\frac{\partial P(x_i + \Delta x_i /2)}{\partial x} -
+\frac{\partial P(x_i - \Delta x_i /2)}{\partial x}
+\bigg]\bigg\} = 0
+\end{equation}
+- 
+* With Adsorption
+\begin{equation}
+\phi c_t
+\frac{\partial P}{\partial t} +
+(1-\phi) 
+\frac{\partial N}{\partial t} 
+=
+\nabla
+\frac{k}{\mu}
+(\nabla P)
+\end{equation}

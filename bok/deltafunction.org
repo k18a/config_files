@@ -1,0 +1,25 @@
+#+TITLE: Dirac Delta Function
+
+- a a piecewise function with the value \infty at 0 and 0 everywhere else
+
+\begin{equation}
+\delta(x=0) = \infty
+
+\delta(x \neq 0) = 0
+\end{equation}
+
+* Properties
+
+- area under curve
+\begin{equation}
+\int _{-\infty} ^{\infty} \delta (x) dx = 1
+\end{equation}
+
+- shifting property, over any symmertic interval
+\begin{equation}
+\int _{a - \epsilon} ^{a + \epsilon} f(x) \delta (x-a) dx = f(a)
+\end{equation}
+
+\begin{equation}
+\int _{a - \epsilon} ^{a + \epsilon} f(x) \frac{\partial \delta (x-a)}{\partial x} dx = - \frac{\partial f(a)}{\partial x}
+\end{equation}

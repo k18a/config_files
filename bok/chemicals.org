@@ -1,0 +1,76 @@
+#+TITLE: Chemicals
+
+* Elements
+
+- [[file:nitrogen.org][Nitrogen]]
+
+* Medecines
+  
+- [[file:triptorelin.org][Triptorelin]]
+- [[file:diazepam.org][Diazepam]]
+
+* Preservatives
+
+Four categories:
+1. UV light absorbers - prevents light from creating harmful and bad-tasting toxins
+2. Colour stabilizers
+3. Anti-oxidants
+4. Anti-microbials
+
+* UV Light Absorbers
+
+- Allows manufacturer to package product in clear glass or plastic. 
+- Can also be added to the packaging, as a UV blocker
+- UV light is of 2 types: UV-A(320-360 nm) and UV-B(280-320 nm).
+- UV-B light with shorter wavelength is more damaging.
+
+- [[file:benzophenone.org][Benzophenone]]
+- [[file:octylmethoxycinnamate.org][Octyl methoxycinnamate]]
+- [[file:zincoxide.org][Zinc oxide]]
+
+* Anti-Mircrobials
+
+- [[file:formaldehyde.org][Formaldehyde]]
+- [[file:parabens.org][Parabens]]
+
+* Anti-Oxidants
+
+* Other Skin
+
+- [[file:euk.org][Ethylbisiminomethylguaiacol Manganese Chloride]]
+- [[file:matrikine.org][Matrikine]]
+- [[file:niacinamide.org][Nicotinamide, 3-pyridinecarboxamide]]
+
+* Solvents
+
+- [[file:propanediol.org][Propanediol]]
+
+
+* Exfoliants
+
+- [[file:alphabetahydroxyacids.org][Alpha & Beta Hydroxy Acids]]
+- [[file:retin.org][Retin]]
+
+* Humectants
+
+- [[file:hyaluronicacid.org][Hyaluronic Acid]]
+
+* Emmolients
+
+- [[file:aloevera.org][Aloe Vera]]
+- [[file:squalene.org][Squalene]]
+
+* Bleaching
+
+- [[file:vitaminc.org][Vitamin C]]
+
+* Oils
+
+- [[file:tsubaki.org][Tsubaki Oil]]
+
+* Bio-molecules
+
+- [[file:vitaminc.org][Vitamin C]]
+- [[file:ceramide.org][Ceramide]]
+- [[file:peptide.org][Peptide]]
+  

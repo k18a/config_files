@@ -1,0 +1,15 @@
+* Conjugate Variables
+
+- thermodynamic potentials are expressed in pairs of conjugate variables
+- the conjugate pair (the product of two variables) has units of energy or sometimes power
+- can be considered as the product of generalized driving-force, which produces a generalized displacement to occur in the system
+
+commonly considefred conjugate variables: 
+
+| type                     | driving-force                 | displacement                                          |
+| thermal                  | temperature, T (K)            | entropy, S (J/K)                                      |
+| mechanical (non-viscous) | pressure p (Pa = J/m3)        | volume, V (m3 = J/Pa)                                 |
+| mechanical (others)      | stress, $\sigma$ (Pa = J/m3)  | volume, V * strain, $\epsilon$ (m3 = J/Pa)*(no units) |
+| material                 | chemical potential, $\mu$ (J) | number of particles, N (no units)                     |
+
+

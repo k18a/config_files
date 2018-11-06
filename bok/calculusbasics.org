@@ -1,0 +1,31 @@
+#+TITLE: Calculus Basics
+
+* Limits
+
+* Differentials
+-  the first derivative is defined as
+- $\frac{dy}{dt} = \lim\limits_{\Delta t\rightarrow 0}\frac{f\left( {t + \Delta t} \right) - f\left( t \right)}{\Delta t}$
+
+***  common derivatives
+- y dependent variable
+- t independent variable
+- r constant
+- $y = f\left( t \right) = r$
+  - $\frac{dy}{dt} = f'\left( t \right) = 0$
+- $y = f\left( t \right) = rt^{n}$
+  - $\frac{dy}{dt} = f'\left( t \right) = rnt^{n - 1}$
+- $y = f\left( t \right) = \sin\left( {rt} \right)$
+  - $\frac{dy}{dt} = f'\left( t \right) = r\cos\left( {rt} \right)$
+- $y = f\left( t \right) = \cos\left( {rt} \right)$
+  - $\frac{dy}{dt} = f'\left( t \right) = - r\sin\left( {rt} \right)$
+- $y = f\left( t \right) = e^{rt}$
+  - $\frac{dy}{dt} = f'\left( t \right) = re^{rt}$
+- $y = f\left( t \right) = \ln\left( {rt} \right)$
+  - $\frac{dy}{dt} = f'\left( t \right) = \frac{1}{t}$
+
+* Integrals
+- there are two types of integrals
+  1. definite
+     - limits are specified
+  2. indefinite
+     - also known as primitive integral or as antiderivative

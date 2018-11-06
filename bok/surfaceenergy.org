@@ -1,0 +1,34 @@
+#+TITLE: Surface Energy
+
+- occurs in all interfaces between two phases
+- surface energy is the excess energy at the surface of a material compared to the bulk
+- surfaces are intrinsically less energetically favourable than the bulk of a material
+- surface energy quantifies the disruption of intermolecular bonds that occur when a surface is created
+  - work required to cut a bulk sample creating two surfaces
+- if the creation of surface is reversible, cutting a solid to give two surfaces implies that surface energy is half the energy of cohesion
+  - this is true only for freshly prepared surfaces in vacuum
+- unit of surface tension
+  - milli-Newtons per meter or dynes per centimeter
+
+| surface tension | interfacial tension | surface free energy |
+| liquid-gas      | liquid-liquid       | solid-fluid    |
+
+* Interfacial Tension
+- interfacial tension for different fluids
+| fluid pair | IFT (mN/m or dyne per cm) |
+| air-brine  |                    72-100 |
+| oil-brine  |                     15-40 |
+| gas-oil    |                     35-65 |
+- interfacial tension maybe estimated using the Macleod-Sugden correlation
+** Macleod-Sugden Correlation
+- Weinaug-Katz variation of the Macleod-Sugdon correlation
+- $$\sigma = \Sigma _{i=1} ^N P _{chi} (x _i \frac{\rho _L}{M _L} - y _i \frac{\rho _V}{M _V})$$
+  - \rho interfacial tension
+  - P_{chi} parachor of component i
+  - M_L molecular weight of liquid phase
+  - M_V molecular weight of gaseous phase
+  - \rho_L liquid phase density
+  - \rho_V vapour phase density
+  - x_i mole fraction of component i in liquid phase
+  - y_i mole fraction of component i in vapour phase
+

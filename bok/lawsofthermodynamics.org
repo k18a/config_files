@@ -1,0 +1,27 @@
+* Laws of Thermodynamics
+
+* Zeroth Law
+
+* First Law
+
+- \partial U = \partial Q + \partial W
+- U is the [[file:internalenergy.org][internal energy]]
+- \partial Q is the energy added as heat
+- \partial W is the [[file:work.org][work done]]
+
+* Second Law
+
+- \partial Q = T dS 
+- \partial Q is the energy added as heat
+- T is the absolute temperature
+- S is the [[file:entropy.org][entropy]]
+
+Principle of Minimum Energy
+- for a process with given constraints [[file:naturalvariables.org][natural variables]] and constant external parameters, 
+  - at equilibrium the corresponding thermodynamic potential will approach a minimum
+- can be compared with the principle of maximum entropy: 
+  - for a closed system with fixed internal energy, the entropy tends to maximum at equilibrium
+
+* Third Law
+
+

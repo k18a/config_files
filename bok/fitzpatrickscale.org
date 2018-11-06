@@ -1,0 +1,12 @@
+#+TITLE: Fitzpatrick Scale
+
+- numerical classification of human skin colour
+- used to estimate the response of different skin types to UV light
+
+| Type | reaction to UV rays                 |
+| I    | always burns, never tans            |
+| II   | usually burns, tans minimally       |
+| III  | sometimes mild burn, tans uniformly |
+| IV   | burns minimally, always tans well   |
+| V    | very rarely burns, tans very easily |
+| VI   | never burns                         |

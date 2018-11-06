@@ -1,0 +1,5 @@
+#+TITLE: Distributive Property
+- consider the operations *
+\begin{equation}
+x*(y+z) = x*y + x*z
+\end{equation}

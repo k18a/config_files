@@ -1,0 +1,9 @@
+#+TITLE: Cauchy Schwarz Inequality
+- the absolute value of the dot product of 2 non-zero vectors is always less than or equal to the product of the magnitueds of individual vectors
+- the dot product is equal to the product of the magnitudes only when the vectors are linear - one of the vectors is a non-zero scalar multiple of the other
+\begin{equation}
+|[x].[y]| \leq ||x||.||y||
+\end{equation}
+\begin{equation}
+|[x].[y]| = ||x|| ||y|| \leftrightarrow [x] = c.[y]
+\end{equation}

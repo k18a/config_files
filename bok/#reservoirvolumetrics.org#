@@ -1,0 +1,89 @@
+#+TITLE: Reservoir Volumetrics
+- reservoir volumetric analysis is used to determine volume from static information that remains constant over a period of time
+- Original Oil in Place (OOIP)
+  - $N = \frac{7758 \phi A h_o S_{oi}}{B_{oi}}$
+    - N is original oil in place (STB)
+    - \phi is reservoir porosity
+    - A is reservoir area (acres)
+    - h_o is net thickness of oil zone (feet)
+    - $S_{oi}$ is initial reservoir oil saturation
+    - $B_{oi}$ is oil formation volume factor (RB/STB)
+- Original Free Gas in Place
+  - $G = \frac{7758 \phi A h_g S_{gi}}{B_{gi}}$
+    - G is original gas in place (SCF)
+    - \phi is reservoir porosity
+    - A is reservoir area (acres)
+    - h_g is net thickness of gas zone (feet)
+    - $S_{gi}$ is initial reservoir gas saturation
+    - $B_{gi}$ is gas formation volume factor (RB/STB)
+- the reservoir is modeled by subdividing the reservoir volume into an array or grid of smaller volume elements - gridblock, cell, or node
+- bulk volume V_b of each gridblock defined in a cartesian co-ordinate system {x,y,z} is calculated from the gross thickness \Delta z = h of each gridblock and the gridblock lengths \Delta x and \Delta y
+  - $V_B = h \Delta x \Delta y$
+- gridblock pore volume is calculated as
+  - $V_P = \phi \eta V_B = \phi \eta h \Delta x \Delta y = \phi h_{net} \Delta x \Delta y$
+  - where \phi is porosity and \eta is net-to-gross ratio and $h_{net}$ is net thickness
+- volume phase is pore volume times the saturation
+  - $V_l = S_l * V_P = S_l \phi h_{net} \Delta x \Delta y$
+- this estimate from a bottom-up approach can be validated based on volumetrics calculated from other sources such as a material balance study or a computer mapping package
+* Material Balance
+- provide an independent method of estimating the volume of oil, water, and gas in a reservoir for compariso with volumetric estimates
+- magnitues of various factors in a material balance equation indicates the relative contribution of different drive mechanisms at work in the reservoir
+- can be used to predict future reservoir performance and aid in estimating cumulative recovery efficiency
+** Volumetric Material Balance By Drake
+*** Oil Reservoir with a Gas Cap and an Aquifer
+|   | term               | significance                                       |
+|   | $N D_o$            | change in volume of initial oil and associated gas |
+| + | $N D_{go}$         | change in volume of free gas                       |
+| + | $N (D_w + D_{gw})$ | change in volume of initial connate water          |
+| + | $N D_r$            | change in formation pore volume                    |
+| = | $N_p B_o$          | cumulative oil production                          |
+| + | $N_p R_{so} B_g$   | cumulative gas produced in solution with oil       |
+| + | $G_{ps} B_g$       | cumulative soltion gas produced as evolved gas     |
+| + | $G_{pc} B_{gc}$    | cumulative gas cap gas production                  |
+| + | $G_i B_g'$         | cumulative gas injection                           |
+| + | $W_e B_w$          | cumulative water influx                            |
+| + | $W_l B_w$          | cumulative water injection                         |
+| + | $W_p B_w$          | cumulative water production                       |
+- where
+  - $D_o = (B_t - B_{ti})$
+  - $D_{go} = N m B_{ti} (\frac{B_{gc} - B_{gi}}{B _{gi}})$
+  - $D_w = \frac{B_{ti} S_{wio}}{1-S_{wio}} (\frac{B_{tw} - B_{twi}}{B _{twi}})$
+  - $D_{gw} = \frac{m B_{ti} S_{wig}}{1-S_{wig}} (\frac{B_{tw} - B_{twi}}{B _{twi}})$
+  - $D_r = (\frac{1}{1-S_{wio}} + \frac{m}{1-S_{wig}) B_{ti} c_f \Delta P$
+- $$N[D_o + D_{go} + D_w + D_{gw} + D_r = N_p B_o - N_p R_{so} B_g + [G_{ps} B_g + G_{pc} B_{gc} - G_i B_g'] - (W_e + W_l - W_p) B_w$$
+  - the left-hand-side term accounts for changes in volume
+  - terms on the right hand side account for fluid production and injection
+*** Gas Reservoir
+- $G B_{gi} = N m B _{ti}$
+- substituting into the oil reservoir material balance equation and accounting for the fact that water compressibility and formation compressibility are negligible compared to gas compressibility
+- $$G B_{gi} (\frac{B_{gc} - B_{gi}}{B_{gi}}) = [G _{pc} B _{gc} - G _t B _g'] - (W _e + W _i - W _p) B _w$$
+* List of Symbols
+| B_g      | gas formation volume factor (RB/SCF)                                          |
+| B_{gc}   | gas cap formation volume factor (RB/SCF)                                      |
+| B_g '    | injected gas formation volume factor (RB/SCF)                                 |
+| B_o      | oil formation volume factor                                                   |
+| B_t      | $B_o + (R_{si} - R_{so}) B_g$ composite oil formation volume factor RB/STB    |
+| B_{tw}   | $B_w + (R_{swi} - R_{sw}) B_g$ composite water formation volume factor RB/STB |
+| c_f      | formation rock compressibility (1/psia)                                       |
+| G        | initial gas in place (SCF)                                                    |
+| G_i      | cumulative gas injected (SCF)                                                 |
+| G_{pc}   | cumulative gas cap produced (SCF)                                             |
+| G_{ps}   | cumulative solution gas produced as evolved gas (SCF)                         |
+| m        | ratio of gas reservoir volume to oil reservoir volume                         |
+| N        | initial oil in place (STB)                                                    |
+| N_p      | cumulative oil produced (STB)                                                 |
+| R_{so}   | solution gas-oil ratio (SCF/STB)                                              |
+| R_{si}   | initial solution gas-oil ratio (SCF/STB)                                      |
+| R_{sw}   | soltuin gas-water ratio (SCF/STB)                                             |
+| S_g      | gas saturation                                                                |
+| S_o      | oil saturation                                                                |
+| S_w      | water saturation                                                              |
+| S_{wi}   | initial water saturation                                                      |
+| S_{wig}  | initial water saturation in gas cap                                           |
+| S_{wio}  | initial water saturation in oil zone                                          |
+| W_e      | cumulative water influx (STB)                                                 |
+| W_i      | cumulative water injected (STB)                                               |
+| W_p      | cumulative water produced (STB)                                               |
+| \Delta P | P_i - P = reservoir pressure change (psia)                                    |
+| P_i      | initial reservoir pressure (psia)                                             |
+| P        | reservoir pressure corresponding to cumulative fluid times (psia)             |

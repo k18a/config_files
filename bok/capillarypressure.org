@@ -1,0 +1,12 @@
+#+TITLE: Capillary Pressure
+
+- pressure difference accross curved interface formed by two immiscible fluids in a small capillary tube
+- $P_c = P_{nw} - P_w$
+  - P_c capillary pressure
+  - P_{nw} pressure in non wetting phase
+  - P_w pressure in wettin phase
+
+* Theory
+
+- 
+

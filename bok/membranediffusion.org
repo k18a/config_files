@@ -1,0 +1,48 @@
+#+TITLE: Membrane Diffusion
+
+* Steady Diffusion Across Membrane
+- treatment is similar but with different boundary conditions
+- mass balance accross a thin section \Delta z, z units of distance from the lseft side of the film
+  - accumulation = rate of diffusion into layer at z - rate of diffusion out of layer at z + \Delta z
+- at steady state accumulation is 0
+  - $0 = A(J_z - J_{(z + \Delta z)})$
+- at very small \Delta z
+  - $0 = - \frac{d}{dz}J$
+- Fick's First Law
+  - $J = D \frac{d C}{dz}$
+- differentiating Fick's first law for a constant D
+  - $0 = D \frac{d^2 C}{d z^2}$
+- boundary conditions
+  - at $z = 0, C = HC_{0}$
+  - at $z = l, C = HC_{l}$
+    - H is the partition coefficient
+      - concentration in the membrane / concentration in the adjacent solution
+- solution to the differential equation is of the form
+  - $C = a + b z$
+- integrating with the given boundary conditions
+  - $C = HC_{0} + H(C_{l} - C_{0})\frac{z}{l}$
+- as expected concentration varies linearly with distance as shown in the figure
+- as the system is in steady state, flux is constant
+  - $j = -D \frac{dC}{dz} = \frac{D}{l} (C_{0} - C_{l})$
+- unless the partition coefficient is 1, this implies that there will be discontinuities in the system, although the concentration profile is still linear
+- the figure below shows the concentration profiles for H > 1, H < 1, and the chemical potentials
+- thinking about chemical potential is helpful as solute travels from a region of higher chemical potential to a region of lower chemical potential
+- [[./steadydiffusionthinmembrane.jpg]]
+
+** In the presence of Chemical Reactions
+- if the diffusing solute 1 can rapidly and reversibly react with other immobile solutes fixed withing the membrane
+- mass balance of solute 1 in section z to z+\Delta z is now given by
+  - accumulation = rate of diffusion into layer at z - rate of diffusion out of layer at (z + \Delta z) + amount produced/consumed by chemical reaction
+- at steady state accumulation is 0
+  - $0 = A(J _1 _z - J _1 _{(z + \Delta z)}) - r_1 A \Delta z$
+  - r1 is rate constant of the chemical reaction involving solute 1
+  - A \Delta z is the volume of the section
+- differentiating
+  - $0 = -\frac{d}{dz} j_1 - r_1$
+- for the immobile solute which is involved in the same reaction
+  - $0 = -\frac{d}{dz} j_2 - r_1$
+  - since the product is immobile, flux, J is 0
+  - \therfore r_1 is 0
+- the derivation reverts to that of steady diffusion in membranes without chemical reaction
+- therefore chemical reaction with an immobile species does not affect diffusion profile in case of steady state diffusion
+  - this is an unsual case as in almost every other case, chemical reaction dramatically alters mass transfer

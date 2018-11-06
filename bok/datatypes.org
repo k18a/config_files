@@ -1,0 +1,21 @@
+#+TITLE: Data Types
+
+* Binary 
+
+- data is stored in binary format by the computer
+- binary data maybe converted into string using an encoding method
+- the most common encoding method is UTF-8 
+
+* Boolean
+
+** Boolean Operators
+
+- short circuit operators
+  - expr1 && expr2
+    - expr2 to is evaluated only if expr1 is true
+  - expr1 || expr2
+    - expr2 is evaluated only if expr1 is false
+
+* Set
+
+- a set of unique values

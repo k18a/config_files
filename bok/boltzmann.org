@@ -1,0 +1,6 @@
+#+TITLE: Boltzmann
+
+* Boltzmann Equation
+
+- describes the statistical behaviour of a thermodynamic system that is not in a state of equilibrium
+- the equation does not analyze individual position and momenta of each particle, but rather considers a probability distribution for the position and momentum of a typical particle

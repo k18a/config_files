@@ -1,0 +1,61 @@
+* Multilayer Adsorption
+
+- multi-layering occurs when the pressure is sufficiently high (~ 0.1 of the P0) cite:Do1998
+- multi-layering is possible in micro-porous substances after the micro-pores are filled cite:Crosdale1998
+- physisorption in micropores is limited to very low relative pressures, which is followed by micropore filling at intermediate relative pressures, before the onset of capillary condensation or multilayer adsorption at external surfaces at higher relative pressure cite:Sing1985
+- if the isotherm plateau at higher relative pressures is virtually horizontal, multilayer adsorption on external surfaces is negligible cite:Sing1985
+
+* Brauner, Emmet, and Teller Model
+
+** Assumptions
+- The BET model assumes cite:Do1998
+  1. Flat surface
+  2. No limit to number of adsorbed layers
+  3. Surface is energetically homogeneous
+  4. No interaction between adsorbed molecules
+
+** TODO Derivation 
+
+The BET equation can be derived as cite:Sing1985: 
+
+- let s0, s1, and sn be the surface areas covered by no layer, one layer, or n layers of adsorbate molecules. 
+- rate of adsorption = rate of desorption
+- for the 1st layer:
+  - $a_1Ps_0 = b_1s_1exp(-\frac{E_1}{RT})$
+    - a1, b1 are constants
+    - P is the pressure
+    - s0 is the surface area occupied by no adsorbate
+    - E1 is the interaction energy between the solid and the molecules of the first layer, which is expected to be higher than the heat of vaporisation. 
+- the interaction energies for all subsequent layers is assumed to be equal to the heat of vaporisation. 
+- for the second layer:
+  - $a_2Ps1 =b_2s_2exp(-\frac{E_2}{RT})$
+- for subsequent layers:
+  - $a_iPs_{i-1}=b_is_iexp(-\frac{E_i}{RT})$
+- total area of the solid is the sum of all individual areas: 
+  - $S=\Sigma s_i$
+- volume adsorbed in any given layer is given as: 
+  - $V_i=V_m(\frac{is_i}{S})$
+    - Vm is the monolayer coverage
+    - Vi is the amount adsorbed in ith layer
+    - si is surface area of ith layer
+- total amount adsorbed is given as: 
+  - $V=\frac{V_m}{S}\sum_{i=0}^{\infty}is_i$
+- further assumptions are necessary to derive the BET isotherm: 
+  - heat of adsorption of the second and subsequent layers is assumed to be equal to the heat of liquifaction: $E_2=E_3=...=E_L$. 
+  - The ratio of rate constants of second and higher layers is equal to each other and to a constant: $\frac{b_i}{a_i}=g$.
+
+** Guggenheim-Andersen de Boer Model 
+
+- based on the BET theory
+- commonly used to fit water isotherms: 
+  - $$w(p/p_0) = \frac{{w_m}{c_{GAB}}{a_w}}{(1-{k a_w})(1+ (c_{GAB}-1){k a_w})}$$
+    - where $w_m$ is the monolayer capacity
+    - $a_w$ is the water activity 
+    - $c_{GAB}$ is the affinity constant
+    - k is a fitting constant, and accounts for enthalpy differences between layers above monolayer and bulk condensed liquid @Day2008. 
+- the GAB model reduces to BET equation when k=1.
+- heat of adsorption maybe derived from the GAB equation as follows @Day2008:
+  - $ Q_{st} = \Delta H_{vap} + R T ln (C)$
+    - where $Q_{st}$ is the heat of adsorption
+    - $\Delta H_{vap}$ is the molar heat of vaporisation 
+    - $C = k*c_{GAB}$ 

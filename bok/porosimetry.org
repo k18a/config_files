@@ -1,0 +1,5 @@
+#+TITLE: Prosimetry 
+
+
+- for macropore analysis, mercury porosimetry is recommended cite:Sing1985
+- macropore volume may be estimated by using the difference between pore volume at 50 nm and pore volume at about $10^5 nm$, obtained using MIP cite:Sing1985

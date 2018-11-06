@@ -1,0 +1,13 @@
+#+TITLE: Orthagonal Differential Equations
+
+* Applications
+- electricity
+  - lines of equal potential in a plane sheet conducting electricity are orthagonal trajectories
+
+* Method to find Orthagonal Trajectories
+
+- find differential equation of the family of curves
+- replace dy/dx with -dx/dy as product of the slope of orthagonal trajectories is -1
+- solve the new differential equation
+
+- it's often convenient to reporesent orthagonal trajectories as polar co-ordinates

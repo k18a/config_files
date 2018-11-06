@@ -1,0 +1,36 @@
+#+TITLE: Knudsen Number
+
+- ratio of molecular mean free path to a representative physical length scale
+- helps determine whether statistical mechanics or continuum mecanics formulation of fluid dynamics should be used to model the phenomenon
+  - if Knudsen number is near or greater than 1, continuum mechanics is no longer a good approximation, and therefore stastical methods should be used
+
+\begin{equation}
+Kn = \frac{\lambda}{L}
+\end{equation}
+
+- Kn is Knudsen number
+- \lambda is mean free path
+- L is representative physical length scale
+
+- substuting for mean free path for a Boltzmann gas
+
+\begin{equation}
+Kn = \frac{k_B T}{\sqrt{2} \pi d^2 p L}
+\end{equation}
+
+- k_B is [[file:boltzmann.org][Boltzmann constant]]
+- T is temperature
+- d is particle hard shell diameter
+- p is pressure
+
+* Relationship with Other Dimensionless Numbers
+
+- Knudsen number is related to [[file:reynoldsnumber.org][Reynolds Number]] and [[file:machnumber.org][Mach Number]] as follows
+
+\begin{equation}
+Kn = \frac{Ma}{Re}\sqrt{\frac{\gamma \pi}{2}}
+\end{equation}
+
+- \gamma is ratio of specific heats
+- Ma is Mach number
+- Re is Reynolds number

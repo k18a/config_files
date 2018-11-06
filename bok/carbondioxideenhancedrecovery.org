@@ -1,0 +1,11 @@
+#+TITLE: Carbon dioxide Enhanced Recovery
+
+- carbon dioxide is a naturally occurring component of most reservoirs. 
+- it was found that multi-component methane+carbondioxide mixtures exhibited significant levels of hysteresis on coals cite:Clarkson1997
+  - this means carbon dioxide was preferentially retained over methane.
+- carbon dioxide selectivity over methane over a range of operation conditions is an important parameter in the evaluation of CO2 injection enhanced recovery projects and also for CO2 based fracturing fluids.
+- moisture decreases CO2 selectivity in coals, although relative experimental errors for this study was over 10% cite:Mazzotti2009,Clarkson2000
+- carbon dioxide injection into the reservoir is accompanied by a sharp drop in the reservoir pH. 
+- the flow properties of supercritical CO2 is reservoir rocks is not well documented for both conventional and tight hydrocarbon reservoirs cite:Lu2016
+- cite:Clarkson1999 found that the maximum carbon dioxide adsorption capacity was nearly twice as that of methane
+- 

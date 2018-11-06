@@ -1,0 +1,20 @@
+#+TITLE: Linear Span
+- a set of all vectors that could be created as a [[file:linearcombinationvector.org][linear combination]] of those vectors
+- linear span of a set of vectors in a linear subspace is the intersection of all linear subspaces which each contain every vector in that set
+- the linear span of a vector space is therefore a vector space
+- given a vector space V over a field K, the span of a set S of vectors is defined to be the intersection W of all subspaces that contain S
+- W is referred to as the subspace spanned by S or by the vectors in S, S is the spanning set of W (S spans W)
+\begin{equation}
+W = span(S) = {\Sigma _{i=1} ^k \lambda _i v _i | k \in N _i, v _i \in S, \lambda _i \in K}
+\end{equation}
+- if S is a finite subset of V then span of S is the set of all linear combinations of the elements of S
+- in case of infinite S, inifinite linear combinations are excluded by the definition
+- the span of [0] is just the [0] vector itself
+- to span all of $[R^n]$, you just need 2 vectors that are not colinear
+- simplest 2 vectors that can span the whole $[R^n]$ is 
+\begin{equation}
+[i] = \begin{matrix} 1 \\ 0 \end{matrix} 
+\end{equation}
+\begin{equation}
+[j] = \begin{matrix} 0 \\ 1 \end{matrix}
+\end{equation}

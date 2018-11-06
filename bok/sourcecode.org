@@ -1,0 +1,6 @@
+#+TITLE: Source Code
+
+- a collection of code written using a human-readable programming language
+- designed to facilitate the work of computer programmers who specify thee actions to be performed by a computer
+transformed by an assembler or compiler into binary machine code understood by the computer
+- most software applications only include the executable files and not the entire source code

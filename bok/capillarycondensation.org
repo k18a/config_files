@@ -1,0 +1,11 @@
+* Capillary Condensation
+
+- based on Kelvin equation cite:Sing1985
+- $r_K=\frac{2*\sigma^{lg}*V_m^l}{R*T*ln(p/p_0)}$
+  - where $r_K$ is the Kelvin radius
+  - $\sigma^{lg}$ is the surface tension
+  - $V_m^l$ is the liquid molar volume
+- for cylindrical pores, the Kelvin radius $r_K$ is corrected to include thickness t, to give the effective radius, $r_p = r_K + t$ cite:Sing1985
+- for slit-pores, the slit width is corrected as, $d_p=r_K+2*t$ cite:Sing1985
+- The thickness is determined from adsorption data on similar non-porous solids cite:Sing1985
+- commonly used in [[file:adsorptionporecharacterization.org][mesopore characterization]]

@@ -1,0 +1,15 @@
+#+TITLE: Colligative Properties
+
+* Colligative Properties
+
+- properties of solutions that depend on the ratio of number of solute particles to the number of solvent molecules in a solution, and not on the nature of the chemical species present
+- derived from Latin colligatus, meaning bound together
+- assumption that solution properties are independent of the nature of the solution is only valid for [[file:idealrealsolution.org][ideal solitions]] and approximately valid for dilute real solutions
+- they are basically solvent properties that are changed by the presence of the solute
+
+Colligative properties include
+
+- relative lowering of [[file:vapourpressure.org][vapour pressure]]
+- elevation of boiling point
+- depression of freezing point
+- [[file:osmoticpressure.org][osmotic pressure]]

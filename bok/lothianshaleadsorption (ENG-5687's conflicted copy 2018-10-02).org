@@ -1,0 +1,153 @@
+#+TITLE: A Critical Analysis of Experimental and Theoretical Assumptions Involved in Manometric Adsorption Characterization of Gas Shales and their Net Effects on Reserve Estimation and Production Forecasts
+
+* Abstract
+* Introduction
+- gas shale reservoirs have been enjoying increasing amounts of attention from the industry and academia since the development of hydraulic fracturing cite:king2010
+- it is now well known that sorption phenomena play a significant role in gas storage and production processes from gas shales; nearly 20-80% of the total gas in gas shales is stored in the adsorbed state cite:schettlerjr1991
+- that said, the lack of reproducibility of adsorption isotherms measured in different laboratories is a significant roadblock to shale reservoir characterization
+- whilst we concede that the highly heterogeneous nature of shales are at least partly responsible for this, significant improvements to experimental reporducibility could be made through diligent control and reporting of experimental parameters
+- this study will review our current understanding of manometric adsorption characterization of shales, and provide a critical analysis on the effect of the assumptions involved in the process on reservoir characterization, through an one dimensional reservoir simulation
+* Methodology
+** sample description
+- for this study, shale outcrop samples from the oil shale mine in straiton are used
+- outcrop samples were crushed to 350 to 2000 $\mu$ m and stored in air-tight containers under dark until the start of experiment
+** adsorption and diffusion characterization
+- analysis methodology, adopted after cite:rouquerol1994, is outlined below
+[[./adsorption_workflow.jpg]]
+- samples were loaded on to the adsorption rig, and the rig was flushed with Helium several times to remove any residual gas from previous experiments
+- samples were then outgassed in-situ at 90 degC and 150 Torr pressure
+- after outgassing the rig was brought down to experimental temperature and allowed to reach equilibrium at about 500 Torr pressure
+- performing outgassing in-situ in an inert vacuum atmosphere allows us to minimize any exposure to air, moisture, or any other adsorptive that might otherwise affect our measurements
+- adsoprtion and desorption was measured through a step-wise procedure as outlined in the diagram
+- the reference and sample cells are isolated; adsorptive is injected into the reference cell and allowed to reach thermal equilibrium; the sample valve is then opened and the rig pressure was monitored for 2 hours or until equilibrium conditions were met, whichever was longer
+- initial # moles in the sample cell is using an appropriate Equation of State
+\begin{equation}
+n_{is} = EOS(P_{s},V_{v},T_{s})
+\end{equation}
+- where
+  - $n_{is}$ is number of moles initially present in the sample cell before experiment
+  - EOS is a function denoting the chosen Equation of State
+  - $P_s$ is sample cell pressure
+  - $V_v$ is sample cell void volume
+  - $T_s$ is sample cell temperature
+- sample cell void volume is calculated as
+\begin{equation}
+V_v = V_s - V_{sp} * w_{sh}
+\end{equation}
+- where
+  - $V_v$ is sample cell void volume
+  - $V_s$ is sample cell volume
+  - $V_{sp}$ is sample specific volume
+  - $w_{sh}$ is sample weight
+- injected # moles is calculated as
+\begin{equation}
+n_{ir} = EOS(P_{r,f},V_r,T_r) - EOS(P_{r,i},V_r,T_r)
+\end{equation}
+- where
+  - $n_{ir}$ is number of moles injected
+  - EOS is a function denoting the chosen Equation of State
+  - $P_{r,f}$ is final pressure of reference cell
+  - $P_{r,i}$ is initial pressure of reference cell
+  - $V_r$ is reference cell volume
+  - $T_r$ is reference cell temperature
+- # moles present at any given instance is calculated as
+\begin{equation}
+n_{c} = EOS(P_s,V_r,V_v,T_s)
+\end{equation}
+  - $n_{c}$ is number of moles injected
+  - EOS is a function denoting the chosen Equation of State
+  - $P_{s}$ is final pressure of reference cell
+  - $P_{s}$ is initial pressure of reference cell
+  - $V_r$ is reference cell volume
+  - $V_v$ is sample cell volume
+  - $T_s$ is sample cell temperature
+- excess adsobed # moles for the nth pressure step is calculated as 
+\begin{equation}
+n_{ex} = n_{ir}(1) + n_{ir}(2) + \dots + n_{ir}(n) + n_{is} - n_c
+\end{equation}
+- where
+  - $n_{ir}(n)$ is amount of moles injected at nth pressure step
+  - various assumptions involved in the calculation of amount adsorbed are discussed in more detail below
+*** Gibbs Approach 
+**** Gas Phase Concentration Correction Term
+- amount adsorbed is defined as the number of adsorptive molecules distributed in the adsorption space, and is defined as absolute sorption
+- adsorption measurement rigs, on the other hand, in effect measure the difference in distribution of the adsorptive molecules in the gas phase and the adsorption space, between the initial and final states of the experiment to calculate amount adsorbed - this is defined to be the Gibbs excess sorption cite:Brandani2017
+- as some gas molecules are distributed in the adsorption space both in the initial and final states, excess sorption values under estimate the actual amount of adsorptive molecules present in the adsorption space
+- the molar density of the gas phase being reasonably small in low pressures, this error is usually negligible
+- at pressures greater than 10 MPa, however, this error becomes significant and must be accounted for
+- experimentally observed excess sorption values - difference in the distribution of adsorptive molecules between the initial and final states - maybe corrected to absolute sorption values - amount af adsorptive molecules distributed in the adsorption space, either by assuming the adsorption mechanism to be surface coverage - adsorbed phase density remains constant with loading - or micropore filling - adsorption space (volume of the adsorbed phase) remains constant with loading
+- surface coverage
+\begin{equation}
+n_{abs} = \frac{n_{ex}}{1-\frac{\rho_{g}}{\rho_{ads}}}
+\end{equation}
+- micropore filling
+\begin{equation}
+n_{abs} = n_{ex} + \rho_g * V_{ads}
+\end{equation}
+**** Void Volume Correction Term
+- the previous section discussed correcting experimentally observed excess sorption values - difference in the distribution of adsorptive molecules between the initial and final states - maybe corrected to absolute sorption values - amount af adsorptive molecules distributed in the adsorption space,
+- the definition of adsorption space itself could be problematic in microporous substances, and is now recognized as one of the biggest error source in the characterization of adsorption for micro-porous substances cite:Rouquerol2016
+- all pore characterization metrics are characteristic measures of the methodology employed
+- discussed in more detail in the [[file:bowlandpore.org][pore characterization paper]]
+- for the purpose of gas adsorption measurement, therefore, it is preferable to apply an experimental technique that most closely simulates pore characteristics observed during methane adsorption on gas shales
+- ideally this technique would involve calibration of a shale's specific volume using a non-adsorbing probe molecule of a similar size to the adsorptive, however this can seldom be achieved in the laboratory
+- errors induced in void volume calibration may be due to the probe molecule (usually Helium) being of a different size compared to the adsorptive molecule, and due to the probe molecule being adsorbed under calibration conditions
+- as a compromise, void volume was measured using Helium at three temperatures 30, 60, and 90 degC at about 500 Torr pressure; the van der Waals equation of state was used for this purpose
+*** Other Assumptions
+**** Equation of State
+- various Equations of State were considered for the calculations described above
+- ideal
+\begin{equation}
+PV = nRT
+\end{equation}
+- van der Waals
+\begin{equation}
+(P + \frac{an^2}{V^2})(V-nb) = nRT
+\end{equation}
+- Peng Robinson
+\begin{equation}
+
+\end{equation}
+- Redlich-Kwong
+\begin{equation}
+
+\end{equation}
+- all cubic equations of state were solved using an iterative procedure with an initial estimate obtained from the ideal gas law, until an accuracy of 1e-6% was achieved
+**** Equilibrium Adsorption Rate
+- the adsorption profile over time was fitted using a rolling regression with a window of 200 readings (~30 minutes)
+- equilibrium was assumed when the rate of sorption (slope of the regression line) fell below 5e-8 mmol/g (mol/kg)
+- different equilibrium conditions were considered for sensitivity analysis
+**** Leak Rate
+- home-made high pressure adsorption rigs usually have a small leak
+- due to the long equilibrium times required for shale adsorption, even small leaks may have a significant effect in adorption calculations; these must be accounted for
+- several studies have incorrectly assumed a constant leak rate for all adsorption steps
+- leak rate is pressure dependent and must be accounted for using Poiseuille's law, which characterizes fluid flow behaviour in very narrow openings
+- hence it's sufficient to measure leak resistance at one sufficiently high pressure, to be able to account for it for the entire adsorption isotherm
+- it was noted that leak rates were not constant with time - they varied between various experiments based on the efficiency of the compression fittings used
+- it is preferable to characterise leak rates just before starting the experiment
+*** Adsorption Models
+*** Kinetic Models
+- kinetic models were fit using a modified least squares approach, providing more weight to data points with smaller time scales
+*** Reservoir Simulation
+- discussed in detail in [[file:reservoirmodeldevelopment.org][shale reservoir model development paper]]
+* Results
+* Discussions
+** Gibbs Approach 
+*** Void Volume Correction Term
+*** Gas Phase Concentration Correction Term
+** Other Assumptions
+*** Equation of State
+- ideal gas law under-estimates sorption by nearly 10% compared to van der Waals equation of state
+- it can also be seen that the desorption curve falls below the adsorption curve in many cases when ideal gas law is used - indicating that real gas laws need to be used to fit high pressure adsorption isotherms
+- when real gas law with compressibility factors from NIST REFPROP is used, there is very little to no hysteresis compared to van der Waals equation of state 
+*** Equilibrium Adsorption Rate
+- it was noted that most of the sorption occured within a few fractions of a seconds
+- the adsorption profile over time was fitted using a rolling regression with a window of 200 readings (~30 minutes)
+- equilibrium was assumed when the rate of sorption (slope of the regression line) fell below 5e-8 mmol/g (mol/kg)
+- as seen from the figure, most of the adsorption occurs instantaneously
+- however, sorption can be seen to proceed at a much slower rate (<5e-7) for extended periods of time
+- this phenomenon is particularly pronounced in highly organic and microporous samples
+- equilibrium conditions donot significantly affect the isotherm except in highly organic and microporous adsorbates
+*** Leak Rate
+** Adsorption Models
+** Kinetic Models

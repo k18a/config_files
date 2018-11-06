@@ -1,0 +1,65 @@
+Chemical Engineering Researcher With Strong Analytical and Commercial Skills
+
+Personal Details:-
+Name: Karthik
+Email: k18a@outlook.com (Personal and Skype); k.arunachalam@ed.ac.uk (Work and Skype for Business)
+Mobile: +44-7922079103
+Current Address: Edinburgh, UK (available for interviews anywhere in the UK, given a notice of 1 week)
+LinkedIn: https://www.linkedin.com/in/karthikeyan18/
+GitHub: https://github.com/k18a
+
+Experience and Projects Involved In:-
+PhD Researcher, University of Edinburgh, UK, Sep 16 to Present
+Project Title: Adsorption and Migration Mechanisms of Methane, Water, and Carbon dioxide in Gas Shales at Pore Scale
+Project Description: Nearly 50-80% of total gas stored in gas shales is in the adsorbed state, implying that production from gas shales is heavily dependent on desorption, although very little is known about the mechanisms underlying these processes. This project attempts to rectify that though a series of laboratory experiments, and uses an one dimensional reservoir simulation to test formulated hypotheses.
+Achievements:
+- Designed, built, and automated an home-made manometric adsorption measurement rig from scratch
+- Designed and deployed an highly-scalable modular python programme for data analysis
+- Attended courses in Statistical Thermodynamics (Molecular Simulations) and Oil and Gas Engineering
+
+Production Technology Specialist, Schlumberger, India, Jul 15 to Mar 16
+Project Title: Control of Hydrogen Sulphide Production from Reservoir and Process Trains
+Project Description: Hydrogen Sulphide produced as a by-product of anaerobic metabolism by Sulphate Reducing Bacteria can pose significant challenges to safe and efficient operations on field. This project involved limiting Hydrogen Sulphide Production by 1) limiting Sulphate Reducing Bacteria population accomplished through biocide dosing, 2) bio competitive exclusion by maintaining optimum conditions for Nitrate Reducing Bacteria, and 3) Hydrogen Sulphide removal using a scavenger.
+
+Project Engineer, Arka Energy, India, Jan 15 to Jun 15
+Project Title: LNG Import Terminal Feasibility Study
+Project Description: There is a significant shortage of Natural Gas in several regions of South India, posing a major hindrance to industrial development in the region. The project produced a Feasibility Study report to install and operate a Liquefied Natural Gas import terminal at the Thirukadayur port, India, that was later submitted to investors.
+
+Masters Dissertation Student, University of Aberdeen, UK, Jul 15 to Sep 14
+Project Title: UK Carbon Capture and Storage Policy Analysis
+Project Description: Carbon Capture and Storage is one of the proposed methods to reduce the carbon footprint of industrial activities. The dissertation provides an analysis of economic and regulatory policies that maybe deployed to accelerate CCS adoption in the UK.
+
+Process Engineer Trainee, Petro6 EC, India, Dec 12 to Aug 13
+Project Title: Design of Early Production Facilities
+Project Description: Early Production Facilities can be used to bring cash flow from hydrocarbon production forward, whilst waiting for the installation and commissioning of more permanent facilities on field. The project involved the design of oil and water process trains of an early production facility based on input parameters from an onshore oil field in Barmer, India - conducted as part of undergraduate design project. 
+
+Voluntary and Part-time Experience:-
+Secretary, IChemE Scottish Members Group, May 17 to Present
+Organised committee meetings; prepared and circulated minutes; co-ordinated all group activities, under the chair's guidance. 
+
+Fire Steward (Process Laboratory), University of Edinburgh, Oct 16 to Present
+Undertook weekly fire-safety checklists; assisted in co-ordinating personnel removal during incidents; actively promoted a safe working-environment amongst peers.
+
+Laboratory Demonstrator and Tutor (Mass Transfer Operations / Separation Processes 2), University of Edinburgh, Oct 16 to Present
+Assisted undergraduate students with applying basic mass transfer concepts to industrial problems; maintained safe conditions in the laboratory; assisted in marking student report submissions.
+
+Education:-
+PhD Engineering (Materials Sciences), University of Edinburgh, Sep 19
+CFA Level 1 Passed, CFA Institute, Jan 17
+Reservoir Geomechanics (online course), University of Stanford (edX Platform), Nov 15
+Machine Learning (online course), University of Washington (Coursera Platform), Jan 15
+MSc Oil and Gas Enterprise Management, University of Aberdeen, Sep 14
+BTech Chemical Engineering, Anna University, Sep 13
+
+Certifications Received:-
+Certified Associate in Project Management, Project Management Institute
+PRINCE 2 Practitioner, Axelos
+
+Professional Memberships:-
+Associate Chemical Engineer, IChemE (currently working towards chartership)
+
+Software Packages:-
+Proficient-in: Python - pandas, numpy, sympy, matplotlib, scipy; MATLAB; Mathematica; MS Excel; emacs; LaTeX; MS Word; MS Outlook; Mendeley; LabVIEW; Aspen HYSYS; Auto CAD; Linux; Windows
+Moderate Exposure: SQL; C++; Java; HTML; Primavera; scikit-learn
+
+References Available on Request

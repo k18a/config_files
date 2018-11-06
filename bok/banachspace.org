@@ -1,0 +1,2 @@
+#+TITLE: Banach Space
+- vector space X over the field of real numbers R or complex numbers C, which is equipped with a [[file:vectornorm.org][norm]].

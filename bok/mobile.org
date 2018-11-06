@@ -1,0 +1,6 @@
+capillary pressure theory
+equilibrium between two phases in a capillary tube it's satisfied be the relationship
+force up = force down
+these forces are expressed in terms of the radius r of the capillary tube
+contact angle theeta
+and the interfacial tension sigma

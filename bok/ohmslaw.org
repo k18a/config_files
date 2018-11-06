@@ -1,0 +1,4 @@
+#+TITLE: Ohm's Law
+
+- [[file:fourierslaws.org][Fourier's Laws]] is the energy analogue of the Ohm's Laws
+- [[file:fickslaws.org][Fick's Law]] is the diffusion analogue

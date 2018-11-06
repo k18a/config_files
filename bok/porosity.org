@@ -1,0 +1,31 @@
+#+TITLE: Porosity
+
+- it's the ratio of void space volume to the bild volume of a given material
+- porosity measured by a given method is the ratio of the total pore volume $V_p$ to the apparent volume V of the particle or powder, excluding interparticle voids, $/epsilon = V_p/V$ cite:Sing1985
+- porosity of shales increases when treated with CO2-saturated brine solution due to decomposition of carbonate minerals cite:Lu1995
+- $PV = BV - GV$
+  - PV is pore volume
+  - BV is bulk volume
+  - GV is grain volume
+- $\phi = PV/BV$
+- $\phi = (BV-GV)/BV$
+  - \phi is porosity
+- effective porosity is a measure of the connected voids 
+  - excluding isolated pores
+  - does not include the volume of clay-bound or mineral-bound water
+  - does not include additional water held within the shale by capillary forces
+- total porosity is a measure both connected and isolated void space
+  - also includes volume occupied by all fluids
+- for most reservoir rocks, the difference between effective and total porosity is negligible cite:API2010
+  - effective porosity determined at 99 degC to 116 degC more closely corresponds to total porosity value cite:API2010
+* Porosity Determination
+** Bulk volume
+*** Archemides (Buoyancy)
+**** Mercury
+- a core plug is immersed in mercury and the volume of mercury displaced is determined gravimetrically
+**** Other Fluids
+*** Mercury Displacement
+*** Caliper
+*** Boyle's Law
+*** Liquid Saturation
+** Organic Rich Rocks with Adsorption Capacity

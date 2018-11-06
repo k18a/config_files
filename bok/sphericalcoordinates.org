@@ -1,0 +1,18 @@
+#+TITLE: Spherical Co-ordinates
+
+- in terms of cartesian co-ordinates
+\begin{equation}
+r = \sqrt{x^2 + y^2 + z^2}
+
+\theta = tan^{-1} (y/x)
+
+\phi = cos^{-1} (z/r)
+\end{equation}
+- to go back to cartesioan cordinates
+\begin{equation}
+x = r cos \theta sin \phi
+
+y = r sin \theta sin \phi
+
+z = r cos \theta
+\end{equation}

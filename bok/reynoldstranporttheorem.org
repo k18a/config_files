@@ -1,0 +1,28 @@
+#+TITLE: Reynolds Transport Theorem
+
+- three dimensiona generalization of the [[file:leibnizintegralrule.org][Leibniz Integral Rule]]
+
+* Derivation
+- consider a control volume and control surface
+                       +--------------------------------------+
+                       |                                      |
+                       |                                      |
+          V1-----------|               CV                     |-------------V2
+                       |                                      |
+                       |                                      |
+                       +--------------------------------------+
+
+- consider a pipe cut at an angle $\theta$, with slanted surface area $A_{\theta}$
+                       +-----------------------+
+                       |                 :    / 
+                       |                 :   /  
+          V------------|                A:  /-------------V
+                       |                 :0/ 
+                       |                 :/ A0
+                       +-----------------+
+- volumetric flowrate is the dot product of area and velocity
+\begin{equation}
+Q = V*A = V*A_{\theta}*Cos(\theta)=V.A
+\end{equation}
+
+

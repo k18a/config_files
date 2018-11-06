@@ -1,0 +1,27 @@
+#+TITLE: Chemical Potential
+
+* Chemical Potential
+
+- a form of energy that can be absorbed or released during a chemical reaction or phase transition
+- rate of change of free energy of a species in a mixture with respect to the change in the number of atoms or molecules of the species that are added to the system
+- partial derivative of the free energy with respect to the amount of the species, with all other species' concentrations in the mixture remaining constant
+- at equilibrium, the sum product of chemical potentials and stoichiometric coefficients of all species is 0, as the free energy approaches minimum
+- particles tend to move from higher chemical potential to lower chemical potential
+
+* Thermodynamic Formulation
+
+Fundamental thermodynamic equation is given as: 
+
+$dU = TdS - PdV + \sum \mu _i dn_i$
+
+At constant entropy, volume, and number of moles of all species except species i
+
+$\mu _i = (\frac{\partial U}{\partial N _i}) _{S, V, N _{j \ne i}}$
+
+Similarly for other thermodynamic potentials
+
+$\mu _i = (\frac{\partial G}{\partial N _i}) _{T, P, N _{j \ne i}}$
+
+$\mu _i = (\frac{\partial H}{\partial N _i}) _{S, P, N _{j \ne i}}$
+
+$\mu _i = (\frac{\partial F}{\partial N _i}) _{T, V, N _{j \ne i}}$

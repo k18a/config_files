@@ -1,0 +1,73 @@
+#+TITLE: Film Diffusion
+
+* Steady Diffusion Across Thin Film
+- mathematically straightforward but with very important consequences for diffusion
+  
+- consider a thin film of thickness l, containing well-mixed solutions on each side of different concentrations
+- [[./steadydiffusionthinfilm.jpg]]
+- the first step is always to write a mass balance
+- mass balance accross a thin section \Delta z, z units of distance from the lseft side of the film
+  - accumulation = rate of diffusion into layer at z - rate of diffusion out of layer at (z + \Delta z)
+- at steady state accumulation is 0
+  - $0 = A(J_z - J_{(z + \Delta z)})$
+  - J is the flux
+  - A is area
+  - z is distance
+- at very small \Delta z
+  - $0 = - \frac{d}{dz}J$
+- Fick's First Law
+  - $J = D \frac{d C}{dz}$
+- differentiating Fick's first law for a constant D
+  - $0 = D \frac{d^2 C}{d z^2}$
+- boundary conditions
+  - at $z = 0, C = C_{0}$
+  - at $z = l, C = C_{l}$
+- solution to the differential equation is of the form
+  - $C = a + b z$
+- integrating with the given boundary conditions
+  - $C = C_{0} + (C_{l} - C_{0})\frac{z}{l}$
+- as expected concentration varies linearly with distance as shown in the figure
+- as the system is in steady state, flux is constant
+  - $j = -D \frac{dC}{dz} = \frac{D}{l} (C_{0} - C_{l})$
+
+** Steady Diffusion with Concentration Dependent Diffusion Coefficient
+
+- treatment remains same but with boundary conditions
+  - $z = 0, C_1 = C_{1 0}$
+  - $z = l, C_1 = C_{1 l}$
+- $C_1 = C_{10} (1-\frac{z}{l})^{1/2}$
+- combined with Fick's laws
+  - $J = -D \frac{dC_1}{dz}
+  - = -\frac{D_0 C_1}}{c_{10}}\frac{dc_1}{dz}
+  - = \frac{D_0 C_{10}
+
+* Linear Driving Force Rate Law
+
+- derivation from cite:Qiu2009
+- rate of solute acumulation in sold phase is equal to the rate of solute transfer across the liquid film
+- $V_p (\frac{\partial q}{\partial t}) = k_f A_s (C - C_i)$
+  - V_p is volume of particles
+  - q is average solute concentration in the solid
+  - t is time
+  - k_f is mass transfer coefficient
+  - A_s is surface area of particle
+  - (C-C_i) is the concentration driving force
+    - C_i is concentration of solute at the interface
+    - C is concentration of solute in the bulk phase
+- substituting surface area per unit volume
+  - $S_0 = A_s/V_p$
+- we get the linear driving force rate law
+- $\frac{\partial q}{\partial t} = k_f S_0 (C - C_i)$
+
+* Film Diffusion Mass Transfer Equation 
+
+- derivation from cite:Qiu2009
+- $ln(1-\frac{q_t}{q_e}) = - R t$
+- $R = \frac{3D_e}{r_0 \Delta r_0 k}
+  - R is liquid film diffusion constant
+  - D_e is efective liquid film diffusion coefficient
+  - r_0 is radius of adsorbent beads
+  - \Delta r_0 is thickness of liquid film
+  - k is equilibrium constant of adsorption
+- a plot of $ln(1-\frac{q_t}{q_e})$ against t should be a straight line if film diffusion is the rate determining step
+- then the corrected film diffusion coefficient can be evaluated

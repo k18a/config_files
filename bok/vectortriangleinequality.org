@@ -1,0 +1,10 @@
+#+TITLE: Vector Triangle Inequality
+- the length of the vector [x] + [y] is always less than or equal to the sum of lengths of the individual vectors [x] and [y]  
+\begin{equation}
+|| [x] + [y] || \leq ||[x]|| + ||[y]||
+\end{equation}
+- the lengths are equal only of [x] and [y] are linearly dependent
+\begin{equation}
+|| [x] + [y] || = ||[x]|| + ||[y]|| \leftrightarrow [x] = c.[y]
+\end{equation}
+

@@ -1,0 +1,27 @@
+#+TITLE: Decline Curve Analysis
+- proposed by cite:Arps1945
+- relationship between flowrate and time for producing wells assuming constant flowing pressure
+- $\frac{dq}{dt} = -a q ^{n+1}$
+  - a and n are empirically determined constants
+  - n ranges from 0 to 1
+- this equation is fitted to flowrate data to perform decline curve analysis
+- three types of decline curves are possible based on the value of n
+- Exponential Decline Curve
+  - n=0
+  - $q = q_i e ^{-at}$
+  - q_i is the initial flow rate
+  - a is empirical constant
+- Hyperbolic Decline Curve
+  - 0<n<1
+  - $q ^{-n} = nat + q _i ^{-n}$
+  - q_i is initial rate
+  - a is empirical constant
+- Harmonic Decline Curve
+  - n=1
+  - $q ^{-1} = nat + q _i ^{-1}$
+  - q_i is initial rate
+  - a is empirical constant
+- decline curves are fit to actual data by plotting the logarithm of observed rates vs time t
+- $ln q = ln q_i - at$
+  - ln q_i is the intercept
+  - a is the slope

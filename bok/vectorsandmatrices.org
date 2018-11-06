@@ -1,0 +1,12 @@
+#+TITLE: Vectors and Matrices
+
+* Vectors
+- conventional vectors having a magnitude and a direction represented as $\vec{a}$, are called geometric vectors
+- other concepts may also be represented as vectors:
+  - polynomials
+  - audio signals
+  - python tuples
+
+* Matrices
+- a collection of vectors
+

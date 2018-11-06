@@ -1,0 +1,30 @@
+#+TITLE: Sips Equation
+
+- also known as Langmuir-Freundlich equation
+- has a finite limit at sufficiently high pressures
+- parameter n could be regarded as characterizing system heterogeneity.
+- n does not however point to the source of the observed system heterogeneity
+- isotherm
+  - $C_\mu=C_{\mu s}*\frac{(bP)^(1/n)}{1 + (bP)^(1/n)}$
+
+* Temperature Dependence
+- temperature dependence of the affinity constant is given by cite:Do1998
+  - $b = b_{\infty}exp(\frac{Q}{RT})=b_0 exp[\frac{Q}{RT_0} (\frac{T_0}{T} -1)]$
+- temperature dependence of parameter n is given by cite:Do1998
+  - $\frac{1}{n}=\frac{1}{n_0} + \alpha(1-\frac{T_0}{T})$
+    - where,
+    - $b_\infty$ is affinity constant at infinite temperature
+    - $b_0$ is affinity constant at reference temperature $T_0$
+    - $n_0$ is parameter n at reference temperature $T_0$
+    - $\alpha$ is a constant parameter
+- saturation capacity takes the following temperature dependence: 
+  - $C_{\mu s} = C_{\mu s, 0} * exp(\Xi (1 - \frac{T}{T_0}))$
+- where,
+  - $C_{\mu s, 0}$ is saturation capacity at reference temperature T0
+  - $\Xi$ is constant parameter
+- in Langmuir heat of adsorption, Q, was equal to the isosteric heat of adsorption, but this not the case in Sips, where Q us merely the adsorption heat.
+- to obtain isosteric heat, van't Hoff equation is used:
+  - $\frac{-\Delta H}{R T^2} = (\frac{\partial ln P}{\partial T})_\theta$
+- in terms of amount adsorbed: 
+  - $(-\Delta H) = Q - (\alpha R T_0) n^2 ln(\frac{C_ \mu}{C_{\mu s} - C_{\mu}})$
+- parameter Q for sips equation is the isosteric heat at the fractional loading of 0.5.

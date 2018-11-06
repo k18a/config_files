@@ -1,0 +1,6 @@
+#+TITLE: Emacs
+
+* Elisp
+** Hooks
+- hook is a variable where you can store a function or functions to be called on a particular occasion by an existing programme
+- emacs hooks are set up in the init file

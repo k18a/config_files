@@ -1,0 +1,9 @@
+#+TITLE: Fowler-Guggenheim Isotherm
+
+- the Fowler-Guggenheim isotherm allows for lateral interaction but not the co-volume term
+  - $$b P = \frac{\theta}{1-\theta}exp(-c\theta)$$
+- the isosteric heat of adsorption derived from the van't Hoff equation is given as:
+  - $- \Delta H = Q + z w \theta$
+- two dimensional analogue of the condensation phenomenon occurs when the attraction between adsorbate molecules is strong - c is sufficiently large.
+- this leads to a discontinuity in amount adsorbed after a certain threshold value for c.
+- for Fowler-Guggenheim isotherm, phase transition exisits when c > 4. cite:Do1998

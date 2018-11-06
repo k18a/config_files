@@ -1,0 +1,25 @@
+#+TITLE: Surfactant Enhanced Recovery
+
+* Surfactant Enhanced Recovery
+
+- surfactant agents can potentially increase hydrocarbon recovery with marginal investment over hydraulic fracturing cite:Shuler2011
+- cite:Li2016a found that upon treatment with fracturing fluids some pores were blocked reducing the desorption efficiency in coals.
+
+* Microbial Enhanced Recovery
+
+- both indigenous and introduced microbes and their associated processes can have a significant impact on hydrocarbon production from shale reservoirs cite:Gaspar2014
+- smaller pore sizes in shales inhibit microbial growth cite:Gaspar2014
+- reservoir temperature significantly affects microbial growth in hydrocarbon reservoirs. cite:Gaspar2014
+  - the upper limit for life at 20 MPa is $122 ^\circ C$.
+  - Biogenic H2S production usually does not occur at temperatures beyond $80 ^\cic C$.
+- bacteria can thrive at pressure up to 500 bars, although high pressures may have an impact on their properties cite:Gaspar2014
+- re-use of produced water as hydraulic fracturing fluids may introduce deleterious microbes into the reservoir cite:Gaspar2014
+- microbial control is closely related to minimising H2S production from reservoirs. cite:Gaspar2014
+  - H2S production maybe biogenic or thermogenic.
+  - biogenic H2S is typically enriched with the isotope 32S, whilst thermogenic H2S has no such positive enrichment 
+  - biogenic H2S are predominantly produced by Sulphate Reducing Bacteria (SRB); however sulfidogenic taxa are also capable f sulfate reduction
+- biocides are classified as oxidizing and non-oxidizing cite:Gaspar2014
+  - non-oxidizing biocides can be electrophilic, lytic, or protonophoric.
+  - non-oxidizing biocides are more stable and less likely to cause corrosion.
+  - oxidizing and electrophilic biocides are reactive biocides with multiple cellular targets, whilst lytic and protonophoric biocides target cellular membranes.
+  - Another method of microbial control is competitive exclusion, which makes it advantageous for a benign microbial species that exists in direct competition with the harmful microbial species to survive  

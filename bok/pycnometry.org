@@ -1,0 +1,27 @@
+#+TITLE: Pycnometry
+
+- apparent density may be calculated from pycnometry;
+- this differs from the true density of the shale in two ways:
+  1) the degree of fineness with which the fluid envelope surrounding the solid is defined, with the limit of an atomic-level resolution which maybe achieved by using Helium as the probing fluid, and
+  2) the presence of closed pores which closed pores which are non-accessible to the probing fluid cite:Sing1985
+- it is advisable to use as high an experimental temperature as convenient to minimise adsorption of the probing fluid cite:Sing1985
+- both the solid and the probing fluid should be thoroughly degassed (stripped of moisture and other physisorbed components) before being brought into contact cite:Sing1985
+- sufficient time must be allowed for the penetration of probing fluid into finer pores
+- in the absence of closed pores and with independent evidence of non-adsorption of He, density of the solid calculated with He pycnometry maybe assumed as the true density of the solid cite:Sing1985
+- non-adsorption may be established by performing the test at varying pressures and temperatures, and also by using different probing fluids with similar molar volumes but different chemical properties cite:Sing1985
+
+
+* Mercury Porosimetry 
+
+- the positive excess hydrostatic pressure $\Delta P$ required by a non-wetting liquid ($\theta > 90^0$) is inversely proportional to the pore radius r cite:Sing1985
+- the sample is evacuated with the help of a vacuum pump,and mercury is injected into the porous solid. cite:Sing1985
+- the pressure at different volumes of mercury injected is measured.cite:Sing1985
+- pressures between 0.1 to 2000 bars correspond to pore sizes between $75 \mu m$ and $3.5 nm$ cite:Sing1985
+- radius is calculated from pressure data as: $r= \frac{2*\sigma*cos(\theta)}{P}$, and the corresponding volumetric distribution of pore sizes is obtained cite:Sing1985
+- $\sigma$ is usually taken as $484 mN m^{-1}$; cite:Sing1985
+- contact angle is usually assumed to be $140^0$ @Sing1985.cite:Sing1985
+- cite:Clarkson1999 assumed a contact angle of $130 ^0$ and a surface tension of $485 dyn/vm$ for coals. 
+- this method is considered destructive as there is a significant possibility of sample deformation at higher pressures, and mercury retention in pores cite:Sing1985
+- a minimum threshold pressure is required to fill the iterparticle voids of curshed samples for mercury porosimetry, before measurements of pore size distribution can begin cite:Clarkson1999
+- compressible nature of organic matter, implies that pore size distributions of shales and coals obtained from Hg porosimetry must be taken with caution cite:Clarkson2000
+

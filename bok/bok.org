@@ -1,0 +1,83 @@
+#+TITLE: Body of Knowledge
+
+* Engineering
+
+** [[file:physics.org][Physics]]
+
+** [[file:chemistry.org][Chemistry]]
+
+** [[file:thermodynamics.org][Thermodynamics]]
+
+** [[file:kinetics.org][Kinetics]]
+
+** [[file:fluiddynamics.org][Fluid Dynamics]]
+
+** [[file:masstransfer.org][Mass Transfer]]
+
+** [[file:heattransfer.org][Heat Transfer]]
+
+** [[file:chemicals.org][Chemicals]]
+
+** [[file:constants.org][Constants]]
+
+* Maths
+  
+** [[file:linearalgebra.org][Linear Algebra]]
+
+** [[file:functionsandseries.org][Functions and Series]]
+
+** [[file:differentialequations.org][Calculus and Differential Equations]]
+
+** [[file:statistics.org][Statistics]]
+   
+** [[file:machinelearning.org][Machine Learning]]
+
+* Computer Science
+
+** [[file:algorithmsandprogramming.org][Algorithms and Programming]]
+
+** [[file:androidsoftwaredevelopment.org][Android Software Development]]
+
+** [[file:linux.org][Linux]]
+   
+** [[file:emacs.org][Emacs]]
+
+** [[file:matlab.org][Matlab]]
+   
+** [[file:mathematica.org][Mathematica]]
+   
+** [[file:python.org][Python]] 
+
+** [[file:numpy.org][Numpy]]
+
+** [[file:scipy.org][Scipy]]
+
+** [[file:pandas.org][Pandas]]
+
+** [[file:matplotlib.org][Matplotlib]]
+
+** [[file:sympy.org][Sympy]]
+
+** [[file:git.org][Git]]
+
+** [[file:dotnetframework.org][.NET Framework]]
+
+* Languages
+
+** [[file:chinese.org][Chinese]]
+
+** [[file:tamil.org][Tamil]]
+
+* Life Skills
+
+** [[file:learningskills.org][Learning Skills]]
+
+** [[file:socialskills.org][Social Skills]]
+  
+** [[file:music.org][Music]]
+
+** [[file:selfcare.org][Self Care]]
+
+** [[file:quotes.org][Quotes]]
+
+*  [[file:phd.org][PhD]]

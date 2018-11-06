@@ -1,0 +1,10 @@
+#+TITLE: Volmer Isotherm
+
+- allows for finite sized molecules in the Gibbs adsorption equation but does not allow for interaction between molecules cite:Do1998:
+  - $\pi (\sigma - \sigma _0) = R_g T$, where, $\sigma _0$ is the area per unit mole occupied by adsorbed molecules
+- volmer equation:
+  - $$b(T)*P=\frac{\theta}{1-\theta}exp(\frac{\theta}{1-\theta})$$
+- the affinity constant, $b = b_{\infty}exp(\frac{Q}{R_g T})$ cite:Do1998
+- the exponential term accounts for the mobility of adsorbate molecules cite:Do1998
+- the isosteric heat is given by the van't Hoff equation by assuming that the saturation capacity is independent of temperature cite:Do1998
+- $(-\Delta H) = R_g T^2 (\frac{\partial ln P}{\partial T})_{C \mu} = Q$

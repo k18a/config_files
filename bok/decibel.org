@@ -1,0 +1,3 @@
+#+TITLE: Decibel
+- unit of measurement of loundness
+- based on a log scale

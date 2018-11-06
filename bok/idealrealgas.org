@@ -1,0 +1,38 @@
+#+TITLE: Ideal Gas
+
+* Ideal Gas
+
+- collisions between particles are perfectly elastic
+- volume of particles negligible
+- a gas behaves more ideally at lower pressures and higher temperatures, since intermolecular forces become less significant compared to the particle's kinetic energy; the size of the particles becomes less significant compared to space between them
+
+## Ideal Gas Law
+
+$PV = nRT$
+
+- P is the pressure
+- V is the volume
+- n is the amount of substance
+- R is the gas constant
+- T is the absolute temperature 
+
+Derived from: 
+
+Boyle's Law: $V \alpha \frac{1}{P}$
+
+Charles's Law: $V \alpha T$
+
+Avogadro's Law: $V \alpha n$
+
+R is the constant of proportionality
+
+Internal energy of the ideal gas is given by Joule's Law: 
+
+$U=c_v n RT$
+
+- U is the internal energy
+- cv is the [heatcapacity](heatcapacity) at constant volume, approximately 3/2 for a monoatomic gas, 5/2 for a diatomic gas, and 3 for a non-linear molecule
+
+** Real Gas
+
+- deviation from ideal behaviour can be described by the compressibility factor, z

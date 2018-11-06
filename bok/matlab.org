@@ -1,0 +1,39 @@
+#+TITLE: MATLAB
+
+
+* Generator Functions
+
+- zeros
+
+X = zeros(sz1,...,szNm, data typename, 'like', input_variable)
+
+- creates an array of zeros of size sz in each dimension, with data type specified, or of a similar type to input variable
+
+- ones
+
+X = ones(sz1,...,szNm, data typename, 'like', input_variable)
+
+- creates an array of ones of size sz in each dimension, with data type specified, or of a similar type to input variable
+
+
+* Maximizing performance
+
+- use [[file:functions.org][functions]] instead of scripts
+- prefer local functions instead of nested functions - if the functions donot need to access variables in the main function
+- use modular programming - split your code into somple and cohesive functions
+- preallocate
+  - when running for and while loops, incrementing the array size every loop requires matlab to spend extra time looking for larger contiguous blocks of memory, and moving these arrays into these blocks
+  - preallocating memory allows the code to be performed faster
+- use vectorization
+  - appears more like mathematical expressions found in books making the code easier to understand
+  - less error prone as the code is shorter
+  - faster as programmes like matlab are optimized for operations involving matrices and vectors
+  - vectorization vs for loop
+    - vectorization is faster than a for loop when calculations are applied to a complete array
+    - when temporary arrays are required, the memory required to store them may reduce the benefits of vectorization
+  - placing . before operators like *, /, ^, transforms them into array operations
+- place independent operations outside loops
+- use [[file:datatypes.org][short circuit operators]]
+- avoid global variables
+- avoid using data as code if you have large portions of code that generate constant values
+- avoid functions such as eval, evalc, evalin, and feval

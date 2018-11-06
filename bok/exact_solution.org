@@ -1,0 +1,55 @@
+#+TITLE: Exact Solution
+* Exact Solutions
+- start with a family of curves
+  - $f\left( {x,y} \right) = c$
+- differential equation is of the form
+  - $df = 0$
+  - $\frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy = 0$
+- now let's begin with the differential equation
+  - $M\left( {x,y} \right){dx} + N\left( {x,y} \right){dy} = 0$
+- if there happens to exist a function
+  - $f\left( {x,y} \right)$
+- such that
+  - $\frac{\partial f}{\partial x} = M$
+- and
+  - $\frac{\partial f}{\partial y} = N$
+- then df can be written as
+  - $\frac{\partial f}{\partial x}{dx} + \frac{\partial f}{\partial y}{dy} = 0$
+  - $df = 0$
+- general solution is
+  - $f\left( {x,y} \right) = c$
+- expression
+  - $$M{dx} + N{dy}$$
+  - is the exact differential equation
+- the exact solution of a given fanction can sometimes be determined by inspection
+  - curve example 1
+    - $xy = 0$
+    - $y{dx} + x{dy} = 0$
+- curve example 2
+  - $\frac{x}{y} = 0$
+  - $\frac{1}{y}{dx} - \frac{x}{y^{2}}{dy} = 0$
+* A test for exactness and a method to finding function f
+- if a function f exists for a given exact differential equation
+  - $M{dx} + N{dy} = 0$
+- then the mixed second partial derivatives of f are equal assuming f is continuous
+  - $\frac{\partial^{2}f}{\partial y\partial x} = \frac{\partial^{2}f}{\partial x\partial y}$
+- this yields
+  - $\frac{\partial M}{\partial y} = \frac{\partial N}{\partial x}$
+  - to be a necessary condition for exactness
+- to construct a function f that satisfies the given exact solution
+- start by integrating
+  - $\frac{\partial f}{\partial x} = M$
+  - $f = \int M{dx} + g\left( y \right)$
+- the integration constant is a function of y since it must disappear when differentiating with respect to ×
+- our problem is now reduced to finding a function of y, g (y) such that f satisfies the equation
+- $\frac{\partial f}{\partial y} = N$
+- differentiating the last equation with respect to y
+  - $\frac{\partial}{\partial y}\int M{dx} + g^{1}\left( g \right) = N$
+  - $g'\left( y \right) = N - \frac{\partial}{\partial y}\int M{dx}$
+  - $g\left( y \right) = \int\left( {N - \frac{\partial}{\partial y}\int M{dx}} \right){dy}$
+- provided the integnand here is a function of y (derivative of the integnand with respect to x is o)
+* Statement:
+- an equation is exact if and only if
+- $\frac{\partial M}{\partial y} = \frac{\partial N}{\partial x}$
+- the general solution is
+- $f\left( {x,y} \right) = c$

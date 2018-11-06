@@ -1,0 +1,105 @@
+#+TITLE: Reservoir Characterization
+* Terminology
+- resources
+  - total amount of hydrocarbons in the play, irrespective of whether they are recoverable or not
+- reserves
+  - amount of recoverable hydrocarbons based on an estimated recovery factor
+- recovery factor
+  - an estimated amount of the total hydrocarbons present that is expected to be produced; expressed as a percentage
+* Petroleum Plays
+** Hydrocarbon Production
+ - biogenic gas
+   - produced by micro-organisms as a metabolic by-product of anoxic conditions in marshes, bogs, landfills, and shallow sediments
+ - thermogenic gas
+   - produced through the maturation of buried organic material
+** Un-conventional Petroleum Plays
+** Shales
+- shales are the largest sedimentary strata on the Earth's curst cite:Garrels1969
+- shales often comprise the source rock in conventional petroleum plays - hydrocarbons generated in organic rich shales following burial migrate through carrier beds into porous reservoir rocks such as sandstones or carbonates
+- in a shale play, shales comprose both the source and the reservoir rock, and thus the target for exploration
+- the advent of hydraulic fracturing technology in recent years have allowed for the economic exploitation of shales
+*** Criteria for Successful Shale Plays
+| criteria        | ideal range | reference |
+| kerogen content |             |           |
+| kerogen type    |             |           |
+* Reservoir Characteristics
+** Kerogen Type
+- there are 4 basic types of kerogen in organic matter
+*** Type 1 Kerogen
+- can generate both oil and gas
+- indicates a lacustrine or marine environment
+*** Type 2 Kerogen
+- can generate both oil and gas
+- indicates exclusively marine environments
+- includes plat spores, exines, resins, and bacterially degraded algal matter
+- primarily generates oil during maturation; further maturation at higher temperatures produce gas
+*** Type 3 Kerogen
+- mainly generates gas
+- organic materials is comprosed of vitrinite - woody materials
+- typically found in woody material in continental rocks, but can also be found in marine environments when it's washed away
+*** Type 4 Kerogen
+- little to no potential to generate hydrocarbons
+- organic material comprises of intertinite - oxidised woody material
+** Rock Eval Pyrolysis
+- used to identify the type and maturity of organic matter
+- used to detect petroleum potential in sediments
+- cannot be used to make real-time drilling decisions because of the lengthy sample preparation, running, and interpretation time
+- consists of programmed temperature heating in a pyrolysis oven in an inert atmosphere (helium) of a small sample (~100 mg) to quantitatively and selectively determine
+  - the free hydrocarbons contained in the sample
+  - the hydrocarbon and oxygen-containing compounds (CO2) that are volatized during the cracking of the unextractable organic matter in the sample (kerogen)
+*** S1 Peak
+- S1 peak is the amount of free hyrdocarbons (gas and oil) in the sample in mg of hydrocarbons per gram of rock
+  - 300 degC
+  - 3 min
+  - free hydrocarbons are volatized
+  - released hydrocarbons are measured as S1 peak
+  - if S1 > 1 mg/g, it may indicate an oil show
+  - S1 normally increases with depth
+  - contamination of samples with drilling fluids can give an abnormally high value for S1
+*** S2 Peak
+- S2 peak is the amount of hydrocarbons generated through the thermal crackng of nonvolatile organic matter
+  - 300 to 550 degC increase
+  - at 25 degC/min
+  - very heavy hydrocarbons > C40 are volatized
+  - non-volatile organic matter is cracked
+  - released hydrocarbons are measured as S2 peak
+  - S2 is tan indication of the quantity of hydrocarbons that the rock can potentially produce with maturation
+  - S2 normally decreases with increasing depth
+*** Tmax
+- Tmax is the temperature at which S2 reaches maximum
+  - Tmax is an indication of the stage of maturation of the organic matter
+*** S3 Peak
+- S3 peak is the amount of CO2 in mg CO2 per g of rock produced during pyrolysis of kerogen
+  - CO2 issued from kerogen is trapped in the 300 to 390 degC
+  - CO2 released is detected during the pyrolysis oven and recorded as the S3 peak
+  - S3 is an indication of the amount of oxygen in the kerogen and is used to calculate the oxygen index
+  - abnormally high S3 values may suggest sample contamination
+*** Hydrogen Index
+- $HI = \frac{100*S2}{TOC}$
+- HI is used to characterize the origin of organic matter
+- marine organisms and algae are composed of lipid and protein rich organic matter, where ratio of H to C is higher than in the carbohydrate rich constituents of land plants
+- HI typically ranges from 100 to 600 in geologic samples
+*** Oxygen Index
+- $OI = \frac{100*S3}{TOC}$
+- is a parameter that correlates with the ratio of O to C, which is high for polysacharride-rich remains of land plants and inert organic material (residual organic matter) encountered as background in marine sediments
+- OI values range from 0 to 150
+*** Production Index
+- $PI = \frac{S1}{S1+S2}$
+- PI is used to chracterize the evolution level of organic matter
+*** Pyrolyzable Carbon
+- $PC = 0.083 * (S1 + S2)$
+- PC corresponds to carbon content of the hydrocarbons volatized and pyrolyzed during the analysis
+* Resource Estimation Methedologies
+- there are several resource estimation methedologies
+
+** Bottom-up
+
+** USGS Technically Recoverable Resource (Top-Down)
+
+** US EIA
+
+** SPE Petroleum Resource Management System
+
+[[./speprmsclassification.jpg]]
+
+** 

@@ -1,0 +1,65 @@
+#+TITLE: Mass Transfer
+
+* [[file:adsorption.org][Adsorption]]
+** Characterization
+*** Single-Component Models
+- [[file:gibbsapproachadsorption.org][Gibbs Thermodynamic Approach]]
+  - [[file:linearisotherm.org][Linear Isotherm]]
+  - [[file:volmerisotherm.org][Volmer Isotherm]]
+  - [[file:fowlerguggenheim.org][Fowler-Guggenheim Isotherm]]
+  - [[file:hilldeboer.org][Hill-deBoer Isotherm]]
+- Mono-layer Models
+  - [[file:langmuir.org][Langmuir Isotherm]]
+  - [[file:freundlich.org][Freundlich Isotherm]]
+  - [[file:sips.org][Sips Isotherm]]
+  - [[file:toth.org][Toth Isotherm]]
+  - [[file:unilan.org][UNILAN Isotherm]]
+- [[file:multilayering.org][Multi-layer Models]]
+- [[file:potentialadsorptiontheory.org][Potential Theory of Adsorption]]
+*** Multi-Component Models
+- [[file:harkinsjuraisotherm.org][Harkins-Jura Isotherm]]
+- [[file:extendedlangmuir.org][Extended Langmuir Isotherm]]
+- [[file:idealadsorptionsolutiontheory.org][Ideal Adsorption Solution Theory]]
+- [[file:loadingratiocorrelation.org][Loading Ratio Correlation]]
+- [[file:zgreos.org][ZGR Equation of State]]
+** Other Concepts
+- [[file:adsorptionhysteresis.org][Hysteresis]]
+- [[file:isostericheat.org][Isosteric Heat of Adsorption]]
+- [[file:capillarycondensation.org][Capillary Condensation]]
+- [[file:criticaldesorptionpressure.org][Critical Desorption Pressure]]
+- [[file:separationfactoradsorption.org][Separation Factor]]
+** Adsorption Characterization Methods
+- [[file:manometricmeasurement.org][Manometric]]
+- [[file:continuousmeasurement.org][Continuous]]
+* [[file:diffusion.org][Diffusion]]
+** [[file:filmdiffusion.org][Film diffusion]]
+** [[file:membranediffusion.org][Membrane Diffusion]]
+** [[file:diffusivity.org][Diffusivity]]
+** [[file:diffusionequation.org][Diffusion Equation]]
+** Characterization
+*** [[file:ratelaw.org][Rate Law Based Equations]] 
+*** [[file:fickslaws.org][Fick's Laws]]
+*** [[file:surfacediffusion.org][Surface Diffusion Models]]
+* Surface/Pore Characterization 
+- [[file:surfaceenergy.org][Surface Free Energy]]
+- [[file:younglaplaceequation.org][Young-Laplace Equation]]
+- [[file:wettability.org][Wettability]]
+- [[file:capillarypressure.org][Capillary Pressure]]
+- [[file:poretypes.org][Pore Types]]
+- [[file:porosity.org][Porosity]]
+- [[file:specificsurfacearea.org][Specific Surface Area]]
+- [[file:poresizedistribution.org][Pore Size Distribution]]
+- [[file:fractaldimension.org][Fractal Dimension]]
+- [[file:permeability.org][Permeability]]
+- [[file:contactangle.org][Contact Angle]]
+- [[file:surfaceenergy.org][Surface Energy]]
+- [[file:parachor.org][Parachor]]
+** Pore/Surface Characterization Methods
+It must be noted that no experimental methods exist that can give the absolute value of pore characteristics listed above; measured values are characteristic of the experimetal conditions cite:Sing1985
+- [[file:adsorptionporecharacterization.org][Gas Adsorption]]
+- [[file:interfacialporecharacterization.org][Interfacial Forces]]
+- [[file:porosimetry.org][Mercury Porosimetry]]
+- [[file:calorimetry.org][Calorimetry]]
+- [[file:pycnometry.org][Pycnometry]]
+- [[file:stereology.org][Stereology]]
+- [[file:amotttest.org][Amott Test]]

@@ -1,0 +1,82 @@
+* Helmholtz Free Energy
+
+- uses symbols A (IUPAC) or F (general physics)
+- capacity to do mechanical work plus non-mechanical work
+- thermodynamic potential that measures useful work obtainable from a closed thermodynamic system at constant temperature and volume
+- the negative of the change in helmholtz energy during a process is the maximum amount of work that the system can perform in a thermodynamic process with constant volume; if volume is not held constant, part of this work is performed as boundary work
+- at constant temperature, the Helmholtz free energy is minimized at equilibrium
+- it is the Legendre transform of the internal energy U, in which temperature replaces entropy as the independent variable
+
+* Formulation
+
+$A = U - TS$
+
+- A is Helmholtz free energy
+- U is internal energy
+- T is absolute temperature
+- S is entropy
+
+* Derivation
+
+Based on the first law of thermodynamics for a closed system: 
+
+$\partial U = \partial Q + \partial W$
+
+- U is internal energy
+- $\partial Q$ is the energy added as heat
+- $\partial W$ is the work done
+
+Second law of thermodynamics for a [reversibleprocess](reversibleprocess): 
+
+$\partial Q = T dS$
+
+- $\partial Q$ is the energy added as heat
+- T is absolute temperature
+- S is entropy
+
+For a reversible process, ignoring non-PV work, such as electrical work: 
+
+$\partial W = - p dV$ 
+
+- $\partial W$ is the work done
+- p is the pressure
+- V is the volume
+ 
+Applying [[file:productrule.org][product rule]] for differentiation: 
+
+$d(TS) = TdS + SdT$
+
+- T is absolute temperature
+- S is entropy
+
+$d(U-TS) = -SdT - pdV$
+
+- U is internal energy
+- T is absolute temperature
+- S is entropy
+- p is the pressure
+- V is the volume
+
+Since, $A = U-TS$, 
+
+$dA = -SdT - pdV$
+ 
+- A is Helmholtz free energy
+- T is absolute temperature
+- S is entropy
+- p is the pressure
+- V is the volume
+
+### Special Cases
+
+For an ideal gas
+
+$A(T,V,N) = NkT (c_v - ln(\frac{VTc_v}{N \phi}))$
+
+- A is Helmholtz free energy
+- T is temperature
+- V is volume
+- N is number of particles
+- k is [boltzmannconstant](boltzmannconstant)
+- cv is heat capacity at constant volume
+- $\phi$ is a constant independent of the thermodynamic state if the gas, with the dimensions of $VTc_v/N$

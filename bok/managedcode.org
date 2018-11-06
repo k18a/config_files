@@ -1,0 +1,5 @@
+#+TITLE: Managed Code
+
+- a computer programme code that requires and will execute only under the management of a common language runtime virtual machine such as the .NET framework
+- is the compiler output of source code written in one of over twenty high level programming languages
+- distinction between managed and unmanaged code is prevalent and only relevant when developing applications that interact with the .NET frameworkd or other common language runtime implementations

@@ -1,0 +1,18 @@
+#+TITLE: Cylindrical Co-ordinates
+
+- in terms of cartesian co-ordinates (x,y,z)
+\begin{equation}
+r = \sqrt{x^2 + y^2}
+
+\theta = tan^{-1}(y/x)
+
+z = z
+\end{equation}
+- in terms of to go back to cartesian co-ordinates
+\begin{equation}
+x = r cos \theta
+
+y = r sin \theta
+
+z = z
+\end{equation}

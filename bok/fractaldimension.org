@@ -1,0 +1,28 @@
+#+TITLE: Fractal Dimension
+
+- a ratio providing a statistical index of complexity comparing hhow detail in a pattern changes with the scale at which it is measured
+- a measure of space-filling capacity of a pattern that tells us how a fractal scales differently from the space it is embedded in
+- a fractal dimension does not have to be an integer
+- made popular by Benoit Mandelbrot in his paper on self-similarity 
+
+* Fractal Dimensions for Adsorption Analysis
+
+- fractal dimensions are found by fitting simple power laws of the type $amount of surface property /alpha (resolution of analysis)^D$,
+  - where the property may denote monolayer value, pore volume etc. and
+  - D denotes the fractal dimension of the surface for which the property is relevant;
+  - the corresponding change in geometry is calculated by changing the size of the adsorbate, pore radius, or a different experimental parameter. cite:Sing1985
+- it must be noted that the fractal dimension calculated is the effective dimension for the system at hand and is only valid for a given method of study. cite:Sing1985
+- monolayer fractal dimension is given by cite:Sing1985
+- $N_m = k \sigma^{ {-D_{ads} / 2} }$
+  - where
+  - $N_m$ is the #molecules at monolayer coverage
+  - k is a fitting constant
+  - $\sigma$ is the cross-sectional area of the adsorbed molecule
+  - D is the fractal dimension of the surface accessible for adsorption
+- Pore-volume distribution fractal is given by cite:Sing1985
+- $\frac{dV_p}{dr_p}=k'r_p^{2-D_{ads}}$
+- although fractal analysis can be used for any technique, is most common in advanced image analysis techniques and NMR cite:Sing1985
+- two fractal dimensions are used to associated with surface heterogeneities in microporous substances.
+  - it is considered that an higher pore surface fractal dimension (D1) is positively correlated with methane adsorption sites due to increased adsorption sites in rougher internal surfaces,
+  - whilst the spatial geometry fractal dimension (D2) does not influence methane adsorption significantly cite:Wang2016
+- fractal dimensions maybe calculated using different methods such as fractal Langmuir, fractal BET, fractal Frenkel-Halsey-Hill (FHH), and the thermodynamic methods cite:Sing1985

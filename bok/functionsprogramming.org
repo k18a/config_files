@@ -1,0 +1,29 @@
+#+TITLE: Functions
+
+* Methods
+
+- functions built into objects
+- 
+
+* Functions
+
+- create blocks of code that can be easily executed many times 
+
+* Function Types
+
+** Main Function
+
+- the first function in a function file is called the main function
+- visible to other files
+- can be called from command line
+
+** Local Function
+
+- functions additional to the main function in a function file are called local functions
+- visible only to the main function
+- cannot access all variables from the main function - only has access to variables that are passed on
+
+** Nested Function 
+
+- a function defined inside another function
+- can access all variables of the containing main function

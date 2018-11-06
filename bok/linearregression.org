@@ -1,0 +1,34 @@
+#+TITLE: Regression
+
+* Linear Regression
+
+- models relation between a dependent variable y, and an independent variable x
+\begin{equation}
+y = \beta _0 + \beta _1 x + \epsilon
+\end{equation}
+- \beta 0 is the y intercept
+- \beta 1 is the slope
+- \epsilon is the residual
+
+- in matrix form
+\begin{equation}
+\begin{bmatrix}
+y_1 \\
+y_2 \\
+\vdots \\
+y_n
+\end{bmatrix}
+= 
+\begin{bmatrix}
+1 & x_1 \\
+1 & x_2 \\
+\vdots & \vdots \\
+1 & x_n
+\end{bmatrix}
+\begin{bmatrix}
+\beta _0 \\
+\beta _1
+\end{bmatrix}
+\end{equation}
+- can be simply written as
+- Y = X B

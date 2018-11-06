@@ -1,0 +1,4 @@
+#+TITLE: Phase Space 
+
+- a space in which all possible states of a system are represented, with each possible state corresponding to one unique point in the phase space
+- for mechanical systems, the phase space usually consists of all possible values of position and momentum variables

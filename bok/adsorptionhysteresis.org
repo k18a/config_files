@@ -1,0 +1,7 @@
+* Hysteresis
+
+- It was found that multi-component methane+carbondioxide mixtures exhibited significant levels of hysteresis cite:Clarkson1997
+
+- Coals do not tend to have significant hysteresis for pure gas isotherms cite:Crosdale1998
+
+

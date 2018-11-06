@@ -1,0 +1,7 @@
+#+TITLE: Musical Theory
+
+- [[file:frequency.org][Frequency]]
+- [[file:hertz.org][Hertz]]
+- [[file:overtones.org][Overtones]]
+- [[file:decibel.org][Decibel]]
+- [[file:soundequalizer.org][Sound Equalizer]]

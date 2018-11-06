@@ -1,0 +1,31 @@
+#+TITLE: Material Time Derivative
+- describes the time rate of change of some physical quantity of a material element that is subjected to space and time dependent macroscopic velocity field variations of that physical quantity
+- serves as a link between Eulerian and Lagrangian descriptions of continum deformation
+- also known as total derivative, substantial derivative, or convective derivative
+
+- consider two concepts with two different sets of co-ordinates
+- for the sake of argument, let's define x at time t as, $x(t_0) = X$
+** Lagrangian co-ordinates
+- also known as refernce or material co-ordinates
+- concentration measured at a point moving along the speed of a stream, c(X)
+  - X with respect to fixed co-ordinates is not a function of time, as it's fixed
+\begin{equation}
+\frac{D}{Dt} (c(X,t)) = \frac{\partial c}{\partial t}
+\end{equation}
+** Eulerian co-ordinates
+- also known as current or spatial co-rodinates
+- concentration measured at a fixed point of a moving stream, c(x)
+  - x with respect to fixed co-ordinates is a function of time, and hence written as x(t)
+\begin{equation}
+\frac{D}{Dt} (c(x(t),t)) = \frac{dc}{dt} 
+= \frac{\partial c}{\partial t} + \frac {\partial c}{\partial x} \frac{\partial x}{\partial t}
+= \frac{\partial c}{\partial t} + \nabla (c) . v
+\end{equation}
+- the first term represents the local rate of change - the rate of change in the absence of any flow
+- the second term represents the convective rate of change - the convective derivative
+- to sum up the material time derivative for any tensor field y that is macroscopic, with the sense that it depends only on position and time co-ordinates y=y(x,t):
+\begin{equation}
+\frac{D}{Dt} (y) = \frac{\partial y}{\partial t} + \nabla (y) * u
+\end{equation}
+- where \Nabla y is the covariant derivative
+- u(x,t) is the flow velocity

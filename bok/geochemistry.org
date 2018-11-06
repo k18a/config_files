@@ -1,0 +1,8 @@
+#+TITLE: Geochemistry 
+
+* Shale Geochemistry
+
+- Primary components of shales include: ------
+- Exposure to CO2-saturated brine lead to a significant dissolution of carbonate minerals, particularly calcite, and to a lesser degree dolomite; quartz, feldspar, and heavy minerals remained intact cite:Lu2016
+- Calcite decomposition was accompanied with some calcite precipitation on the pore surface cite:Lu2016
+- Exposure to supercritical CO2 was less corrosive - etching only calcite, along with precipitation of salt crystals due to evaporation of residual pore water into the CO2 phase cite:Lu2016

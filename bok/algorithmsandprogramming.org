@@ -1,0 +1,19 @@
+#+TITLE: Algorithms and Programming
+
+
+* [[file:datatypes.org][Data Types]]
+
+
+* [[file:managedcode.org][Managed Code]]
+
+* [[file:sourcecode.org][Source Code]]
+
+* Software Design
+
+** [[file:objectorientedprogramming.org][Object Oriented Programming]]
+
+** [[file:applicationprogramminginterface.org][Application Programming Interface]]
+   
+** [[file:regularexpression.org][Regular Expression (regex)]]
+
+* [[file:functionsprogramming.org][Functions]]

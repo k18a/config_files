@@ -1,0 +1,18 @@
+Files
+* find file 
+** C-x C-f
+* save file 
+** C-x C-s
+* list buffers 
+** C-x C-b
+* switch to buffer 
+** C-x b
+* kill buffer 
+** C-x k
+* quit emacs 
+** C-x C-c
+* previous versions of file start with 
+** ~
+* altered but unsaved versions of file start with 
+** #
+** these are accessed by mx recover-file

@@ -1,0 +1,10 @@
+* Isosteric Heat of Adsorption
+
+- Isosteric heat of adsorption is the ratio of the infinitesimal change in the adsorbate enthalpy to the infinitesimal change in amount adsorbed $=\Delta H/\Delta n_{ads}$ cite:Do1998
+- The Isosteric Heat of Adsorption is given by the van't Hoff equation:
+  - $\frac{\Delta H}{R_g T^2} = -(\frac{\partial ln(P)}{\partial T})_{C_{\mu}}$ cite:Do1998
+- Iso-steric heat is the standard enthalpy of adsorption at fixed surface coverage cite:Do1998 
+- the total differentiation of the isotherm equation is substituted into the van't Hoff equation (into the term $\frac{\partial ln P}{\partial T})_\theta$) to get the iso-steric heat for various adsorption models cite:Do1998
+- the change in saturation capacity with respect to temperature is usually given by a parameter called $\delta$:
+  - $\frac{1}{C_{\mu s}} \frac{dC_{\mu s}}{dT}=-\delta$ cite:Do1998
+- a decrease in the isosteric heat of adsorption with loading can indicate either the existence of an heterogeneous surface, or a negative interaction between adsorbed molecules cite:Do1998

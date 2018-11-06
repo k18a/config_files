@@ -1,0 +1,62 @@
+#+TITLE: Pore Geometry and Geo-Chemical Characteristics of Bowland Gas Shales
+
+* Introruction
+
+* Methodology 
+
+** Samples
+
+- shale reservoir samples from all stratigraphic units being considered fror exploration in the Bowland Basin, UK were acquired
+- samples were crushed to a sieve size of 300-2000 \mu m
+- crushed samples were washed with water and subsequently with acetone to remove entrenched oil
+- they were then dried at 80 degC for nearly 12 hours and stored in air-tight containers in dark
+
+*** Bowland Geology
+
+** X-Ray Diffraction
+
+** N2 Isotherm
+
+- N2 isotherms were obtained from Quantachrome Autosorb IQ.
+- about 0.1 to 0.2 g of the sample was weighed and transfered to the sample cell
+- the sample was then outgassed in the rig; final weight was measured and fed into the system
+- outgassing parameters
+  | T (min) | Temp ( ^C) |
+  |      60 |         50 |
+  |      60 |        100 |
+  |     300 |        120 |
+
+*** Assumptions
+
+- N2 boiling point - 77.35 K
+- Non-ideality factor - 6.58 e-5 1/Torr
+- N2 molecular weight - 28.0134 g/mol
+- Cross sectional area - 1.624 nm^2/mol
+
+** Scanning Electron Microscope
+
+** Porosity Determination
+
+*** He Expansion
+
+*** Water Immersion
+
+* Results
+  
+** X-Ray Diffraction
+
+** N2 Isotherm
+
+| Sample ID | Strata
+
+** SEM 
+
+** Porosity Determination
+
+* Discussions
+ 
+** Mineral Composition
+
+** Pore Characteristics
+
+

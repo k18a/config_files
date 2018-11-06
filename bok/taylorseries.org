@@ -1,0 +1,13 @@
+#+TITLE: Taylor Series
+- any function satisfying certain conditions can be expressed as a Taylor Series
+- series expansion of a function f(x) about a point x= a
+\begin{equation}
+f(x)
+=
+f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\dots+\frac{f^{(n)}(a)}{n!}(x-a)^n+\dots
+=
+\Sigma _{n=0} ^{\infty} \frac{f^{n} (a)}{n!} (x-a)^n
+\end{equation}
+- if a=0, the expansion is known as a Maclaurin series
+- taylor series of some common functions: 
+- $\frac{1}{(1-x)}=\frac{1}{(1-a)}+\frac{(x-a)}{((1-a)^2)}+\frac{((x-a)^2)}{((1-a)^3)}+\dots$

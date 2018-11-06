@@ -1,0 +1,18 @@
+
+#+TITLE: Picard's Theorem
+
+If f(x,y) and $\partial f / \partial y$ are continuous on a closed rectangle R, then through each point (x0, y0) in the interior of R, there passes a unique integral curve of the equation $dy/dx = f(x,y)$.
+
+[[./picardstheorem.png]]
+
+- if P0=(x0,y0), then $(\frac{dy}{dx})_{P_0} = f(x_0,y_0)$, determines the direction of P0
+- let P1=(x1,y1) be a point in that direction
+- a new direction is determined again by differentiating the function at P1 to give a new point P2, and so on
+- if the successive points are brought closer together, the broken lines become smaller to give a curve
+- this curve is a solution to the [firstorderequation](firstorderequation) for each point on the curve
+- if we start with a different point, we get a different curve
+- all these solutions (curves) form a family of curves called integral curves
+- solutions of a differential equation are sometimes called integrals of the equation as the problem of finding them is more or less an extension of the ordinary problem of integration.
+- through each point in R, there passes just one integral curve
+- this is called the particular solution that satisfies the given initial condition
+- an essential feature of the general solution is that the integration constant c can be chosen so that in integral curve passes through any given point of the rectangle under consideration for different values of c

@@ -1,0 +1,10 @@
+* Work
+
+- the energy expended when force acts through a displacement
+
+$\partial W = PdV$
+
+** Boundary Work
+
+- work that occurs because the mass of the substance contained within the system boundary 
+  - causes a force (F=P*A), to act on the boundary surface and make it move.

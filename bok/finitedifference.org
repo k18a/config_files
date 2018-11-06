@@ -1,0 +1,123 @@
+#+TITLE: Finite Difference
+
+- consider [[file:taylorseries.org][Taylor Series]] expansion
+- series expansion of a function f(x) about a point x= a
+\begin{equation}
+f(x)
+=
+f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\dots+\frac{f^{(n)}(a)}{n!}(x-a)^n+\dots
+=
+\Sigma _{n=0} ^{\infty} \frac{f^{n} (a)}{n!} (x-a)^n
+\end{equation}
+- for $f(x+ \Delta x)$
+\begin{equation}
+f(x+\Delta x)
+=
+f(x) +
+\frac{\partial f}{\partial x} \Delta x + 
+\frac{1}{2!} \frac{\partial ^2 f}{\partial x^2} \Delta x^2 +
+\frac{1}{3!} \frac{\partial ^3 f}{\partial x^3} \Delta x^2 +
+\dots
+\end{equation}
+- the smaller the step change, $\Delta x$
+  - the more accurate the aproximation, and higher orders can then be ignored
+    
+* First Order Approximation
+
+** Forward Difference Approximation
+ - consider
+ \begin{equation}
+ p(x+\Delta x)
+ =
+ p(x) +
+ \frac{\partial p}{\partial x} \Delta x + 
+ \frac{1}{2!} \frac{\partial ^2 p}{\partial x^2} \Delta x^2 +
+ \dots
+ \end{equation}
+ - solving for $\frac{\partial p}{\partial x}$
+ \begin{equation}
+ \frac{\partial p}{\partial x} = 
+ \frac{p(x+\Delta x) - p(x)}{\Delta x} - 
+ \frac{1}{2!} \frac{\partial ^2 p}{\partial x^2} \Delta x^2 +
+ \dots
+ \end{equation}
+ - the above solution is first order accurate
+
+** Backward Difference Approximation
+ - consider
+ \begin{equation}
+ p(x-\Delta x)
+ =
+ p(x) -
+ \frac{\partial p}{\partial x} \Delta x +
+ \frac{1}{2!} \frac{\partial ^2 p}{\partial x^2} \Delta x^2 -
+ \dots
+ \end{equation}
+ - solving for $\frac{\partial p}{\partial x}$
+ \begin{equation}
+ \frac{\partial p}{\partial x} = 
+ \frac{p(x+\Delta x) - p(x)}{\Delta x} + 
+ \frac{1}{2!} \frac{\partial ^2 p}{\partial x^2} \Delta x^2 -
+ \dots
+ \end{equation}
+ - the above solution is first order accurate
+
+** Central Difference Approximation
+ - a more accurate form maybe derived by subtracting the forward difference equation with the backward difference equation
+ \begin{equation}
+ p(x+\Delta x)
+ =
+ p(x) +
+ \frac{\partial p}{\partial x} \Delta x + 
+ \frac{1}{2!} \frac{\partial ^2 p}{\partial x^2} \Delta x^2 +
+ \dots
+
+ - 
+
+ p(x-\Delta x)
+ =
+ p(x) -
+ \frac{\partial p}{\partial x} \Delta x +
+ \frac{1}{2!} \frac{\partial ^2 p}{\partial x^2} \Delta x^2 -
+ \dots
+ \end{equation}
+ - which gives
+ \begin{equation}
+ p(x+\Delta x)
+ - 
+ p(x-\Delta x)
+ =
+ 2 \frac{\partial p}{\partial x} \Delta x + 
+ 2 \frac{1}{2!} \frac{\partial ^3 p}{\partial x^3} \Delta x^3 +
+ \dots
+ \end{equation}
+ - solving for $\frac{\partial p}{\partial x}$
+ \begin{equation}
+ \frac{\partial p}{\partial x} = 
+ \frac{p(x+\Delta x) - p(x-\Delta x)}{2 \Delta x} + 
+ \frac{1}{3!} \frac{\partial ^3 p}{\partial x^3} \Delta x^3 +
+ \dots
+ \end{equation}
+ - the above solution is second order accurate
+  
+* Second Order Approximation
+- consider the central difference equation, but add equations instead of subtracting them
+ \begin{equation}
+ p(x+\Delta x)
+ - 
+ p(x-\Delta x)
+ =
+ 2 p(x) + 
+ 2 \frac{1}{2!} \frac{\partial ^2 p}{\partial x^2} \Delta x^2 +
+ 2 \frac{1}{4!} \frac{\partial ^4 p}{\partial x^4} \Delta x^4 +
+ \dots
+ \end{equation}
+
+ - solving for $\frac{\partial p}{\partial x}$
+ \begin{equation}
+ \frac{\partial^2 p}{\partial x^2} = 
+ \frac{p(x+\Delta x) - 2 p(x) + p(x-\Delta x)}{\Delta x ^2} + 
+ \frac{1}{4!} \frac{\partial ^4 p}{\partial x^4} \Delta x^4 +
+ \dots
+ \end{equation}
+ - the above solution is second order accurate

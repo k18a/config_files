@@ -1,0 +1,16 @@
+#+TITLE: Measurement based on Interfacial Curvature 
+
+- the interface has 2 equilibrium states: hydrostatic equilibrium and diffusional equilibrium cite:Sing1985
+- hydrostatic equilibrium is achieved when the product of mean curvature, C, and interfacial tension, $\sigma$, equals the hydrostatic pressure difference, given by the Young-Laplace equation:
+  - $\Delta P$: $\Delta P=\sigma*C$
+- diffusional equilibrium is achieved when: $\frac{R.T}{V_m^l}ln(p/p_0)=\sigma C$, where $V_m^l$ is the liquid molar volume cite:Sing1985
+- measurements of either $\Delta P$ or $p/p_0$ can be used to calculate the mean curvature, C, from which pore radius, r, can be calculated as: $r=-2.cos(\theta)/C$, where $\theta$ is the contact angle cite:Sing1985
+
+* Suction Method 
+
+- according to Young-Laplace equation, a wetting fluid experiences a reduced hydrostatic pressure when coming into contact with a porous solid cite:Sing1985
+- water is commonly used as the wetting fluid for organic solids cite:Sing1985
+- a saturated sample of a porous solid is placed on top of a permeable support over a water reservoir cite:Sing1985
+- the hydrostatic pressure of the reservoir is reduced in steps, and the corresponding volume of water withdrawn from the sample is recorded cite:Sing1985
+- the relationship between reduced pressure and equilibrium saturation is known as the moisture characteristic of the porous solid cite:Sing1985, and can be used to derive a relationship between pore volume and radius using a method similar to mercury porosimetry cite:Sing1985
+- the pore size of the supporting plate must be smaller than the pore size of the porous solid being studied cite:Sing1985

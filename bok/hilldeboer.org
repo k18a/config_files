@@ -1,0 +1,13 @@
+#+TITLE: Hill-deBoer Isotherm
+
+- includes corrective terms for both co-volume and attractive forces in the Gibbs model - similar to van der Waals EoS: $(\pi + \frac{a}{\sigma^2})(\sigma - \sigma_0) = R_g T$
+- Hill-deBoer Isotherm:
+  - $$b P = \frac{\theta}{1-\theta}exp(\frac{\theta}{1-\theta})exp(-c\theta)$$
+- the affinity constant, $b = b_{\infty}exp(\frac{Q}{R_g T})$ cite:Do1998
+- fitting constant, $c=\frac{2a}{R_g T \sigma_0}=\frac{z w}{R_g T}$ cite:Do1998 where z is the co-ordination number taken as either 4 or 6 depending on the molecule and w is the interaction energy between the adsorbed molecules cite:Do1998
+  - w can be positive or negative and decides whether the affinity constant increases or decreases with loading for a given system
+  - if w=0, the equation reduces to Volmer isotherm
+- the exponential term $exp(\frac{\theta}{1-\theta})$ accounts for the mobility of adsorbate molecules, and the term $exp(-c\theta)$ accounts for inter-atomic forces cite:Do1998
+- the isosteric heat of adsorption derived from the van't Hoff equation is given as: $- \Delta H = Q + z w \theta$
+- when accounting for interatomic forces, a phenomenon called two dimensional condensation occurs cite:Do1998
+- when interatomic forces are sufficiently powerful, c > 6.75,at a certain threshold pressure, called the phase transition pressure, the density of the adsorbed phase changes abruptly from low density to high density cite:Do1998

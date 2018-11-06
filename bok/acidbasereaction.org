@@ -1,0 +1,47 @@
+#+TITLE: Acid Base Reactions
+
+- reaction between an acid and a base
+
+
+* Models
+- should be viewed as complementing each other rather than competing with each other
+
+* Lavoisier Oxygen Theory
+
+- limited to acids containing oxygen
+- defined acidsin terms of their containing oxygen
+  
+* Liebig's Hydrogen Theory
+
+- based on extensive work on organic acids
+- acid is an hydrogen containing substance that could be replaced by a metal
+- most accepted thoery till adoption of arrhenius definition
+
+* Arrhenius Definition
+
+- first mordern definition of acids and bases
+- *arrhenius acid is a substance that dissociates in water to form hydrogen ions (H+)*
+- *arrhenius base is a substance that dissociates in water to form hydroxide ions (OH-)*
+- restricted to aqueous solutions and refer to the concentration of solvent ions
+
+* Bronsted-Lowry Acid-Base Theory
+
+- based on the acid's ability to cause protonation - donate hydrogen ions - to bases which accept them
+- removal of hydrogen ion from an acid produces its conjugate base
+  - conjugate base is the acid with hydrogen ion removed
+- addition of proton to a base produces its conjugate acid
+  - conjugate acid is the base with a hydrogen ion added
+- acid and base thus react to form a new conjugate acid and a conjugate base - there is no concept of neutralization like other theories
+- independent of solvent - wider application than arrhenius definition
+- $HA + B \rightarrow BH^+ + A^-$
+  - HA - acid
+  - B base
+  - BH+ conjugate acid
+  - A- conjugate base
+
+* Lewis Definition
+
+- removed hydrogen requirement of other theories
+- lewis acid can receive an electron pair
+- lewis base can donate an electron pair
+

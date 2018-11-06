@@ -1,0 +1,32 @@
+
+
+#+TITLE: Object Oriented Programming
+
+- functions are not enough for larger pieces of code
+
+* Injeritance 
+- inherit features of base class to derived class
+- derived class can use methods from base class
+- methods can be over written if necessary as well
+
+
+* Polymorphism
+- way in which different objects of classes can share the same method name, and the methods can be called from the same place even though a variety of objects may be passed in
+
+* Special Methods
+- allows python inbuilt methods to be passed into classes
+
+#+BEGIN_SRC python
+def __str__(self):
+    return value
+#+END_SRC
+
+the string representation of the class is used for inbuilt string function
+
+* Modular Programming 
+
+- emphasizes separating the functionality of a programme into independent, interchangeable modules
+- each module contains everything necessary to execute only one aspect of the desired functionality
+- 
+
+

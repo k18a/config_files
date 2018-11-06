@@ -1,0 +1,5 @@
+#+TITLE: Machine Learning
+
+|                       | supervised learning | unsupervised learning    |
+| continuous variable   | regression          | dimensionality reduction |
+| categorical variables | classification      | density estimation       |

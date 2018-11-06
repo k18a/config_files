@@ -1,0 +1,7 @@
+#+TITLE: Gibbs Duhem Equation
+
+* Gibbs-Duhem Equation
+
+- relates individual [[file:chemicalpotential.org][chemical potentials]] between different species in a mixture
+
+$\sum _{i=1} ^ I = - SdT + VdP$

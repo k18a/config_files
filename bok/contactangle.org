@@ -1,0 +1,4 @@
+#+TITLE: Contact Angle
+
+- the contact angle of 2 fluids in a capillary or a slit-pore is measured through the denser of the two fluids cite:Sing1985
+- the mean curvature will be equal to $C=-2.cos(\theta)/r$, where $\theta$ is the contact angle and r is the pore radius cite:Sing1985

@@ -1,0 +1,11 @@
+* Specific Properties 
+
+
+* Molar Properties
+- molar volume of ideal gas at [standardconditions](standardconditions):
+- at 1 bar pressure
+- 0.022710980 m3/mol at 0 degC
+- 0.024789598 m3/mol at 25 degC
+- at 1 atm pressure 
+- 0.022414 m3/mol at 0 degC
+- 0.024465 m3/mol at 25 deg

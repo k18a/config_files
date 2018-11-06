@@ -1,0 +1,31 @@
+#+TITLE: Gibbs Thermodynamic Approach for Adsorption
+
+- in the Gibbs Thermodynamic approach, the volume parameter is replaced by the area; 
+- the pressure is replaced by a two-dimensional equivalent, the spreading pressure cite:Do1998
+- Spreading pressure is the reduction in surface tension of a surface due to spreading of the adsorbate on the surface cite:Ruthven1984
+
+#+ATTR_ORG: : width 300
+[[./gibbsapproachadsorption.png]]
+
+- the Helmholtz free energy of the free gas ($\alpha$), adsorbent ($\beta$), and the adsorbate ($\sigma$) phases are given as
+  - $dF = -S^{\alpha}dT^{\alpha} -P^{\alpha}dV^{\alpha} +\sum_{i=1}^{N}\mu_i^{\alpha}dn_i^{\alpha}$
+  - $dF = -S^{\beta}dT^{\beta} -P^{\beta}dV^{\beta} +\sum_{i=1}^{N}\mu_i^{\beta}dn_i^{\beta}$
+  - $dF = -S^{\sigma}dT^{\sigma} -\pi^{\sigma}dA^{\sigma} +\sum_{i=1}^{N}\mu_i^{\sigma}dn_i^{\sigma}$
+- integrating with constant T, P, and $\mu$, we get:
+  - $F^{\alpha}=-PV^{\alpha}+\sum_{i=1}^{N}{\mu}_i^{\alpha}n_i^{\alpha}$
+  - $F^{\beta}=-PV^{\beta}+\sum_{i=1}^{N}{\mu}_i^{\beta}n_i^{\beta}$
+  - $F^{\sigma}=-{\pi A}^{\sigma}+\sum_{i=1}^{N}{\mu}_i^{\sigma}n_i^{\sigma}$
+- differentiating and subtracting from the thermodynamic relation for Helmholtz free energy we get the Gibbs Duhem equation for all three phases:
+  - $-V^{\alpha}dP -S^{\alpha}dT +\sum_{i=1}^{N}n_i^{\alpha}d{\mu}_i^{\alpha}$
+  - $-V^{\beta}dP -S^{\beta}dT +\sum_{i=1}^{N}n_i^{\beta}d{\mu}_i^{\beta}$
+  - $-A^{\sigma}d{\pi} -S^{\sigma}dT +\sum_{i=1}^{N}n_i^{\sigma}d{\mu}_i^{\sigma}$
+- since adsorption isotherms are at constant temperature
+  - $-A^{\sigma}d{\pi} +\sum_{i=1}^{N}n_i^{\sigma}d{\mu}_i^{\sigma}$
+- removing $\sigma$ to simplify notation,
+  - $-Ad{\pi} +\sum_{i=1}^{N}n_id{\mu}_i$
+- for pure component systems,
+  - $-Ad{\pi} +n_id{\mu}$
+- at equilibrium the chemical potentials of the adsorbed phase and gas phase are equal, $\mu_a = \mu_g = \mu_{g0} + R_g T ln(P)
+  - $$(\frac{d \pi}{d ln(P)}) _{T} = (n/A)*R_g*T$$
+- this is the Gibbs isotherm equation relating gas pressure, spreading pressure, and amount adsorbed.
+- if an equation of state relating the spreading pressure and amount adsorbed is provided, this can be used to derive various isotherms. 

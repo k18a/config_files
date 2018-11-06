@@ -1,0 +1,50 @@
+#+TITLE: Properties
+
+- property is a built in function that creates and returns a property object
+- the signature of this function is
+#+BEGIN_SRC python
+variable = property(fget=function_for_fget,fset=function_for_fget,fdel=function_for_delete,doc='comment')
+#+END_SRC
+- fget is function to get value of the attribute
+  - automatically run when user runs the method
+- fset is function to set value of the attribute
+  - automatically run when user sets the attribute
+- fdel is function to delete attribute
+- doc is a string (comment)
+- a property object has 3 methods
+  - getter()
+    - to specify or change the value of fget
+  - setter()
+    - to specify or change the value of fset
+  - delete()
+    - to specify or change the value of del
+- properties can be implemented as decorators
+#+BEGIN_SRC python
+class Celsius:
+    def __init__(self, temperature = 0):
+        self._temperature = temperature
+
+    def to_fahrenheit(self):
+        return (self.temperature * 1.8) + 32
+
+    @property
+    def temperature(self):
+        print("Getting value")
+        return self._temperature
+
+    @temperature.setter
+    def temperature(self, value):
+        if value < -273:
+            raise ValueError("Temperature below -273 is not possible")
+        print("Setting value")
+        self._temperature = value
+
+c = Celsius()
+c.temperature = -273 #property.setter
+result1 = c.temperature #property.setter
+result2 = c.to_fahrenheit()
+return result1, result2
+#+END_SRC
+
+#+RESULTS:
+| -273 | -459.40000000000003 |

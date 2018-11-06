@@ -1,0 +1,2 @@
+#+TITLE: Constitutive Relation
+- relation between two physical quantities that is specific to a material or substance, and approximates response of that material to external stimuli

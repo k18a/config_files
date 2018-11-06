@@ -1,0 +1,22 @@
+#+TITLE: Pore Characterization Based on Gas Adsorption
+
+- it is recommended to employ a range of probe molecules to obtain a reliable assessment of the micropore size distribution cite:Sing1985
+- for mesopore distribution and surface area determination, N2 adsorption is the recommended characterization method cite:Sing1985
+- krypton adsorption maybe used to determine low SSAs ($<2m^2g^{-1}$) cite:Sing1985
+- low pressure CO2 isotherm is often used to characterize micro-pores in shales cite:Sing1985
+- [[file:bet.org][BET Theory]] is used to derive surface area from physisorption data as a standard practice irrespective of whether the surface of the adsorbent complies with BET theory cite:Sing1985
+- due to the limitations of BET theory, the fitting constant must be relatively high ($C>100$), as lower values of C is associated with an appreciable overlap of monolayer and multilayer adsorption cite:Sing1985
+- low pressure N2 isotherm is often used to characterize meso-pores, alternatively other methods involving curvature of a meniscus may also be used cite:Sing1985
+- a residual pressure of $10^{-4} Torr$ is considered acceptable in the case of for the case of pore-size-distribution characterization cite:Sing1985
+- at lower relative pressures, ($p/p_0<0.3$) linear plot is obtained between $\frac{p}{{n^a}({p^0}-p)}$ and $\frac{p}{p^0}$, which allows us to obtain the monolayer adsorption capacity, $n_m^a$. The BET SSA is calculated from the monolayer capacity as: $SSA_{BET}={{n_m^a}.L.{a_m}}/{w}$ cite:Sing1985
+  - w is the sample weight
+  - L is the Avogadro constant
+  - $a_m$ is the average cross-sectional area occupied by a single molecule; $a_m(N_2)=0.162{nm^2}$ 
+- it is now widely recognized that the limitations of the BET theory, render in unsuitable for microporous substances cite:Sing1985
+- no analogous standard such as the BET SSA exists for microporous substances cite:Sing1985
+- the potential theory of adsorption is used to calculate pore characteristics for microporous substances; if multilayer adsorption exists, the finite slope of the isotherm beyond micropore capacity must be accounted for during pore characterization cite:Sing1985
+- capillary condensation theory at an intermediate pressure range is applied to N2 isotherms to characterize mesopores cite:Sing1985
+- most methods that have been proposed to characterize mesopores from N2 adsorption data are based on the Barrett, Joyner, and Halenda (BJH) procedure cite:Sing1985
+
+bibliography:~/bok/bibliography/allref.bib
+

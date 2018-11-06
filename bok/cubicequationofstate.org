@@ -1,0 +1,91 @@
+#+TITLE: Cubic Equation of State
+- all cubic equations of state are encompassed by the following equation
+\begin{equation}
+P = \frac{RT}{V-b} - \frac{a(T)}{(V+\epsilon b)(V+\sigma b)}
+\end{equation}
+- $\epsilon$ and $\sigma$ are constant for all parameters for any given cubic equation of state
+- a(T) and b are dependent of the substance for a given equation of state
+\begin{equation}
+a(T) = \Psi \frac{\alpha (T_r) R^2 T _c ^2}{P_c}
+\end{equation}
+\begin{equation}
+b = \Omega \frac{R T_c}{P_c}
+\end{equation}
+- $\alpha (T_r)$ is an empirical expression specific to a particular form of the equation of state
+- $\Psi$ and $\Omega$ are constants for a given equation of state
+- the easiest way to solve cubic equations of state is through iterative substitution
+- for vapour like substances
+\begin{equation}
+V = \frac{RT}{P} + b - \frac{a(T)}{P} \frac{V-b}{(V+\epsilon b)(V+\sigma b)}
+\end{equation}
+- for liquid like substances
+\begin{equation}
+V = b + (V + \epsilon b) (V + \sigma b)[\frac{RT + bP - VP}{a(T)}]
+\end{equation}
+- initial value for V maybe obtained from the ideal gas law as RT/P
+- they can be solved for z as follows
+- for vapour like substances
+\begin{equation}
+z = 1 + \beta - q \beta \frac{z-\beta}{(z+\epsilon \beta)(z+\sigma \beta)}
+\end{equation}
+- for liquid like substaces
+\begin{equation}
+z = \beta + (z + \epsilon \beta)(z + \sigma \beta)(\frac{1+\beta-z}{q \beta})
+\end{equation}
+- where
+\begin{equation}
+\beta = \Omega \frac{P_r}{T_r}
+\end{equation}
+\begin{equation}
+q = \frac{\Psi \alpha T_r}{\Omega T_r}
+\end{equation}
+- initial estimate for z for vapours is taken as 1, and for liquids is taken as $\beta$
+- parameters for different equations of state
+| EOS | $\alpha (T_r)$  |    $\sigma$ |  $\epsilon$ | $\Omega$ |  $\Psi$ |
+| RK  | $\alpha _{RK}$  |           1 |           0 |  0.08664 | 0.42748 |
+| SRK | $\alpha _{SRK}$ |           1 |           0 |  0.08664 | 0.42748 |
+| PR | $\alpha _{PR}$  | $1+\sqrt 2$ | $1-\sqrt 2$ |  0.07780 | 0.45724 |
+\begin{equation}
+\alpha _{RK} = T _r ^{-1/2}
+\end{equation}
+\begin{equation}
+\alpha _{SRK} = [1 + (0.480 + 1.574 \omega - 0.176 \omega ^2) (1 - T _r ^{1/2})]^2
+\end{equation}
+\begin{equation}
+\alpha _{PR} = [1 + (0.37464 + 1.54226 \omega - 0.26992 \omega ^2) (1 - T _r ^{1/2})]^2
+\end{equation}
+
+* van der Waals Equation of State
+
+- takes into account the effect of molecular size and inter-molecular forces
+
+$[P + a (\frac{n}{V})^2] (\frac{V}{n} - b) = RT$
+
+- constants a and b are characteristic of the gas being modeled 
+- a accounts for intermolecular forces
+- b accounts for finite molecular size, and is the volume of one mole of the atom or molecule
+- van der Waals EoS approaches ideal gas law as these constants approach 0
+
+* Peng-Robinson Equation of State
+
+$P = \frac{RT}{V_m - b} - \frac{a \alpha}{V _m ^2 + 2 v V_m - b ^2}$
+
+Equation constants are defined as,
+
+$a = \frac{0.457235 R^2 T _c ^2}{P_c}$
+
+$b = \frac{0.077796 R T_c}{P_c}$
+
+$\alpha = (1 + \kappa (1 - T _r ^{1/2}) )^2$ 
+
+$\kappa= 0.37464 + 1.54223 \omega - 0.23992 \omega ^2$
+
+$\omega$ is the acentric factor given by,
+
+$\omega = \frac{P _{sat}}{P_c}$
+
+- P is pressure
+- R is gas constant
+- Vm is molar volume
+- Psat is saturated vapour pressure
+- Pc is critical pressure

@@ -1,0 +1,82 @@
+#+TITLE: Thermodynamics
+
+- the study of equilibrium
+- not concerned with rate, which is studied under [[file:kinetics.org][kinetics]]
+
+* Core Concepts
+
+- [[file:lawsofthermodynamics.org][Laws of Thermodynamics]]
+- [[file:entropy.org][Entropy]]
+- [[file:enthalpy.org][Enthalpy]]
+- [[File:standardconditions.org][Standard Conditions]]
+- [[file:specificmolarproperties.org][Specific / Molar Properties]]
+
+
+* Thermodynamic Potentials 
+
+- a scalar quantity that is used to represent the thermodynamic state of a system.
+- external forces such as gravity are usually disregarded when formulating expressions for potentials
+- different processes have different constraints, and a corresponding thermodynamic potential that is used for it
+- are often referred to as fundamental equations of thermodynamics
+
+| potential             | description                              | [[file:naturalvariables.org][natural variables]] |
+| [[file:internalenergy.org][internal energy]]       | total energy                             | S, V, Ni          |
+| [[file:enthalpy.org][enthalpy]]              | sum of heat and non-mechanical work      | S, p, Ni          |
+| [[file:gibbsfreeenergy.org][gibbs free energy]]     | non-mechanical work                      | T, p, Ni          |
+| [[file:helmholtzfreeenergy.org][helmholtz free energy]] | mechanical work plus non-mechanical work | T, V, Ni          |
+| [[file:grandpotential.org][grand potential]]       | used for adsorption                      | T, V, \mu_i       |
+
+** Auxiliary Concepts
+   
+- [[file:naturalvariables.org][Natural Variables]]
+- [[file:conjugatevariables.org][Conjugate Variables]]
+
+* Work and Energy 
+
+- [[file:systemsurroundings.org][System and Surroundings]]
+- [[file:work.org][Work]]
+- [[file:reversibleprocess.org][Reversible Process]]
+- [[file:quasistaticprocess.org][Quasi-static Process]]
+- [[file:heatcapacity.org][Heat Capacity]]
+- [[file:thermalexpansioncoefficient.org][Thermal Expansion Coefficient]]
+- [[file:isothermalcompressibility.org][Isothermal Compressibility]]
+- [[file:vanthoffequation.org][van't Hoff Equation]]
+
+* Single Component Thermodynamics
+
+- [[file:idealrealgas.org][Ideal / Real Gas]]
+- [[file:maxwellrelations.org][Maxwell Relations]]
+- [[file:phasediagram.org][Phase Diagrams]]
+- [[file:clausiusclapeyron.org][Clausius Clapeyron Equation]]
+- [[file:gibbsphaserule.org][Gibbs Phase Rule]]
+- [[file:vapourpressure.org][Vapour Pressure]]
+- [[file:isostericheat.org][Isosteric Heat]]
+
+** Equations of State
+
+- [[file:idealrealgas.org][Ideal gas law]]
+- [[file:cubicequationofstate.org][Cubic Equation of State]]
+
+* Multi Component Thermodynamics
+
+** Phase Equilibria
+
+- [[file:chemicalpotential.org][Chemical Potential]]
+- [[file:gibbsduhem.org][Gibbs-Duhem Equation]]
+- [[file:osmoticpressure.org][Osmotic Pressure]]
+- [[file:vapourpressure.org][Vapour Pressure]]
+- [[file:partitioncoefficient.org][Partition Coefficient]]
+
+** Solution Thermodynamics
+
+- [[file:colligativeproperties.org][Colligative Properties]]
+- [[file:idealrealsolution.org][Ideal / Real Solution]]
+- [[file:raoultslaw.org][Raoult's Law]]
+- [[file:activitycoefficient.org][Activity Coefficient]]
+
+* Statistical Thermodynamics
+
+- [[file:intermolecularforces.org][Intermolecular Forces]]
+- [[file:phasespace.org][Phase Space]]
+- [[file:boltzmann.org][Boltzmann Equation]]
+

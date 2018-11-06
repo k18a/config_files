@@ -1,0 +1,5 @@
+#+TITLE: Application Programming Interface
+
+- a set of subroutine definitions, protocols, and tools for building software
+- a set of clearly defined methods of communication between various components
+- provides all building blocks for a programme which are put together by the programmer

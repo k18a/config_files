@@ -1,0 +1,12 @@
+#+TITLE: Loading Ratio Correlation
+
+- the Loading Ratio Correlation combines both Langmuir and Freundlich equations for multicomponent isotherms cite:Fitzgerald2005
+- $ {\theta}_i = \frac{{\omega}_i}{L_i} = \frac{(B_i P y_i)^{{\eta}_i}}{1+\Sigma (B_j P y_j)^{{\eta}_i}}$
+  - $\theta$ - fractional loading
+  - $\omega$ - component i adsorbed 
+  - $L_i$ - Langmuir constant
+  - $B_i$ - Langmuir constant
+  - P - pressure
+  - $y_i$ - mole fraction in gas phase
+  - ${\eta}_i$ - Freundlich parameter
+- the LRC model has 1/3rd the RMSE of EL model whilst predicting multicomponent isotherms cite:Fitzgerald2005

@@ -1,0 +1,10 @@
+#+TITLE: Extended Langmuir Model 
+
+- cite:Fitzgerald2005 used the following variant of the Langmuir model for multi-components:
+  - $$ {\theta}_i = \frac{{\omega}_i}{L_i} = \frac{B_i P y_i}{1+{\Sigma B_j P y_j}}$$
+    - $\theta$ - fractional loading
+    - $\omega$ - component i adsorbed 
+    - $L_i$ - Langmuir constant
+    - $B_i$ - Langmuir Constant 
+    - P - pressure
+    - $y_i$ - mole fraction in gas phase

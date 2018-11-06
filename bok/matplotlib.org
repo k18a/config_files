@@ -1,0 +1,35 @@
+#+TITLE: Matplotlib
+
+- plotting programme for python 
+- inline display in jupyter
+  - %matplotlib inline
+
+#+BEGIN_SRC python :results file
+import matplotlib.pyplot as plt
+import seaborn as sns
+plt.style.use('dark_background')
+plt.plot([0,1,2,3])
+plt.xlabel("some numbers")
+plt.savefig('example_plot.png')
+return './example_plot.png'
+#+END_SRC
+
+#+RESULTS:
+[[file:./example_plot.png]]
+
+#+begin_src python :results file
+import matplotlib, numpy
+import seaborn as sns
+matplotlib.pyplot.style.use('dark_background')
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+fig=plt.figure(figsize=(4,2))
+x=numpy.linspace(-15,15)
+plt.plot(numpy.sin(x)/x)
+fig.tight_layout()
+plt.savefig('python-matplot-fig.png')
+return 'python-matplot-fig.png' # return filename to org-mode
+#+end_src
+
+#+RESULTS:
+[[file:python-matplot-fig.png]]

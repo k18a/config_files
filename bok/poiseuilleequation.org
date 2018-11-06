@@ -1,0 +1,18 @@
+#+TITLE: Hagen-Poiseuille Equation
+
+- relates pressure drop of an incompressible Newtonian fluid flopwing though a long cylindrical pupe of constant cross-section
+- $\Delta P = \frac{8 \mu L Q}{\pi R ^4}$
+  - \Delta P is the pressure difference between two ends
+  - L is length of pipe
+  - \mu is dynamic viscosity
+  - Q is volumetric flow rate
+  - R is pipe radius
+
+* Drawbacks
+
+- for turbulent flows, pressure drop is larger than that calculated by Hagen-Poiseuille equation
+- the equation does not hold close to pipe entrance
+- the equation fails for low-viscosity, wide, and short pipes
+- for such cases more complex models such as the Darcy-Weisbach equation need to be used
+
+

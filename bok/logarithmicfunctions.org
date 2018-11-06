@@ -1,0 +1,6 @@
+#+TITLE: Logarithmic Functions
+
+* Rules
+$$(\log{(xy)} = \log{(x)} + \log{(y)})$$
+$$(\log{(x^n)} = n\log{(x)})$$
+Neither identity is true for arbitrary complex $(x)$ and $(y)$, due to the branch cut in the complex plane for the complex logarithm. However, sufficient conditions for the identities to hold are if $(x)$ and $(y)$ are positive and $(n)$ is real.

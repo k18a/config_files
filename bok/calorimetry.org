@@ -1,0 +1,5 @@
+#+TITLE: Calorimetry
+
+* Calorimetric Methods for Pore Characterization
+- pore characterization may also be accomplished using calorimetric methods, either by comparison of change in enthalpy of immersion with a standard sample, or by coating the sample with Ca, so the enthalpy of immersion is known cite:Sing1985
+- calorimetry may also be accomplished with N2 or argon gas adsorption @Sing1985, or with thermoporometry cite:Sing1985

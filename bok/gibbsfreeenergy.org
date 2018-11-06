@@ -1,0 +1,18 @@
+* Gibbs Free Energy
+
+- represented by G
+- capacity to do non-mechanical work
+
+* Derivation
+
+* Special Cases
+
+$G(T,P,N) = NkT (c_p - ln(\frac{kT^{c_p}}{P \phi}))$
+
+- G is Gibbs free energy
+- S is entropy
+- cp is heat capacity at constant pressure
+- N is number of moles
+- V is volume
+- $\phi$ is a constant independent of the thermodynamic state if the gas, with the dimensions of $VTc_v/N$
+- k is  = 1.381e-23 J/K

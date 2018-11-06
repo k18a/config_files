@@ -1,0 +1,14 @@
+#+TITLE: Android Software Development
+
+Templates
+- creates some code for your project based on the options you choose
+- you can change this code later on based on what you need
+  
+company domain
+- when creating a project you need to create a unique company identifier to upload your project to the google play store
+- google recommends using the company domain name to be this identifier
+- if you don't have a domain, you can use example.com or example.org for training and testing purposes
+
+gradle
+- open source build automation system
+- puts together all the bits of the project to create the application file that can be installed on an android device

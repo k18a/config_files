@@ -1,0 +1,77 @@
+#+TITLE: Heat Capacity
+
+- denoted by C
+- amount of heat required to increase temperature of one kilogram of a substance by 1 kelvin
+- has units of J/K or $(kg*m^2)/(K*s^2)$
+- extensive property; specific heat capacity, c, heat capacity per unit mass, is an intensive property
+
+* Constant Volume Heat Capacity Cv 
+
+From the fundamental equations: 
+
+$dU = \partial Q + \partial W$
+
+At constant volume
+
+$C_v = (\frac{\partial U}{\partial T})_V = (\frac{\partial Q}{\partial T})_V$
+
+- Cv is heat capacity at constant volume
+- U is internal energy
+- T is temperature
+- V is volume
+- Q is heat added/removed
+
+For ideal gas: $C_v = \frac{1}{nR} T (\frac{\partial S}{\partial T})_V = \frac{1}{nR} (\frac{\partial U}{\partial T})_V$
+
+- Cv is heat capacity at constant volume
+- n is number of moles
+- R is gas constant
+- T is temperature
+- S is entropy
+- V is volume
+- U us internal energy
+
+Specific heat capacity at constant volume: 
+
+$c_v = (\frac{\partial C}{\partial m})_V$
+
+In engineering practice, cv often signifies volumetric heat capacity rather than constant volume heat capacity
+
+* Constant Pressure Heat Capacity Cp
+
+From fundamental equations: 
+
+$dH = \partial Q + VdP$
+
+At constant pressure
+
+$C_P = (\frac{\partial H}{\partial T})_P = (\frac{\partial Q}{\partial T})_P$
+
+- CP is heat capacity at constant volume
+- H is enthalpy
+- T is temperature
+- V is volume
+- Q is heat added/removed
+
+For ideal gas: $C_p = \frac{1}{nR} T (\frac{\partial S}{\partial T})_P = \frac{1}{nR} (\frac{\partial H}{\partial T})_P = c_v + 1$
+
+- Cp is heat capacity at constant pressure
+- H is enthalpy, $H=U+PV$
+
+Specific heat capacity at constant pressure
+
+$c_P = (\frac{\partial C}{\partial m})_P$
+
+* Relation Between Heat Capacities
+
+it's easier to measure heat capacity at constant pressure than at constant volume, especially for liquids and solids where pressure required to maintain a constant volume can be significant
+
+$C_p - C_v = VT \frac{\alpha ^2}{\beta _T}$
+
+$c_p - c_v = \frac{\alpha ^2}{\sigma \beta _T}$
+
+- $\alpha$ is the thermal expansion coefficient
+- $\beta$ is the isothermal compressibility
+- $\sigma$ is the density of the material
+
+Isentropic expansion factor is the ratio between the constant volume and constant pressure heat capacity is denoted by: $\gamma = \frac{c_p}{c_v}$, which is 1.4 for air

@@ -1,0 +1,89 @@
+#+TITLE: Sympy
+
+- deals with computation of mathematical objects symbolically
+- variables are stored exactly not approximately
+- can compute derivates, integrals, and limits
+- can solve equations
+- includes modules for plotting, printing in latex
+
+#+BEGIN_SRC python
+import sympy
+import math
+
+result1 = sympy.sqrt(8)
+result2 = math.sqrt(8)
+
+return(result1,result2)
+#+END_SRC
+
+#+RESULTS:
+| 2*sqrt | (2) | 2.8284271247461903 |
+
+* init_printing()
+- for pretty printing
+- prints with the default printer
+- if latex is installed, uses latex, otherwise uses matplotlib, failing which unicode (default) is used
+** str 
+- string representation is obtained using print statement
+** repr
+- shows the exact form of the expression - how it's built internally
+** latex
+- to get the latex form of an expression use print(latex(expr))
+
+* init_session()
+- import everything in sympy, create some common symbols, set up plotting, and run init_printing
+
+* symbols
+- takes a string of variable names separated by spaces or comma
+
+** assumptions
+- several assumptions may be passed when declaring symbols
+- real
+- positive
+
+* Eq
+- creates sybolic equalities
+
+* simplify
+- simplifies a given expression
+- sympy has dozens of functions to simplify an expression
+- simplify tries to use all of these functions in an intelligent way to get the simplest form of a given expression
+
+** expand/factor
+ - expands/factors a given expression
+ - factor_list returns a more structured output of factors
+
+** collect
+- collects common power terms in an expression
+- coeff gives the coefficient of a given power term in an expression
+
+** cancel
+- takes any rational function and puts it in the standard canonical form $\frac{p}{q}$, where p and q are expanded polynomials with no common factors
+
+** apart
+- performs a partial fraction decomposition on a rational function
+
+** trigsimp
+- simplifies trigonometric expressions
+
+** expand_trig
+- expands trigonometric expressions
+
+* subs
+- substitute one symbol/function/integer/etc for another
+
+* diff
+- differentiates given expression
+- Derivative gets the derivative of a given expression without evaluating it
+
+* integrate
+- integrates a given expression
+- Integral gets the integral of the given expression without evaluating it
+- smypy does not include integration constant you need to include it yourself, or solve the equation as an ODE
+
+* limit
+- solves given expression at given limits
+- Limit gets the limit of a given expression without evaluating it
+
+* doit
+- solves an unevaluated expression

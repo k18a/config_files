@@ -1,0 +1,3 @@
+#+TITLE: Cea's Lemma
+- a tool for proving error estimates for the FEM applied to elliptic partial differential equations
+- 

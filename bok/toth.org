@@ -1,0 +1,24 @@
+#+TITLE: Toth Isotherm
+
+- Possesses correct Henry law behaviour at low pressures, with $K=C_{\mu s}b$
+- toth isotherm is given as:
+  - $C_\mu = C_{\mu s} \frac{b*P}{[1 + (b*P)^t]^{(1/t)}}$
+    - where, 
+    - b is affinity constant
+    - t is fitting parameter, characterizing system heterogeneity, usually less than 1 @Do1998
+    - b and t are specific for adsorbate-adsorbent pairs cite:Do1998
+
+* Temperature Dependency 
+
+- temperature dependence of the affinity constant is given by cite:Do1998
+  - $b = b_{\infty}exp(\frac{Q}{RT})=b_0 exp[\frac{Q}{RT_0} (\frac{T_0}{T} -1)]$
+- temperature dependence of parameter t is given by cite:Do1998
+  - $t = t_0 + \alpha(1 - \frac{T_0}{T})$
+- temperature dependence of saturation concentration is given by cite:Do1998
+  - $C_{\mu s} = C_{\mu s, 0} * exp(\Xi (1 - \frac{T}{T_0}))$
+- to obtain isosteric heat, van't Hoff equation is used:
+  - $\frac{-\Delta H}{R T^2} = (\frac{\partial ln P}{\partial T})_\theta$
+  - in terms of amount adsorbed cite:Do1998
+    - $(-\Delta H) = Q - \frac{1}{t}(\alpha R T_0)*[ln(\frac{C_ \mu}{(C_{\mu s}^t - C_{\mu}^t)^(1/t)}) - \frac{ln(C_{\mu}/C_{\mu s})}{1 - (C_{\mu} / C_{\mu s})^t}]$
+- for the Toth equation, the parameter Q is equal to the isosteric heat when the fractional loading is zero: 
+- $Q=|(-\Delta H)|_{\theta = 0}$

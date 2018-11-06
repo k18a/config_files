@@ -1,0 +1,4 @@
+#+TITLE: Regular Expression
+
+- a sequence of characters that define a search pattern
+- this pattern is used by string searching algorithms to find or find and replace operations on strings or for input validation

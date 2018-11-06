@@ -1,0 +1,7 @@
+#+TITLE: Divergence
+
+- divergence of a vector field denoted by $\nabla F$ is defined by a limit of the surface integral
+
+\begin{equation}
+\nabla F = \lim_{V->0} \frac{\int_S d a }{V}
+\end{equation}

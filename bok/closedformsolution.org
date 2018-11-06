@@ -1,0 +1,5 @@
+#+TITLE: Closed Form Solution
+
+- solves a given problem in terms of functions and mathematical operations from a given generally-accepted set
+- infinte functions are not closed form solutions
+- a function is said to be of closed form if it is contained in some so-called Liouvillian extension field of a field K - if they are obtained from rational functions 

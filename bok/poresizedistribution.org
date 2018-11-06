@@ -1,0 +1,3 @@
+#+TITLE: Pore Size Distributions
+
+- pore size distributions (PSD) are represented by the derivatives $\frac{dA_p}{dr_p}di$ or $\frac{dV_p}{dr_p}$ cite:Sing1985

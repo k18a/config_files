@@ -1,0 +1,17 @@
+#+TOPIC: Amott Test
+
+- Oil Recovery by Spontaneous Imbibition cite:Shuler2011
+  - Prepare a 2 wt% KCl brine solution as a blank sample solution
+  - Prepare a 2 wt% KCl solutions where add different 0.1 wt% Surfactant Product
+  - Dry the test cores overnight near 200 Â°F.
+  - Measure the dry weight of each core
+  - Place cores into a vacuum flask
+  - Have a tube going into the top of the container. Have a separatory funnel connected to this tube leading   into the top of the container. Close the stopcock of the funnel.
+  - Pull a high vacuum on the cores for 3 â€“ 4 hours
+  - Load crude oil into the funnel
+  - Stop the vacuum pump
+  - Slowly open the stopcock of the funnel and introduce enough crude oil to cover the sample cores   completely. Close the stopcock.
+  - Allow the cores to soak in crude oil for 16 â€“ 24 hours. Release the vacuum.
+  - Remove cores one at a time and allow the surface oil to drain off and reweigh the cores to determine   mass of oil loaded into that core
+  - Load each Amott cell with the oil-saturated core and fill with the aqueous test solution. NOTE: perform this soaking test in an oven at 185 F.
+  - Monitor the volume of oil expelled by the core versus time. 
