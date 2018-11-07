@@ -44,6 +44,8 @@
 
 ** [[file:matlab.org][Matlab]]
    
+** [[file:matlabpde.org][MATLAB PDE Solver]]
+   
 ** [[file:mathematica.org][Mathematica]]
    
 ** [[file:python.org][Python]] 
@@ -59,8 +61,6 @@
 ** [[file:sympy.org][Sympy]]
 
 ** [[file:git.org][Git]]
-
-** [[file:dotnetframework.org][.NET Framework]]
 
 * Languages
 
