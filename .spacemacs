@@ -31,7 +31,6 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     yaml
      html
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
@@ -45,7 +44,6 @@ values."
      git
      markdown
      org
-     latex
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
@@ -54,9 +52,6 @@ values."
      version-control
      python
      csv
-     (extra-langs :variables
-                  matlab-mode)
-
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -67,7 +62,6 @@ values."
      org-journal 
      org-ref
      org-attach-screenshot
-     ein
      ob-ipython
      )
    ;; A list of packages that cannot be updated.
@@ -373,11 +367,6 @@ you should place your code here."
     (find-file "~/bok/phd.org"))
   (spacemacs/set-leader-keys "ofp" 'open-phd-file) ;open bok file
 
-  (defun open-lothian-paper()
-    (interactive)
-    (find-file "C:/Users/s1584407/papers/LothianShales/main.tex"))
-  (spacemacs/set-leader-keys "ofl" 'open-lothian-paper) ;open bok file
-
   ;; spacemacs settings
   (global-display-line-numbers-mode 1)
   (global-visual-line-mode 1)
@@ -488,17 +477,6 @@ you should place your code here."
 
   (org-defkey org-mode-map [(meta return)] 'org-meta-return); fix org links due to bug in recent emacs update
 
-  ;; org babel
-  (require 'ob-ipython)
-  (org-babel-do-load-languages
-   'org-babel-load-languages
-   '((ipython . t)
-     (python . t)
-     (matlab . t)
-     ;; other languages..
-     ))
-  (setq org-src-tab-acts-natively nil); let tab run as it should
-
   ;; flyspell mode settings
   (add-to-list 'exec-path "C:/Program Files (x86)/Aspell/bin/")
   (setq ispell-program-name "aspell")
@@ -507,17 +485,13 @@ you should place your code here."
   ;; screenshot
   (require 'org-attach-screenshot)
 
-  ;; ipython
-  (require 'ein)
-  (require 'ein-notebook)
-  (require 'ein-subpackages)
-
-  ;; pdf view
-  (setq doc-view-ghostscript-program "c:/Program Files/gs/gs9.25/bin/gswin64c.exe")
-
-  ;; latex
-  (add-hook 'doc-view-mode-hook 'auto-revert-mode)
-
+  ;; org-babel settings
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((ipython . t)
+     (python . t)
+     ;; other languages..
+     ))
  )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -584,7 +558,7 @@ plt.figure()
      ("t" "#+TITLE: ?"))))
  '(package-selected-packages
    (quote
-    (thrift stan-mode scad-mode qml-mode matlab-mode julia-mode arduino-mode company-auctex auctex-latexmk auctex skewer-mode request-deferred websocket deferred js2-mode simple-httpd babel yaml-mode org-attach-screenshot org-pdfview key-chord biblio parsebib biblio-core tablist org-ref pdf-tools ivy helm-bibtex auto-complete-auctex org-wunderlist latex-preview-pane latex-math-preview web-mode tagedit slim-mode scss-mode sass-mode pug-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data org-journal org-ref pdf-tools fm-bookmarks ein ob-ipython csv-mode evil-tabs pandoc-mode ht hy-mode company-anaconda yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode dash-functional helm-pydoc cython-mode anaconda-mode pythonic xterm-color unfill smeargle shell-pop orgit org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download mwim multi-term mmm-mode markdown-toc markdown-mode magit-gitflow htmlize helm-gitignore helm-company helm-c-yasnippet gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip flycheck evil-magit magit magit-popup git-commit ghub with-editor eshell-z eshell-prompt-extras esh-help diff-hl company-statistics company auto-yasnippet yasnippet auto-dictionary ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f dash s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async))))
+    (treepy graphql thrift stan-mode scad-mode qml-mode matlab-mode julia-mode arduino-mode company-auctex auctex-latexmk auctex skewer-mode request-deferred websocket deferred js2-mode simple-httpd babel yaml-mode org-attach-screenshot org-pdfview key-chord biblio parsebib biblio-core tablist org-ref pdf-tools ivy helm-bibtex auto-complete-auctex org-wunderlist latex-preview-pane latex-math-preview web-mode tagedit slim-mode scss-mode sass-mode pug-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data org-journal org-ref pdf-tools fm-bookmarks ein ob-ipython csv-mode evil-tabs pandoc-mode ht hy-mode company-anaconda yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode dash-functional helm-pydoc cython-mode anaconda-mode pythonic xterm-color unfill smeargle shell-pop orgit org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download mwim multi-term mmm-mode markdown-toc markdown-mode magit-gitflow htmlize helm-gitignore helm-company helm-c-yasnippet gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip flycheck evil-magit magit magit-popup git-commit ghub with-editor eshell-z eshell-prompt-extras esh-help diff-hl company-statistics company auto-yasnippet yasnippet auto-dictionary ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f dash s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
