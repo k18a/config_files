@@ -1,3 +1,0 @@
-#+TITLE: Fourier Transform
-
-- generalization of the complex [[file:fourierseries.org][Fourier series]] in the limit as $L->\infty$

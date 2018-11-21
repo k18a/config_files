@@ -1,7 +1,0 @@
-* Chemistry
-
-* [[file:equivalentweight.org][Equivalent Weight]]
-
-* [[file:acidbasereaction.org][Acid Base Reactions]]
-
-* 

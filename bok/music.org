@@ -1,3 +1,0 @@
-#+TITLE: Music
-
-* [[file:musical_theory.org][Musical Theory]]

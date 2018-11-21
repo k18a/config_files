@@ -1,3 +1,0 @@
-* Heat Transfer
-
-- [[file:fourierslaws.org][Fourier's Laws]]

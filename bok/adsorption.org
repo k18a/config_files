@@ -1,5 +1,0 @@
-#+TITLE: Adsorption
-
-* BDDT Classification of Adsorption Isotherms
-
-[[./adsorptionisothermtypes.jpg]]

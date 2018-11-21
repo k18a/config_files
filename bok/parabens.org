@@ -1,7 +1,0 @@
-#+TITLE: Parabens
-
-- Common parabens:
-  - Methylparaben
-  - Ethylparaben
-  - Propylparaben
-  - Butylparaben

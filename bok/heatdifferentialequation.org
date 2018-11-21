@@ -1,6 +1,0 @@
-#+TITLE: Heat Equation
-
-- proposed by Fourier
-- applied to investigating temperature distribution in materials
-
-- $$a^2(\frac{\partial ^2 w}{\partial x ^2}+\frac{\partial ^2 w}{\partial y ^2}+\frac{\partial ^ 2 w}{\partial z ^2})=\frac{\partial w}{\partial t}$$
