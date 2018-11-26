@@ -31,6 +31,8 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     windows-scripts
+     octave
      html
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
@@ -335,36 +337,36 @@ you should place your code here."
 
   (defun open-todo-file ()
     (interactive)
-    (find-file "~/bok/todo.org")
+    (find-file "C:/Users/s1584407/Dropbox/bok/todo.org")
     (delete-other-windows))
   (spacemacs/set-leader-keys "oft" 'open-todo-file) ;open todo file
 
   (defun open-mobile-file ()
     (interactive)
-    (find-file "~/bok/mobile.org")
+    (find-file "C:/Users/s1584407/Dropbox/bok/mobile.org")
     (delete-other-windows))
   (spacemacs/set-leader-keys "ofm" 'open-mobile-file) ;open todo file
 
   (defun open-reading-file ()
     (interactive)
-    (find-file "~/bok/reading.org")
+    (find-file "C:/Users/s1584407/Dropbox/bok/reading.org")
     (delete-other-windows))
   (spacemacs/set-leader-keys "ofr" 'open-reading-file) ;open todo file
 
   (defun open-video-file ()
     (interactive)
-    (find-file "~/bok/video.org")
+    (find-file "C:/Users/s1584407/Dropbox/bok/video.org")
     (delete-other-windows))
   (spacemacs/set-leader-keys "ofv" 'open-video-file) ;open todo file
 
   (defun open-bok-file ()
     (interactive)
-    (find-file "~/bok/bok.org"))
+    (find-file "C:/Users/s1584407/Dropbox/bok/bok.org"))
   (spacemacs/set-leader-keys "ofb" 'open-bok-file) ;open bok file
 
   (defun open-phd-file ()
     (interactive)
-    (find-file "~/bok/phd.org"))
+    (find-file "C:/Users/s1584407/Dropbox/bok/phd.org"))
   (spacemacs/set-leader-keys "ofp" 'open-phd-file) ;open bok file
 
   ;; spacemacs settings
@@ -386,15 +388,15 @@ you should place your code here."
   (setq org-todo-keywords
         '((sequence "EXPAND-SCOPE" "WAITING-ON" "TICKLER" "|" "DOING" "NEXT" )))
 
-  (setq reftex-default-bibliography '("~/bok/bibliography/allref.bib"))
+  (setq reftex-default-bibliography '("C:/Users/s1584407/Dropbox/bok/bibliography/allref.bib"))
 
-  (setq org-ref-bibliography-notes "~/bok/bibliography/notes.org"
-        org-ref-default-bibliography '("~/bok/bibliography/allref.bib")
-        org-ref-pdf-directory "~/bok/bibliography/pdfs/")
+  (setq org-ref-bibliography-notes "C:/Users/s1584407/Dropbox/bok/bibliography/notes.org"
+        org-ref-default-bibliography '("C:/Users/s1584407/Dropbox/bok/bibliography/allref.bib")
+        org-ref-pdf-directory "C:/Users/s1584407/Dropbox/bok/bibliography/pdfs/")
 
-  (setq bibtex-completion-bibliography "~/bok/bibliography/allref.bib"
-        bibtex-completion-library-path "~/bok/bibliography/pdfs"
-        bibtex-completion-notes-path "~/bok/bibliography/helm-bibtex-notes")
+  (setq bibtex-completion-bibliography "C:/Users/s1584407/Dropbox/bok/bibliography/allref.bib"
+        bibtex-completion-library-path "C:/Users/s1584407/Dropbox/bok/bibliography/pdfs"
+        bibtex-completion-notes-path "C:/Users/s1584407/Dropbox/bok/bibliography/helm-bibtex-notes")
 
   ;; open pdf with system pdf viewer (works on mac)
   (setq bibtex-completion-pdf-open-function 'org-open-file)
@@ -501,7 +503,7 @@ you should place your code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(bmkp-last-as-first-bookmark-file "c:/Users/s1584407/Dropbox/.emacs.d/.cache/bookmarks")
+ '(bmkp-last-as-first-bookmark-file "~/.emacs.d/.cache/bookmarks")
  '(ob-ipython-resources-dir "./")
  '(org-format-latex-options
    (quote
@@ -558,7 +560,7 @@ plt.figure()
      ("t" "#+TITLE: ?"))))
  '(package-selected-packages
    (quote
-    (treepy graphql thrift stan-mode scad-mode qml-mode matlab-mode julia-mode arduino-mode company-auctex auctex-latexmk auctex skewer-mode request-deferred websocket deferred js2-mode simple-httpd babel yaml-mode org-attach-screenshot org-pdfview key-chord biblio parsebib biblio-core tablist org-ref pdf-tools ivy helm-bibtex auto-complete-auctex org-wunderlist latex-preview-pane latex-math-preview web-mode tagedit slim-mode scss-mode sass-mode pug-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data org-journal org-ref pdf-tools fm-bookmarks ein ob-ipython csv-mode evil-tabs pandoc-mode ht hy-mode company-anaconda yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode dash-functional helm-pydoc cython-mode anaconda-mode pythonic xterm-color unfill smeargle shell-pop orgit org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download mwim multi-term mmm-mode markdown-toc markdown-mode magit-gitflow htmlize helm-gitignore helm-company helm-c-yasnippet gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip flycheck evil-magit magit magit-popup git-commit ghub with-editor eshell-z eshell-prompt-extras esh-help diff-hl company-statistics company auto-yasnippet yasnippet auto-dictionary ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f dash s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async))))
+    (powershell treepy graphql thrift stan-mode scad-mode qml-mode matlab-mode julia-mode arduino-mode company-auctex auctex-latexmk auctex skewer-mode request-deferred websocket deferred js2-mode simple-httpd babel yaml-mode org-attach-screenshot org-pdfview key-chord biblio parsebib biblio-core tablist org-ref pdf-tools ivy helm-bibtex auto-complete-auctex org-wunderlist latex-preview-pane latex-math-preview web-mode tagedit slim-mode scss-mode sass-mode pug-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data org-journal org-ref pdf-tools fm-bookmarks ein ob-ipython csv-mode evil-tabs pandoc-mode ht hy-mode company-anaconda yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode dash-functional helm-pydoc cython-mode anaconda-mode pythonic xterm-color unfill smeargle shell-pop orgit org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download mwim multi-term mmm-mode markdown-toc markdown-mode magit-gitflow htmlize helm-gitignore helm-company helm-c-yasnippet gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip flycheck evil-magit magit magit-popup git-commit ghub with-editor eshell-z eshell-prompt-extras esh-help diff-hl company-statistics company auto-yasnippet yasnippet auto-dictionary ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f dash s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
