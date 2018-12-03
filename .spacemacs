@@ -65,6 +65,7 @@ values."
      org-ref
      org-attach-screenshot
      ob-ipython
+     ein
      )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -494,6 +495,12 @@ you should place your code here."
      (python . t)
      ;; other languages..
      ))
+
+  ;;ipython notebook
+  (package-initialize)
+  (require 'ein)
+  (require 'ein-notebook)
+  (require 'ein-subpackages)
  )
 
 ;; Do not write anything past this comment. This is where Emacs will
